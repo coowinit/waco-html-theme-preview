@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WACO Projects Page</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="assets/css/waco-pages.css?v=2.2.0" />
+</head>
+<body>
+
+  <!--
+    WACO PROJECTS PAGE v1.8.7
+    - No header / navigation / footer
+    - Inner banner: breadcrumb + page title
+    - 3-column project card grid
+    - Click card to open modal
+    - Modal includes Swiper main carousel + thumbnail carousel
+    - Modal includes project introduction below carousel
+  -->
+
+  <main class="waco-page waco-projects-page">
+
+    <!-- 01. Inner Page Banner -->
+    <section
+      class="waco-inner-hero waco-projects-inner-hero"
+      style="background: linear-gradient(90deg, rgba(14, 24, 19, 0.82) 0%, rgba(14, 24, 19, 0.58) 50%, rgba(14, 24, 19, 0.22) 100%), url('assets/images/projects/projects-hero.jpg') center / cover no-repeat;"
+    >
+      <div class="waco-container">
+        <div class="waco-inner-hero-content waco-reveal">
+          <nav class="waco-breadcrumb" aria-label="Breadcrumb">
+            <a href="/">Home</a>
+            <span>/</span>
+            <span>Projects</span>
+          </nav>
+          <h1>Projects</h1>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02. Projects Grid -->
+    <section class="waco-section waco-projects-list-section">
+      <div class="waco-container">
+        <div class="waco-section-heading waco-heading-split waco-reveal">
+          <div>
+            <span class="waco-eyebrow">Case Studies</span>
+            <h2>Project showcase layout placeholder.</h2>
+          </div>
+          <p>
+            Project page description placeholder. This section is prepared for completed projects, application scenes and customer case studies.
+          </p>
+        </div>
+
+        <div class="waco-project-filter waco-reveal" data-waco-project-filter>
+          <button class="is-active" type="button" data-filter="all">All Projects</button>
+          <button type="button" data-filter="decking">Decking</button>
+          <button type="button" data-filter="cladding">Cladding</button>
+          <button type="button" data-filter="commercial">Commercial</button>
+          <button type="button" data-filter="residential">Residential</button>
+        </div>
+
+        <div class="waco-project-grid" data-waco-project-grid>
+          <article class="waco-project-card waco-reveal" data-category="decking residential">
+            <button class="waco-project-card-button" type="button" data-project-id="garden-decking">
+              <span class="waco-project-card-media" style="background: url('assets/images/projects/case-01-01.jpg') center / cover no-repeat;"></span>
+              <span class="waco-project-card-body">
+                <span class="waco-project-card-meta">Residential / Decking</span>
+                <strong>Garden Decking Renovation</strong>
+                <span>Click to view project details and image gallery.</span>
+              </span>
+            </button>
+          </article>
+
+          <article class="waco-project-card waco-reveal" data-category="cladding commercial">
+            <button class="waco-project-card-button" type="button" data-project-id="hotel-facade">
+              <span class="waco-project-card-media" style="background: url('assets/images/projects/case-02-01.jpg') center / cover no-repeat;"></span>
+              <span class="waco-project-card-body">
+                <span class="waco-project-card-meta">Commercial / Cladding</span>
+                <strong>Hotel Facade Cladding for Commercial Entrance</strong>
+                <span>View the project details, material use and image gallery for this completed case.</span>
+              </span>
+            </button>
+          </article>
+
+          <article class="waco-project-card waco-reveal" data-category="decking commercial">
+            <button class="waco-project-card-button" type="button" data-project-id="restaurant-terrace">
+              <span class="waco-project-card-media" style="background: url('assets/images/projects/case-03-01.jpg') center / cover no-repeat;"></span>
+              <span class="waco-project-card-body">
+                <span class="waco-project-card-meta">Commercial / Decking</span>
+                <strong>Restaurant Terrace Decking</strong>
+                <span>Explore project images, application notes and material details in the gallery.</span>
+              </span>
+            </button>
+          </article>
+
+          <article class="waco-project-card waco-reveal" data-category="decking residential">
+            <button class="waco-project-card-button" type="button" data-project-id="balcony-upgrade">
+              <span class="waco-project-card-media" style="background: url('assets/images/projects/case-04-01.jpg') center / cover no-repeat;"></span>
+              <span class="waco-project-card-body">
+                <span class="waco-project-card-meta">Residential / Balcony</span>
+                <strong>Apartment Balcony Upgrade with Composite Boards</strong>
+                <span>View the balcony layout, product application and image gallery for this case.</span>
+              </span>
+            </button>
+          </article>
+
+          <article class="waco-project-card waco-reveal" data-category="cladding residential">
+            <button class="waco-project-card-button" type="button" data-project-id="villa-wall">
+              <span class="waco-project-card-media" style="background: url('assets/images/projects/case-05-01.jpg') center / cover no-repeat;"></span>
+              <span class="waco-project-card-body">
+                <span class="waco-project-card-meta">Residential / Cladding</span>
+                <strong>Villa Exterior Wall Design</strong>
+                <span>Click to view project details and image gallery.</span>
+              </span>
+            </button>
+          </article>
+
+          <article class="waco-project-card waco-reveal" data-category="decking commercial">
+            <button class="waco-project-card-button" type="button" data-project-id="poolside-deck">
+              <span class="waco-project-card-media" style="background: url('assets/images/projects/case-06-01.jpg') center / cover no-repeat;"></span>
+              <span class="waco-project-card-body">
+                <span class="waco-project-card-meta">Commercial / Poolside</span>
+                <strong>Poolside Decking Area for Leisure Space</strong>
+                <span>Explore project images, application notes and material details in the gallery.</span>
+              </span>
+            </button>
+          </article>
+
+          <article class="waco-project-card waco-reveal" data-category="decking residential">
+            <button class="waco-project-card-button" type="button" data-project-id="rooftop-garden">
+              <span class="waco-project-card-media" style="background: url('assets/images/projects/case-07-01.jpg') center / cover no-repeat;"></span>
+              <span class="waco-project-card-body">
+                <span class="waco-project-card-meta">Residential / Rooftop</span>
+                <strong>Rooftop Garden Decking</strong>
+                <span>Click to view project details and image gallery.</span>
+              </span>
+            </button>
+          </article>
+
+          <article class="waco-project-card waco-reveal" data-category="cladding commercial">
+            <button class="waco-project-card-button" type="button" data-project-id="office-cladding">
+              <span class="waco-project-card-media" style="background: url('assets/images/projects/case-08-01.jpg') center / cover no-repeat;"></span>
+              <span class="waco-project-card-body">
+                <span class="waco-project-card-meta">Commercial / Cladding</span>
+                <strong>Office Entrance Cladding with Modern Wall Finish</strong>
+                <span>View the entrance design, cladding details and project image gallery.</span>
+              </span>
+            </button>
+          </article>
+
+          <article class="waco-project-card waco-reveal" data-category="decking commercial">
+            <button class="waco-project-card-button" type="button" data-project-id="public-walkway">
+              <span class="waco-project-card-media" style="background: url('assets/images/projects/case-09-01.jpg') center / cover no-repeat;"></span>
+              <span class="waco-project-card-body">
+                <span class="waco-project-card-meta">Commercial / Decking</span>
+                <strong>Public Walkway Decking</strong>
+                <span>Explore project images, application notes and material details in the gallery.</span>
+              </span>
+            </button>
+          </article>
+        </div>
+
+        <div class="waco-project-empty" data-waco-project-empty>
+          No matching projects found. Try another category.
+        </div>
+
+        <div class="waco-project-load-more-wrap waco-reveal">
+          <button class="waco-btn waco-btn-primary waco-project-load-more" type="button" data-waco-project-load-more>
+            Load More Projects
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 03. CTA -->
+    <section class="waco-section waco-cta-section">
+      <div class="waco-container">
+        <div class="waco-cta-box waco-reveal">
+          <div class="waco-cta-content">
+            <h2>Have a similar project?</h2>
+            <p>
+              CTA description placeholder. Guide users to request samples, send project photos or ask for product recommendations.
+            </p>
+            <div class="waco-btn-group">
+              <a class="waco-btn waco-btn-light" href="/quote/">Request Samples</a>
+              <a class="waco-btn waco-btn-ghost-light" href="/contact/">Discuss Project</a>
+            </div>
+          </div>
+          <div class="waco-cta-side">
+            <div class="waco-cta-panel">
+              <ul class="waco-check-list">
+                <li>Project consultation placeholder</li>
+                <li>Product recommendation placeholder</li>
+                <li>Sample support placeholder</li>
+                <li>Installation guide placeholder</li>
+              </ul>
+            </div>
+            <div class="waco-cta-image" style="background: url('assets/images/projects/case-03-01.jpg') center / cover no-repeat;"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Project Modal -->
+  <div class="waco-project-modal" data-waco-project-modal aria-hidden="true">
+    <div class="waco-project-modal-backdrop" data-waco-project-close></div>
+
+    <div class="waco-project-modal-dialog" role="dialog" aria-modal="true" aria-label="Project details">
+      <button class="waco-project-modal-close" type="button" data-waco-project-close aria-label="Close project modal">×</button>
+
+      <div class="waco-project-modal-gallery">
+        <div class="swiper waco-project-modal-main-swiper" data-waco-project-main-swiper>
+          <div class="swiper-wrapper" data-waco-project-main-wrapper></div>
+
+          <button class="waco-project-modal-arrow waco-project-modal-prev" type="button" aria-label="Previous image">←</button>
+          <button class="waco-project-modal-arrow waco-project-modal-next" type="button" aria-label="Next image">→</button>
+        </div>
+
+        <div class="swiper waco-project-modal-thumb-swiper" data-waco-project-thumb-swiper>
+          <div class="swiper-wrapper" data-waco-project-thumb-wrapper></div>
+        </div>
+      </div>
+
+      <div class="waco-project-modal-content">
+        <div class="waco-project-modal-meta" data-waco-project-modal-meta></div>
+        <h2 data-waco-project-modal-title></h2>
+        <div class="waco-project-modal-text" data-waco-project-modal-text></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="assets/js/waco-pages.js?v=2.2.0"></script>
+</body>
+</html>

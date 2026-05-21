@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WACO Blog List Page</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="assets/css/waco-pages.css?v=2.2.0" />
+</head>
+<body>
+
+  <!--
+    WACO BLOG LIST PAGE v1.4.3
+    - No header / navigation / footer
+    - Inner banner: breadcrumb + page title
+    - Blog category buttons
+    - Featured article
+    - Blog card grid
+    - Pagination
+    - CTA section
+  -->
+
+  <main class="waco-page waco-blog-page">
+
+    <!-- 01. Inner Page Banner -->
+    <section
+      class="waco-inner-hero waco-blog-inner-hero"
+      style="background: linear-gradient(90deg, rgba(14, 24, 19, 0.82) 0%, rgba(14, 24, 19, 0.58) 50%, rgba(14, 24, 19, 0.22) 100%), url('assets/images/blog/blog-hero.jpg') center / cover no-repeat;"
+    >
+      <div class="waco-container">
+        <div class="waco-inner-hero-content waco-reveal">
+          <nav class="waco-breadcrumb" aria-label="Breadcrumb">
+            <a href="/">Home</a>
+            <span>/</span>
+            <span>Blog</span>
+          </nav>
+          <h1>Blog</h1>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02. Featured Article -->
+    <section class="waco-section waco-blog-featured-section">
+      <div class="waco-container">
+        <div class="waco-section-heading waco-heading-split waco-reveal">
+          <div>
+            <span class="waco-eyebrow">Featured Article</span>
+            <h2>Featured blog layout title placeholder.</h2>
+          </div>
+          <p>
+            Featured blog description placeholder. This area can highlight buying guides, product knowledge or project inspiration.
+          </p>
+        </div>
+
+        <div class="waco-featured-posts-wrap waco-reveal">
+          <div class="swiper waco-featured-posts-swiper" data-waco-featured-posts-swiper>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <article class="waco-featured-blog-card">
+                  <a class="waco-featured-blog-media" href="blog-detail.html" style="background: url('assets/images/blog/blog-featured.jpg') center / cover no-repeat;"></a>
+                  <div class="waco-featured-blog-content">
+                    <div class="waco-blog-meta">
+                      <span>Product Guide</span>
+                      <span>May 21, 2026</span>
+                    </div>
+                    <h3><a href="blog-detail.html">Featured blog article title placeholder for product knowledge.</a></h3>
+                    <p>
+                      Featured article excerpt placeholder. This area can introduce important product knowledge, customer questions, application ideas or installation tips.
+                    </p>
+                    <a class="waco-arrow-link" href="blog-detail.html">Read Article</a>
+                  </div>
+                </article>
+              </div>
+
+              <div class="swiper-slide">
+                <article class="waco-featured-blog-card">
+                  <a class="waco-featured-blog-media" href="blog-detail.html" style="background: url('assets/images/blog/blog-01.jpg') center / cover no-repeat;"></a>
+                  <div class="waco-featured-blog-content">
+                    <div class="waco-blog-meta">
+                      <span>Installation</span>
+                      <span>May 18, 2026</span>
+                    </div>
+                    <h3><a href="blog-detail.html">Featured blog title placeholder for installation tips.</a></h3>
+                    <p>
+                      Featured article excerpt placeholder. Use this slide for installation knowledge, accessories, clips and practical project guidance.
+                    </p>
+                    <a class="waco-arrow-link" href="blog-detail.html">Read Article</a>
+                  </div>
+                </article>
+              </div>
+
+              <div class="swiper-slide">
+                <article class="waco-featured-blog-card">
+                  <a class="waco-featured-blog-media" href="blog-detail.html" style="background: url('assets/images/blog/blog-02.jpg') center / cover no-repeat;"></a>
+                  <div class="waco-featured-blog-content">
+                    <div class="waco-blog-meta">
+                      <span>Project Ideas</span>
+                      <span>May 16, 2026</span>
+                    </div>
+                    <h3><a href="blog-detail.html">Featured blog title placeholder for project inspiration.</a></h3>
+                    <p>
+                      Featured article excerpt placeholder. This slide can highlight design inspiration, product applications and customer project ideas.
+                    </p>
+                    <a class="waco-arrow-link" href="blog-detail.html">Read Article</a>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+
+          <div class="waco-featured-posts-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03. Blog List -->
+    <section class="waco-section waco-blog-list-section">
+      <div class="waco-container">
+        <div class="waco-section-heading waco-heading-split waco-reveal">
+          <div>
+            <span class="waco-eyebrow">Latest Posts</span>
+            <h2>Blog listing layout title placeholder.</h2>
+          </div>
+          <p>
+            Blog listing description placeholder. Category buttons are prepared for future WordPress post category filters.
+          </p>
+        </div>
+
+        <div class="waco-blog-filter waco-reveal" data-waco-blog-filter>
+          <button class="is-active" type="button" data-filter="all">All Posts</button>
+          <button type="button" data-filter="guides">Guides</button>
+          <button type="button" data-filter="installation">Installation</button>
+          <button type="button" data-filter="ideas">Project Ideas</button>
+          <button type="button" data-filter="news">News</button>
+        </div>
+
+        <div class="waco-blog-grid">
+          <article class="waco-blog-card waco-reveal" data-category="guides">
+            <a class="waco-blog-card-media" href="blog-detail.html" style="background: url('assets/images/blog/blog-01.jpg') center / cover no-repeat;"></a>
+            <div class="waco-blog-card-body">
+              <div class="waco-blog-meta">
+                <span>Guides</span>
+                <span>May 21, 2026</span>
+              </div>
+              <h3><a href="blog-detail.html">Blog article title placeholder for outdoor product selection.</a></h3>
+              <p>Blog excerpt placeholder. Keep this short and useful for WordPress archive pages.</p>
+              <a class="waco-arrow-link" href="blog-detail.html">Read More</a>
+            </div>
+          </article>
+
+          <article class="waco-blog-card waco-reveal" data-category="installation">
+            <a class="waco-blog-card-media" href="blog-detail.html" style="background: url('assets/images/blog/blog-02.jpg') center / cover no-repeat;"></a>
+            <div class="waco-blog-card-body">
+              <div class="waco-blog-meta">
+                <span>Installation</span>
+                <span>May 18, 2026</span>
+              </div>
+              <h3><a href="blog-detail.html">Blog article title placeholder for installation notes.</a></h3>
+              <p>Blog excerpt placeholder. Use this area for quick article summaries and archive cards.</p>
+              <a class="waco-arrow-link" href="blog-detail.html">Read More</a>
+            </div>
+          </article>
+
+          <article class="waco-blog-card waco-reveal" data-category="ideas">
+            <a class="waco-blog-card-media" href="blog-detail.html" style="background: url('assets/images/blog/blog-03.jpg') center / cover no-repeat;"></a>
+            <div class="waco-blog-card-body">
+              <div class="waco-blog-meta">
+                <span>Project Ideas</span>
+                <span>May 16, 2026</span>
+              </div>
+              <h3><a href="blog-detail.html">Blog article title placeholder for project inspiration.</a></h3>
+              <p>Blog excerpt placeholder. Prepared for project inspiration and application content.</p>
+              <a class="waco-arrow-link" href="blog-detail.html">Read More</a>
+            </div>
+          </article>
+
+          <article class="waco-blog-card waco-reveal" data-category="guides">
+            <a class="waco-blog-card-media" href="blog-detail.html" style="background: url('assets/images/blog/blog-04.jpg') center / cover no-repeat;"></a>
+            <div class="waco-blog-card-body">
+              <div class="waco-blog-meta">
+                <span>Guides</span>
+                <span>May 12, 2026</span>
+              </div>
+              <h3><a href="blog-detail.html">Blog article title placeholder for colour comparison.</a></h3>
+              <p>Blog excerpt placeholder. This archive card is prepared for product guide posts.</p>
+              <a class="waco-arrow-link" href="blog-detail.html">Read More</a>
+            </div>
+          </article>
+
+          <article class="waco-blog-card waco-reveal" data-category="news">
+            <a class="waco-blog-card-media" href="blog-detail.html" style="background: url('assets/images/blog/blog-05.jpg') center / cover no-repeat;"></a>
+            <div class="waco-blog-card-body">
+              <div class="waco-blog-meta">
+                <span>News</span>
+                <span>May 08, 2026</span>
+              </div>
+              <h3><a href="blog-detail.html">Blog article title placeholder for company updates.</a></h3>
+              <p>Blog excerpt placeholder. Use this for latest news, events or announcement posts.</p>
+              <a class="waco-arrow-link" href="blog-detail.html">Read More</a>
+            </div>
+          </article>
+
+          <article class="waco-blog-card waco-reveal" data-category="installation">
+            <a class="waco-blog-card-media" href="blog-detail.html" style="background: url('assets/images/blog/blog-06.jpg') center / cover no-repeat;"></a>
+            <div class="waco-blog-card-body">
+              <div class="waco-blog-meta">
+                <span>Installation</span>
+                <span>May 05, 2026</span>
+              </div>
+              <h3><a href="blog-detail.html">Blog article title placeholder for accessories and clips.</a></h3>
+              <p>Blog excerpt placeholder. Prepared for installation and accessory knowledge articles.</p>
+              <a class="waco-arrow-link" href="blog-detail.html">Read More</a>
+            </div>
+          </article>
+
+          <article class="waco-blog-card waco-reveal" data-category="ideas">
+            <a class="waco-blog-card-media" href="blog-detail.html" style="background: url('assets/images/blog/blog-07.jpg') center / cover no-repeat;"></a>
+            <div class="waco-blog-card-body">
+              <div class="waco-blog-meta">
+                <span>Project Ideas</span>
+                <span>Apr 30, 2026</span>
+              </div>
+              <h3><a href="blog-detail.html">Blog article title placeholder for balcony design.</a></h3>
+              <p>Blog excerpt placeholder. Good for application ideas and visual inspiration articles.</p>
+              <a class="waco-arrow-link" href="blog-detail.html">Read More</a>
+            </div>
+          </article>
+
+          <article class="waco-blog-card waco-reveal" data-category="guides">
+            <a class="waco-blog-card-media" href="blog-detail.html" style="background: url('assets/images/blog/blog-08.jpg') center / cover no-repeat;"></a>
+            <div class="waco-blog-card-body">
+              <div class="waco-blog-meta">
+                <span>Guides</span>
+                <span>Apr 26, 2026</span>
+              </div>
+              <h3><a href="blog-detail.html">Blog article title placeholder for maintenance tips.</a></h3>
+              <p>Blog excerpt placeholder. Suitable for FAQ, maintenance or comparison articles.</p>
+              <a class="waco-arrow-link" href="blog-detail.html">Read More</a>
+            </div>
+          </article>
+
+          <article class="waco-blog-card waco-reveal" data-category="news">
+            <a class="waco-blog-card-media" href="blog-detail.html" style="background: url('assets/images/blog/blog-09.jpg') center / cover no-repeat;"></a>
+            <div class="waco-blog-card-body">
+              <div class="waco-blog-meta">
+                <span>News</span>
+                <span>Apr 22, 2026</span>
+              </div>
+              <h3><a href="blog-detail.html">Blog article title placeholder for new product updates.</a></h3>
+              <p>Blog excerpt placeholder. Prepared for company news and product update posts.</p>
+              <a class="waco-arrow-link" href="blog-detail.html">Read More</a>
+            </div>
+          </article>
+        </div>
+
+        <nav class="waco-pagination waco-reveal" aria-label="Blog pagination">
+          <a class="is-active" href="#">1</a>
+          <a href="#">2</a>
+          <a href="#">3</a>
+          <span>...</span>
+          <a href="#">Next</a>
+        </nav>
+      </div>
+    </section>
+
+    <!-- 04. CTA -->
+    <section class="waco-section waco-cta-section">
+      <div class="waco-container">
+        <div class="waco-cta-box waco-reveal">
+          <div class="waco-cta-content">
+            <h2>CTA layout title placeholder.</h2>
+            <p>
+              CTA description placeholder. This area can guide users to product pages, sample requests or project consultation.
+            </p>
+            <div class="waco-btn-group">
+              <a class="waco-btn waco-btn-light" href="/products/">View Products</a>
+              <a class="waco-btn waco-btn-ghost-light" href="/quote/">Request Samples</a>
+            </div>
+          </div>
+          <div class="waco-cta-side">
+            <div class="waco-cta-panel">
+              <ul class="waco-check-list">
+                <li>Support item placeholder</li>
+                <li>Support item placeholder</li>
+                <li>Support item placeholder</li>
+                <li>Support item placeholder</li>
+              </ul>
+            </div>
+            <div class="waco-cta-image" style="background: url('assets/images/blog/blog-featured.jpg') center / cover no-repeat;"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="assets/js/waco-pages.js?v=2.2.0"></script>
+</body>
+</html>

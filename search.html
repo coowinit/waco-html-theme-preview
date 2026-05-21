@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WACO Search Results Page</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="assets/css/waco-pages.css?v=2.2.0" />
+</head>
+<body>
+
+  <!--
+    WACO SEARCH RESULTS PAGE v1.9.0
+    - No header / navigation / footer
+    - Inner banner: breadcrumb + page title
+    - Search form
+    - Result type filter buttons
+    - Search result list
+    - Pagination
+  -->
+
+  <main class="waco-page waco-search-page">
+
+    <section
+      class="waco-inner-hero waco-search-inner-hero"
+      style="background: linear-gradient(90deg, rgba(14, 24, 19, 0.82) 0%, rgba(14, 24, 19, 0.58) 50%, rgba(14, 24, 19, 0.22) 100%), url('assets/images/archive/search-hero.jpg') center / cover no-repeat;"
+    >
+      <div class="waco-container">
+        <div class="waco-inner-hero-content waco-reveal">
+          <nav class="waco-breadcrumb" aria-label="Breadcrumb">
+            <a href="/">Home</a>
+            <span>/</span>
+            <span>Search</span>
+          </nav>
+          <h1>Search Results</h1>
+        </div>
+      </div>
+    </section>
+
+    <section class="waco-section waco-search-results-section">
+      <div class="waco-container">
+        <div class="waco-section-heading waco-heading-split waco-reveal">
+          <div>
+            <span class="waco-eyebrow">Search</span>
+            <h2>Search result layout title placeholder.</h2>
+          </div>
+          <p>
+            Showing results for <strong>“decking”</strong>. This template is prepared for WordPress search results across products, posts, projects and resources.
+          </p>
+        </div>
+
+        <form class="waco-archive-search-box waco-reveal" action="search.html" method="get">
+          <label for="wacoArchiveSearch">Search keyword</label>
+          <div class="waco-archive-search-row">
+            <input id="wacoArchiveSearch" name="s" type="search" value="decking" placeholder="Search products, articles, projects..." />
+            <button class="waco-btn waco-btn-primary" type="submit">Search</button>
+          </div>
+        </form>
+
+        <div class="waco-archive-filter waco-reveal" data-waco-archive-filter>
+          <button class="is-active" type="button" data-filter="all">All Results</button>
+          <button type="button" data-filter="products">Products</button>
+          <button type="button" data-filter="articles">Articles</button>
+          <button type="button" data-filter="projects">Projects</button>
+          <button type="button" data-filter="downloads">Downloads</button>
+        </div>
+
+        <div class="waco-search-layout">
+          <aside class="waco-archive-sidebar waco-reveal">
+            <div class="waco-archive-side-card">
+              <span class="waco-eyebrow">Result Summary</span>
+              <h3>12 results found</h3>
+              <p>Sidebar placeholder. This area can show result count, popular searches or search help text.</p>
+            </div>
+
+            <div class="waco-archive-side-card">
+              <span class="waco-eyebrow">Popular Searches</span>
+              <div class="waco-archive-tags">
+                <a href="search.html">Decking</a>
+                <a href="search.html">Wall Cladding</a>
+                <a href="search.html">Colour</a>
+                <a href="search.html">Installation</a>
+                <a href="search.html">Samples</a>
+              </div>
+            </div>
+          </aside>
+
+          <div class="waco-search-result-list" data-waco-archive-list>
+            <article class="waco-search-result-card waco-reveal" data-category="products">
+              <a class="waco-search-result-media" href="product-detail.html" style="background: url('assets/images/projects/case-01-01.jpg') center / cover no-repeat;"></a>
+              <div class="waco-search-result-body">
+                <div class="waco-search-result-meta"><span>Product</span><span>Composite Decking</span></div>
+                <h3><a href="product-detail.html">Classic Composite Decking</a></h3>
+                <p>Search result excerpt placeholder. Prepared for WooCommerce product result descriptions and short product summaries.</p>
+                <a class="waco-arrow-link" href="product-detail.html">View Result</a>
+              </div>
+            </article>
+
+            <article class="waco-search-result-card waco-reveal" data-category="articles">
+              <a class="waco-search-result-media" href="blog-detail.html" style="background: url('assets/images/blog/blog-01.jpg') center / cover no-repeat;"></a>
+              <div class="waco-search-result-body">
+                <div class="waco-search-result-meta"><span>Article</span><span>Product Guide</span></div>
+                <h3><a href="blog-detail.html">Blog article title placeholder for outdoor product selection.</a></h3>
+                <p>Search result excerpt placeholder. Use this for matched blog posts, guides and educational articles.</p>
+                <a class="waco-arrow-link" href="blog-detail.html">View Result</a>
+              </div>
+            </article>
+
+            <article class="waco-search-result-card waco-reveal" data-category="projects">
+              <a class="waco-search-result-media" href="projects.html" style="background: url('assets/images/projects/case-03-01.jpg') center / cover no-repeat;"></a>
+              <div class="waco-search-result-body">
+                <div class="waco-search-result-meta"><span>Project</span><span>Case Study</span></div>
+                <h3><a href="projects.html">Restaurant Terrace Decking</a></h3>
+                <p>Search result excerpt placeholder. Prepared for project and case study search results.</p>
+                <a class="waco-arrow-link" href="projects.html">View Result</a>
+              </div>
+            </article>
+
+            <article class="waco-search-result-card waco-reveal" data-category="downloads">
+              <a class="waco-search-result-media" href="downloads.html" style="background: url('assets/images/downloads/downloads-cta.jpg') center / cover no-repeat;"></a>
+              <div class="waco-search-result-body">
+                <div class="waco-search-result-meta"><span>Download</span><span>PDF</span></div>
+                <h3><a href="downloads.html">Decking Installation Guide</a></h3>
+                <p>Search result excerpt placeholder. Prepared for downloadable files, manuals and resource documents.</p>
+                <a class="waco-arrow-link" href="downloads.html">View Result</a>
+              </div>
+            </article>
+
+            <article class="waco-search-result-card waco-reveal" data-category="articles">
+              <a class="waco-search-result-media" href="blog-detail.html" style="background: url('assets/images/blog/blog-03.jpg') center / cover no-repeat;"></a>
+              <div class="waco-search-result-body">
+                <div class="waco-search-result-meta"><span>Article</span><span>Project Ideas</span></div>
+                <h3><a href="blog-detail.html">Blog article title placeholder for project inspiration.</a></h3>
+                <p>Search result excerpt placeholder. Prepared for matched article content and archive excerpts.</p>
+                <a class="waco-arrow-link" href="blog-detail.html">View Result</a>
+              </div>
+            </article>
+
+            <div class="waco-archive-empty" data-waco-archive-empty>No matching results found. Try another type.</div>
+
+            <nav class="waco-pagination waco-reveal" aria-label="Search results pagination">
+              <a class="is-active" href="#">1</a>
+              <a href="#">2</a>
+              <a href="#">3</a>
+              <span>...</span>
+              <a href="#">Next</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="assets/js/waco-pages.js?v=2.2.0"></script>
+</body>
+</html>

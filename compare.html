@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WACO Product Compare Page</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="assets/css/waco-pages.css?v=2.2.0" />
+</head>
+<body>
+
+  <!--
+    WACO PRODUCT COMPARE PAGE v2.2.0
+    - No header / navigation / footer
+    - Before / After draggable comparison sliders
+    - Types:
+      1. Installation Before / After
+      2. Normal Wood / WPC
+      3. Old Ground / Renovated
+    - Each slider has a content area below (title + description)
+  -->
+
+  <main class="waco-page waco-compare-page">
+
+    <!-- 01. Inner Page Banner -->
+    <section
+      class="waco-inner-hero waco-compare-inner-hero"
+      style="background: linear-gradient(90deg, rgba(14, 24, 19, 0.82) 0%, rgba(14, 24, 19, 0.58) 50%, rgba(14, 24, 19, 0.22) 100%), url('assets/images/compare/compare-hero.jpg') center / cover no-repeat;"
+    >
+      <div class="waco-container">
+        <div class="waco-inner-hero-content waco-reveal">
+          <nav class="waco-breadcrumb" aria-label="Breadcrumb">
+            <a href="/">Home</a>
+            <span>/</span>
+            <span>Product Compare</span>
+          </nav>
+          <h1>Product Compare</h1>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02. Page Intro -->
+    <section class="waco-section waco-compare-intro-section">
+      <div class="waco-container">
+        <div class="waco-section-heading waco-heading-split waco-reveal">
+          <div>
+            <span class="waco-eyebrow">Before / After</span>
+            <h2>Compare different product effects with a draggable slider.</h2>
+          </div>
+          <p>
+            This page uses the classic Before / After comparison style. Drag the center divider to compare the visual effect before and after product application.
+          </p>
+        </div>
+
+        <div class="waco-compare-note-grid">
+          <article class="waco-compare-note-card waco-reveal">
+            <strong>01</strong>
+            <h3>Drag the divider</h3>
+            <p>Move the center line left or right to compare the two states in the same frame.</p>
+          </article>
+
+          <article class="waco-compare-note-card waco-reveal">
+            <strong>02</strong>
+            <h3>Show visual difference</h3>
+            <p>Suitable for installation effects, material comparisons and renovation before/after cases.</p>
+          </article>
+
+          <article class="waco-compare-note-card waco-reveal">
+            <strong>03</strong>
+            <h3>Easy to replace later</h3>
+            <p>The current images are generic placeholders and can be replaced with real product or project photos.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03. Compare Sliders -->
+    <section class="waco-section waco-compare-list-section">
+      <div class="waco-container">
+        <div class="waco-compare-list">
+
+          <article class="waco-compare-card waco-reveal">
+            <div class="waco-before-after-slider" data-waco-before-after style="--position: 50%;">
+              <div class="waco-ba-image waco-ba-before" style="background-image: url('assets/images/compare/install-before.jpg');"></div>
+              <div class="waco-ba-image waco-ba-after" style="background-image: url('assets/images/compare/install-after.jpg');"></div>
+
+              <div class="waco-ba-label waco-ba-label-before">Before</div>
+              <div class="waco-ba-label waco-ba-label-after">After</div>
+
+              <div class="waco-ba-divider"></div>
+              <div class="waco-ba-handle" aria-hidden="true"><span>↔</span></div>
+
+              <input class="waco-ba-range" type="range" min="0" max="100" value="50" aria-label="Installation before and after comparison" />
+            </div>
+
+            <div class="waco-compare-card-body">
+              <span class="waco-eyebrow">01 / Installation Before & After</span>
+              <h3>Before installation and after installation comparison.</h3>
+              <p>
+                Use this section to show the visual transformation after product installation. It can clearly present how the space changes from a rough or unfinished state to a cleaner and more complete finished effect.
+              </p>
+            </div>
+          </article>
+
+          <article class="waco-compare-card waco-reveal">
+            <div class="waco-before-after-slider" data-waco-before-after style="--position: 50%;">
+              <div class="waco-ba-image waco-ba-before" style="background-image: url('assets/images/compare/wood-before.jpg');"></div>
+              <div class="waco-ba-image waco-ba-after" style="background-image: url('assets/images/compare/wood-after.jpg');"></div>
+
+              <div class="waco-ba-label waco-ba-label-before">Normal Wood</div>
+              <div class="waco-ba-label waco-ba-label-after">WPC</div>
+
+              <div class="waco-ba-divider"></div>
+              <div class="waco-ba-handle" aria-hidden="true"><span>↔</span></div>
+
+              <input class="waco-ba-range" type="range" min="0" max="100" value="50" aria-label="Normal wood and WPC comparison" />
+            </div>
+
+            <div class="waco-compare-card-body">
+              <span class="waco-eyebrow">02 / Normal Wood vs WPC</span>
+              <h3>Traditional wood and WPC material comparison.</h3>
+              <p>
+                Use this section to compare ordinary wood with WPC products. It is suitable for explaining differences in appearance, surface stability, maintenance expectations and overall product presentation.
+              </p>
+            </div>
+          </article>
+
+          <article class="waco-compare-card waco-reveal">
+            <div class="waco-before-after-slider" data-waco-before-after style="--position: 50%;">
+              <div class="waco-ba-image waco-ba-before" style="background-image: url('assets/images/compare/oldfloor-before.jpg');"></div>
+              <div class="waco-ba-image waco-ba-after" style="background-image: url('assets/images/compare/oldfloor-after.jpg');"></div>
+
+              <div class="waco-ba-label waco-ba-label-before">Old Ground</div>
+              <div class="waco-ba-label waco-ba-label-after">Renovated</div>
+
+              <div class="waco-ba-divider"></div>
+              <div class="waco-ba-handle" aria-hidden="true"><span>↔</span></div>
+
+              <input class="waco-ba-range" type="range" min="0" max="100" value="50" aria-label="Old ground and renovated comparison" />
+            </div>
+
+            <div class="waco-compare-card-body">
+              <span class="waco-eyebrow">03 / Old Ground vs Renovated</span>
+              <h3>Old ground and renovated effect comparison.</h3>
+              <p>
+                Use this module to show how an aged or outdated ground surface can be refreshed through renovation. It works well for decking upgrades, terrace improvements and other outdoor transformation examples.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 04. CTA -->
+    <section class="waco-section waco-cta-section">
+      <div class="waco-container">
+        <div class="waco-cta-box waco-reveal">
+          <div class="waco-cta-content">
+            <h2>Need more product comparison materials?</h2>
+            <p>
+              CTA description placeholder. Guide users to browse products, download resources or contact the team for more detailed comparison support.
+            </p>
+            <div class="waco-btn-group">
+              <a class="waco-btn waco-btn-light" href="products.html">View Products</a>
+              <a class="waco-btn waco-btn-ghost-light" href="contact.html">Contact Us</a>
+            </div>
+          </div>
+          <div class="waco-cta-side">
+            <div class="waco-cta-panel">
+              <ul class="waco-check-list">
+                <li>Installation comparison placeholder</li>
+                <li>Material comparison placeholder</li>
+                <li>Renovation case placeholder</li>
+                <li>Sample request placeholder</li>
+              </ul>
+            </div>
+            <div class="waco-cta-image" style="background: url('assets/images/compare/compare-cta.jpg') center / cover no-repeat;"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="assets/js/waco-pages.js?v=2.2.0"></script>
+</body>
+</html>

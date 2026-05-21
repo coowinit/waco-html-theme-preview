@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WACO Blog Detail Page</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="assets/css/waco-pages.css?v=2.2.0" />
+</head>
+<body>
+
+  <!--
+    WACO BLOG DETAIL PAGE v1.5.7
+    - No header / navigation / footer
+    - Inner banner: breadcrumb + page title
+    - Article detail layout
+    - Right sidebar table of contents generated from article h2 tags only
+  -->
+
+  <main class="waco-page waco-blog-detail-page">
+
+    <!-- 01. Inner Page Banner -->
+    <section
+      class="waco-inner-hero waco-blog-detail-inner-hero"
+      style="background: linear-gradient(90deg, rgba(14, 24, 19, 0.82) 0%, rgba(14, 24, 19, 0.58) 50%, rgba(14, 24, 19, 0.22) 100%), url('assets/images/blog/blog-hero.jpg') center / cover no-repeat;"
+    >
+      <div class="waco-container">
+        <div class="waco-inner-hero-content waco-reveal">
+          <nav class="waco-breadcrumb" aria-label="Breadcrumb">
+            <a href="/">Home</a>
+            <span>/</span>
+            <a href="blog.html">Blog</a>
+            <span>/</span>
+            <span>Blog Detail</span>
+          </nav>
+          <h1>Blog Detail</h1>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02. Blog Detail -->
+    <section class="waco-section waco-blog-detail-section">
+      <div class="waco-container">
+        <div class="waco-blog-detail-layout">
+
+          <div class="waco-blog-detail-main-column">
+            <article class="waco-article-card waco-reveal" data-waco-article>
+            <header class="waco-article-header">
+              <div class="waco-blog-meta">
+                <span>Product Guide</span>
+                <span>May 21, 2026</span>
+                <span>By WACO Team</span>
+              </div>
+              <h1>Blog detail article title placeholder for product knowledge.</h1>
+              <p>
+                Article summary placeholder. This area introduces the topic, user problem and what the reader will learn from this article.
+              </p>
+            </header>
+
+            <div
+              class="waco-article-hero-image"
+              style="background: url('assets/images/blog/blog-featured.jpg') center / cover no-repeat;"
+            ></div>
+
+            <div class="waco-article-content">
+              <p>
+                Intro paragraph placeholder. This opening paragraph explains the article background and gives users a quick overview before they read the main sections.
+                The right-side article directory still only reads <code>h2</code> headings, even though this article includes many other tags for style testing.
+              </p>
+
+              <div class="waco-article-note">
+                <strong>Editor note:</strong>
+                This is a custom <code>div</code> content block. It can be used for tips, warnings, product reminders or important notes inside WordPress articles.
+              </div>
+
+              <h2>Understanding the Product Application</h2>
+              <p>
+                Paragraph placeholder. This section can explain the product application, suitable scenarios, customer requirements and the general decision-making process.
+                Use normal paragraphs for SEO content, introduction copy and longer educational descriptions.
+              </p>
+              <p>
+                Additional paragraph placeholder. Keep the writing structure clear so this template can work well for product guides, installation notes and project inspiration articles.
+                Inline code such as <code>background-size: cover;</code> should remain readable inside regular paragraphs.
+              </p>
+
+              <figure>
+                <img src="assets/images/blog/blog-01.jpg" alt="Article image placeholder one" />
+                <figcaption>Figure caption placeholder. Use this text to describe the image, product scene or project detail.</figcaption>
+              </figure>
+
+              <h3>Application subheading h3 placeholder</h3>
+              <p>
+                This is a paragraph under an <code>h3</code> heading. It is useful for smaller article subsections that should not appear in the automatic right-side directory.
+              </p>
+
+              <h4>Detail heading h4 placeholder</h4>
+              <p>
+                This paragraph tests the <code>h4</code> heading level. It can be used for minor details inside a section.
+              </p>
+
+              <h5>Small heading h5 placeholder</h5>
+              <p>
+                This paragraph tests the <code>h5</code> heading level for very small article divisions.
+              </p>
+
+              <h6>Micro heading h6 placeholder</h6>
+              <p>
+                This paragraph tests the <code>h6</code> heading level. It should be visible but visually lighter than larger headings.
+              </p>
+
+              <h2>Key Features to Compare</h2>
+              <p>
+                Paragraph placeholder. This section can compare surface finish, colour, length, structure, installation method and maintenance requirements.
+              </p>
+
+              <ul>
+                <li>Unordered list item placeholder for product comparison.</li>
+                <li>Unordered list item placeholder for installation or usage.</li>
+                <li>
+                  Nested list example:
+                  <ul>
+                    <li>Nested unordered list item one.</li>
+                    <li>Nested unordered list item two.</li>
+                  </ul>
+                </li>
+              </ul>
+
+              <ol>
+                <li>Ordered list item placeholder for step one.</li>
+                <li>Ordered list item placeholder for step two.</li>
+                <li>Ordered list item placeholder for step three.</li>
+              </ol>
+
+              <blockquote>
+                This is a quote placeholder. Use it for a product note, design suggestion or important reminder inside the article.
+              </blockquote>
+
+              <h2>Specification Table Example</h2>
+              <p>
+                Tables are often used for product specifications, comparison data, installation dimensions or maintenance details.
+              </p>
+
+              <div class="waco-article-table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Item</th>
+                      <th>Description</th>
+                      <th>Note</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Material</td>
+                      <td>Wood Plastic Composite</td>
+                      <td>Product specification placeholder.</td>
+                    </tr>
+                    <tr>
+                      <td>Surface</td>
+                      <td>Embossed / Brushed</td>
+                      <td>Surface style placeholder.</td>
+                    </tr>
+                    <tr>
+                      <td>Application</td>
+                      <td>Garden, balcony, terrace</td>
+                      <td>Application scenario placeholder.</td>
+                    </tr>
+                    <tr>
+                      <td>Maintenance</td>
+                      <td>Low maintenance</td>
+                      <td>Maintenance description placeholder.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <h2>Code and Preformatted Content</h2>
+              <p>
+                Inline code should be styled clearly, for example <code>.waco-article-content h2</code> or <code>font-size: clamp(...)</code>.
+                Code blocks can be used for CSS snippets, HTML examples or technical notes.
+              </p>
+
+              <pre><code>&lt;section class="example-section"&gt;
+  &lt;h2&gt;Example heading&lt;/h2&gt;
+  &lt;p&gt;Example paragraph content.&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+
+              <h2>Description List Example</h2>
+              <p>
+                Description lists are useful for glossary items, FAQ-style labels or product terminology explanations.
+              </p>
+
+              <dl>
+                <dt>Composite Decking</dt>
+                <dd>Description list placeholder. Explain the term or product category in one or two sentences.</dd>
+
+                <dt>Wall Cladding</dt>
+                <dd>Description list placeholder. Use this for vertical surface products, facades or decorative walls.</dd>
+
+                <dt>Installation Accessories</dt>
+                <dd>Description list placeholder. Explain clips, joists, trims or other support items.</dd>
+              </dl>
+
+              <h2>Image Layout and Spacing</h2>
+              <p>
+                The article should also handle multiple images with clear spacing. Images below are standard <code>img</code> tags inside <code>figure</code> elements.
+              </p>
+
+              <figure>
+                <img src="assets/images/blog/blog-02.jpg" alt="Article image placeholder two" />
+                <figcaption>Second image caption placeholder. Captions should be readable but not too visually heavy.</figcaption>
+              </figure>
+
+              <div class="waco-article-image-grid">
+                <figure>
+                  <img src="assets/images/blog/blog-03.jpg" alt="Grid image placeholder one" />
+                  <figcaption>Grid image caption one.</figcaption>
+                </figure>
+                <figure>
+                  <img src="assets/images/blog/blog-04.jpg" alt="Grid image placeholder two" />
+                  <figcaption>Grid image caption two.</figcaption>
+                </figure>
+              </div>
+
+              <h2>Recommended Use Cases</h2>
+              <p>
+                Paragraph placeholder. This section can describe common project scenarios such as garden decking, balcony areas, poolside spaces, facade cladding or commercial outdoor areas.
+              </p>
+
+              <div class="waco-article-callout">
+                <h3>Custom content block placeholder</h3>
+                <p>
+                  This is another custom <code>div</code> block with its own heading and paragraph. It can be used for recommendations, summary boxes or product highlights.
+                </p>
+              </div>
+
+              <h2>Installation and Maintenance Notes</h2>
+              <p>
+                Paragraph placeholder. This section can introduce installation preparation, substructure considerations, fixing accessories and long-term maintenance suggestions.
+              </p>
+              <p>
+                Additional paragraph placeholder. Keep each section concise and scannable so the generated content directory remains useful.
+              </p>
+
+              <h3>Maintenance checklist h3</h3>
+              <ul>
+                <li>Clean the surface regularly with water and mild soap.</li>
+                <li>Avoid using sharp tools directly on the product surface.</li>
+                <li>Follow installation spacing recommendations for drainage and expansion.</li>
+              </ul>
+
+              <h2>Final Recommendation</h2>
+              <p>
+                Paragraph placeholder. This final section can summarize the main points and guide users to request samples, view products or contact the team for recommendations.
+              </p>
+              <p>
+                Closing paragraph placeholder. The article content is intentionally longer in this version so the typography, spacing, right-side directory and sticky sidebar can all be tested together.
+              </p>
+            </div>
+            </article>
+
+            <section class="waco-article-author-card">
+              <div class="waco-author-avatar" aria-hidden="true">W</div>
+              <div class="waco-author-content">
+                <span class="waco-eyebrow">About the Author</span>
+                <h2>WACO Editorial Team</h2>
+                <p>
+                  Author box placeholder. Use this area for author introduction, company editorial notes, product expertise or links to more articles by the same author.
+                </p>
+                <div class="waco-author-links">
+                  <a href="blog.html">View All Articles</a>
+                  <a href="/contact/">Contact Team</a>
+                </div>
+              </div>
+            </section>
+
+            <nav class="waco-article-post-nav" aria-label="Post navigation">
+              <a class="waco-post-nav-card waco-post-nav-prev" href="blog-detail.html">
+                <span>Previous Article</span>
+                <strong>Previous blog title placeholder for installation guidance.</strong>
+              </a>
+              <a class="waco-post-nav-card waco-post-nav-next" href="blog-detail.html">
+                <span>Next Article</span>
+                <strong>Next blog title placeholder for project inspiration.</strong>
+              </a>
+            </nav>
+
+            <section class="waco-article-inline-recommend">
+              <div class="waco-section-heading waco-heading-split">
+                <div>
+                  <span class="waco-eyebrow">Recommended Reading</span>
+                  <h2>Recommended article layout title placeholder.</h2>
+                </div>
+                <p>
+                  Recommendation description placeholder. Keep this module inside the article column for a natural reading flow.
+                </p>
+              </div>
+
+              <div class="waco-inline-recommend-grid">
+                <article class="waco-inline-recommend-card">
+                  <a class="waco-inline-recommend-media" href="blog-detail.html" style="background: url('assets/images/blog/blog-02.jpg') center / cover no-repeat;"></a>
+                  <div class="waco-inline-recommend-body">
+                    <div class="waco-blog-meta">
+                      <span>Installation</span>
+                      <span>May 18, 2026</span>
+                    </div>
+                    <h3><a href="blog-detail.html">Recommended blog title placeholder for installation tips.</a></h3>
+                    <a class="waco-arrow-link" href="blog-detail.html">Read More</a>
+                  </div>
+                </article>
+
+                <article class="waco-inline-recommend-card">
+                  <a class="waco-inline-recommend-media" href="blog-detail.html" style="background: url('assets/images/blog/blog-03.jpg') center / cover no-repeat;"></a>
+                  <div class="waco-inline-recommend-body">
+                    <div class="waco-blog-meta">
+                      <span>Project Ideas</span>
+                      <span>May 16, 2026</span>
+                    </div>
+                    <h3><a href="blog-detail.html">Recommended blog title placeholder for outdoor project ideas.</a></h3>
+                    <a class="waco-arrow-link" href="blog-detail.html">Read More</a>
+                  </div>
+                </article>
+              </div>
+            </section>
+          </div>
+
+          <aside class="waco-article-sidebar waco-reveal">
+            <div class="waco-article-toc-card">
+              <span class="waco-eyebrow">Contents</span>
+              <h2>Article Directory</h2>
+              <nav class="waco-article-toc" data-waco-article-toc aria-label="Article contents"></nav>
+            </div>
+
+            <div class="waco-article-tags-card">
+              <span class="waco-eyebrow">Tags</span>
+              <h2>Article Tags</h2>
+              <div class="waco-article-tags">
+                <a href="#">Composite Decking</a>
+                <a href="#">Outdoor Living</a>
+                <a href="#">Installation</a>
+                <a href="#">Product Guide</a>
+                <a href="#">Project Ideas</a>
+                <a href="#">Maintenance</a>
+              </div>
+            </div>
+
+            <div class="waco-article-side-card">
+              <h3>Need product samples?</h3>
+              <p>Sidebar CTA placeholder. Guide users to request samples or view related products after reading.</p>
+              <a class="waco-btn waco-btn-primary" href="/quote/">Request Samples</a>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 03. Related Articles -->
+    <section class="waco-section waco-related-blog-section">
+      <div class="waco-container">
+        <div class="waco-section-heading waco-heading-split waco-reveal">
+          <div>
+            <span class="waco-eyebrow">Related Articles</span>
+            <h2>Related blog layout title placeholder.</h2>
+          </div>
+          <p>
+            Related blog description placeholder. Prepared for WordPress related posts or manually selected articles.
+          </p>
+        </div>
+
+        <div class="waco-blog-grid">
+          <article class="waco-blog-card waco-reveal" data-category="installation">
+            <a class="waco-blog-card-media" href="blog-detail.html" style="background: url('assets/images/blog/blog-02.jpg') center / cover no-repeat;"></a>
+            <div class="waco-blog-card-body">
+              <div class="waco-blog-meta">
+                <span>Installation</span>
+                <span>May 18, 2026</span>
+              </div>
+              <h3><a href="blog-detail.html">Blog article title placeholder for installation notes.</a></h3>
+              <p>Blog excerpt placeholder. Use this area for quick article summaries and archive cards.</p>
+              <a class="waco-arrow-link" href="blog-detail.html">Read More</a>
+            </div>
+          </article>
+
+          <article class="waco-blog-card waco-reveal" data-category="ideas">
+            <a class="waco-blog-card-media" href="blog-detail.html" style="background: url('assets/images/blog/blog-03.jpg') center / cover no-repeat;"></a>
+            <div class="waco-blog-card-body">
+              <div class="waco-blog-meta">
+                <span>Project Ideas</span>
+                <span>May 16, 2026</span>
+              </div>
+              <h3><a href="blog-detail.html">Blog article title placeholder for project inspiration.</a></h3>
+              <p>Blog excerpt placeholder. Prepared for project inspiration and application content.</p>
+              <a class="waco-arrow-link" href="blog-detail.html">Read More</a>
+            </div>
+          </article>
+
+          <article class="waco-blog-card waco-reveal" data-category="guides">
+            <a class="waco-blog-card-media" href="blog-detail.html" style="background: url('assets/images/blog/blog-04.jpg') center / cover no-repeat;"></a>
+            <div class="waco-blog-card-body">
+              <div class="waco-blog-meta">
+                <span>Guides</span>
+                <span>May 12, 2026</span>
+              </div>
+              <h3><a href="blog-detail.html">Blog article title placeholder for colour comparison.</a></h3>
+              <p>Blog excerpt placeholder. This archive card is prepared for product guide posts.</p>
+              <a class="waco-arrow-link" href="blog-detail.html">Read More</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04. CTA -->
+    <section class="waco-section waco-cta-section">
+      <div class="waco-container">
+        <div class="waco-cta-box waco-reveal">
+          <div class="waco-cta-content">
+            <h2>CTA layout title placeholder.</h2>
+            <p>
+              CTA description placeholder. This area can guide users to product pages, sample requests or project consultation.
+            </p>
+            <div class="waco-btn-group">
+              <a class="waco-btn waco-btn-light" href="/products/">View Products</a>
+              <a class="waco-btn waco-btn-ghost-light" href="/quote/">Request Samples</a>
+            </div>
+          </div>
+          <div class="waco-cta-side">
+            <div class="waco-cta-panel">
+              <ul class="waco-check-list">
+                <li>Support item placeholder</li>
+                <li>Support item placeholder</li>
+                <li>Support item placeholder</li>
+                <li>Support item placeholder</li>
+              </ul>
+            </div>
+            <div class="waco-cta-image" style="background: url('assets/images/blog/blog-featured.jpg') center / cover no-repeat;"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="assets/js/waco-pages.js?v=2.2.0"></script>
+</body>
+</html>

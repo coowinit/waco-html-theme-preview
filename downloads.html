@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WACO Downloads Page</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="assets/css/waco-pages.css?v=2.2.0" />
+</head>
+<body>
+
+  <!--
+    WACO DOWNLOADS PAGE v1.7.0
+    - No header / navigation / footer
+    - Inner banner: breadcrumb + page title
+    - Resource overview cards
+    - Download category filters
+    - Download cards
+    - Support note
+    - CTA section
+  -->
+
+  <main class="waco-page waco-downloads-page">
+
+    <!-- 01. Inner Page Banner -->
+    <section
+      class="waco-inner-hero waco-downloads-inner-hero"
+      style="background: linear-gradient(90deg, rgba(14, 24, 19, 0.82) 0%, rgba(14, 24, 19, 0.58) 50%, rgba(14, 24, 19, 0.22) 100%), url('assets/images/downloads/downloads-hero.jpg') center / cover no-repeat;"
+    >
+      <div class="waco-container">
+        <div class="waco-inner-hero-content waco-reveal">
+          <nav class="waco-breadcrumb" aria-label="Breadcrumb">
+            <a href="/">Home</a>
+            <span>/</span>
+            <span>Downloads</span>
+          </nav>
+          <h1>Downloads</h1>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02. Resource Overview -->
+    <section class="waco-section waco-download-overview-section">
+      <div class="waco-container">
+        <div class="waco-section-heading waco-heading-split waco-reveal">
+          <div>
+            <span class="waco-eyebrow">Resource Center</span>
+            <h2>Download resources layout placeholder.</h2>
+          </div>
+          <p>
+            Resource description placeholder. This page is prepared for catalogues, installation guides, colour cards, certificates and technical documents.
+          </p>
+        </div>
+
+        <div class="waco-download-overview-grid">
+          <article class="waco-download-overview-card waco-reveal">
+            <div class="waco-download-icon">PDF</div>
+            <h3>Product Catalogues</h3>
+            <p>Overview placeholder for product brochures, range guides and general catalogue files.</p>
+          </article>
+
+          <article class="waco-download-overview-card waco-reveal">
+            <div class="waco-download-icon">DOC</div>
+            <h3>Installation Guides</h3>
+            <p>Overview placeholder for installation documents, fixing instructions and accessory guides.</p>
+          </article>
+
+          <article class="waco-download-overview-card waco-reveal">
+            <div class="waco-download-icon">ZIP</div>
+            <h3>Technical Files</h3>
+            <p>Overview placeholder for technical sheets, certificates, test reports and support materials.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03. Download List -->
+    <section class="waco-section waco-download-list-section">
+      <div class="waco-container">
+        <div class="waco-section-heading waco-heading-split waco-reveal">
+          <div>
+            <span class="waco-eyebrow">Files</span>
+            <h2>Download list layout title placeholder.</h2>
+          </div>
+          <p>
+            Filter files by resource type. The buttons and cards are prepared for future WordPress file download content.
+          </p>
+        </div>
+
+        <div class="waco-download-filter waco-reveal" data-waco-download-filter>
+          <button class="is-active" type="button" data-filter="all">All Files</button>
+          <button type="button" data-filter="catalogues">Catalogues</button>
+          <button type="button" data-filter="installation">Installation</button>
+          <button type="button" data-filter="colour">Colour Cards</button>
+          <button type="button" data-filter="technical">Technical</button>
+          <button type="button" data-filter="certificates">Certificates</button>
+        </div>
+
+        <div class="waco-download-layout">
+          <aside class="waco-download-side waco-reveal">
+            <div class="waco-download-side-card">
+              <span class="waco-eyebrow">Download Note</span>
+              <h3>Need a specific document?</h3>
+              <p>
+                Side note placeholder. If customers cannot find the required document, guide them to contact support or request project-specific files.
+              </p>
+              <a class="waco-btn waco-btn-primary" href="/contact/">Request a File</a>
+            </div>
+
+            <div class="waco-download-side-card">
+              <span class="waco-eyebrow">File Types</span>
+              <ul class="waco-download-type-list">
+                <li><strong>PDF</strong><span>Catalogues and guides</span></li>
+                <li><strong>JPG</strong><span>Colour card preview</span></li>
+                <li><strong>ZIP</strong><span>Technical package</span></li>
+              </ul>
+            </div>
+          </aside>
+
+          <div class="waco-download-grid" data-waco-download-list>
+            <article class="waco-download-card waco-reveal" data-category="catalogues">
+              <div class="waco-file-badge">PDF</div>
+              <div class="waco-download-card-content">
+                <div class="waco-download-meta">
+                  <span>Catalogue</span>
+                  <span>12.8 MB</span>
+                  <span>2026</span>
+                </div>
+                <h3>Composite Decking Product Catalogue</h3>
+                <p>Download description placeholder. Use this file for product range, specifications, colours and application information.</p>
+              </div>
+              <a class="waco-download-btn" href="#" download>Download</a>
+            </article>
+
+            <article class="waco-download-card waco-reveal" data-category="catalogues">
+              <div class="waco-file-badge">PDF</div>
+              <div class="waco-download-card-content">
+                <div class="waco-download-meta">
+                  <span>Catalogue</span>
+                  <span>9.6 MB</span>
+                  <span>2026</span>
+                </div>
+                <h3>Wall Cladding Product Catalogue</h3>
+                <p>Download description placeholder. Prepared for cladding range, surface options and project applications.</p>
+              </div>
+              <a class="waco-download-btn" href="#" download>Download</a>
+            </article>
+
+            <article class="waco-download-card waco-reveal" data-category="installation">
+              <div class="waco-file-badge">PDF</div>
+              <div class="waco-download-card-content">
+                <div class="waco-download-meta">
+                  <span>Installation</span>
+                  <span>4.2 MB</span>
+                  <span>Guide</span>
+                </div>
+                <h3>Decking Installation Guide</h3>
+                <p>Download description placeholder. Include spacing, joist layout, fixing clips and edge finishing notes.</p>
+              </div>
+              <a class="waco-download-btn" href="#" download>Download</a>
+            </article>
+
+            <article class="waco-download-card waco-reveal" data-category="installation">
+              <div class="waco-file-badge">PDF</div>
+              <div class="waco-download-card-content">
+                <div class="waco-download-meta">
+                  <span>Installation</span>
+                  <span>3.7 MB</span>
+                  <span>Guide</span>
+                </div>
+                <h3>Wall Cladding Installation Guide</h3>
+                <p>Download description placeholder. Prepared for wall cladding installation steps and accessory recommendations.</p>
+              </div>
+              <a class="waco-download-btn" href="#" download>Download</a>
+            </article>
+
+            <article class="waco-download-card waco-reveal" data-category="colour">
+              <div class="waco-file-badge">JPG</div>
+              <div class="waco-download-card-content">
+                <div class="waco-download-meta">
+                  <span>Colour</span>
+                  <span>2.1 MB</span>
+                  <span>Preview</span>
+                </div>
+                <h3>Decking Colour Card</h3>
+                <p>Download description placeholder. Colour card file for customer comparison and sample request reference.</p>
+              </div>
+              <a class="waco-download-btn" href="#" download>Download</a>
+            </article>
+
+            <article class="waco-download-card waco-reveal" data-category="colour">
+              <div class="waco-file-badge">JPG</div>
+              <div class="waco-download-card-content">
+                <div class="waco-download-meta">
+                  <span>Colour</span>
+                  <span>2.4 MB</span>
+                  <span>Preview</span>
+                </div>
+                <h3>Cladding Colour Card</h3>
+                <p>Download description placeholder. Prepared for wall cladding colour selection and project matching.</p>
+              </div>
+              <a class="waco-download-btn" href="#" download>Download</a>
+            </article>
+
+            <article class="waco-download-card waco-reveal" data-category="technical">
+              <div class="waco-file-badge">PDF</div>
+              <div class="waco-download-card-content">
+                <div class="waco-download-meta">
+                  <span>Technical</span>
+                  <span>1.8 MB</span>
+                  <span>Sheet</span>
+                </div>
+                <h3>Technical Data Sheet</h3>
+                <p>Download description placeholder. Use this file for material data, profile details and product information.</p>
+              </div>
+              <a class="waco-download-btn" href="#" download>Download</a>
+            </article>
+
+            <article class="waco-download-card waco-reveal" data-category="technical">
+              <div class="waco-file-badge">ZIP</div>
+              <div class="waco-download-card-content">
+                <div class="waco-download-meta">
+                  <span>Technical</span>
+                  <span>18.5 MB</span>
+                  <span>Package</span>
+                </div>
+                <h3>Project Technical Package</h3>
+                <p>Download description placeholder. Prepared for drawings, project references and technical support files.</p>
+              </div>
+              <a class="waco-download-btn" href="#" download>Download</a>
+            </article>
+
+            <article class="waco-download-card waco-reveal" data-category="certificates">
+              <div class="waco-file-badge">PDF</div>
+              <div class="waco-download-card-content">
+                <div class="waco-download-meta">
+                  <span>Certificate</span>
+                  <span>1.2 MB</span>
+                  <span>Report</span>
+                </div>
+                <h3>Product Certificate Placeholder</h3>
+                <p>Download description placeholder. Use this card for certificates, test reports or compliance documents.</p>
+              </div>
+              <a class="waco-download-btn" href="#" download>Download</a>
+            </article>
+
+            <div class="waco-download-empty" data-waco-download-empty>
+              No matching files found. Try another category.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04. CTA -->
+    <section class="waco-section waco-cta-section">
+      <div class="waco-container">
+        <div class="waco-cta-box waco-reveal">
+          <div class="waco-cta-content">
+            <h2>Need project-specific documents?</h2>
+            <p>
+              CTA description placeholder. Guide users to request customised documents, product recommendations or sample information.
+            </p>
+            <div class="waco-btn-group">
+              <a class="waco-btn waco-btn-light" href="/contact/">Contact Us</a>
+              <a class="waco-btn waco-btn-ghost-light" href="/quote/">Request Samples</a>
+            </div>
+          </div>
+          <div class="waco-cta-side">
+            <div class="waco-cta-panel">
+              <ul class="waco-check-list">
+                <li>Catalogue placeholder</li>
+                <li>Installation guide placeholder</li>
+                <li>Colour card placeholder</li>
+                <li>Technical support placeholder</li>
+              </ul>
+            </div>
+            <div class="waco-cta-image" style="background: url('assets/images/downloads/downloads-cta.jpg') center / cover no-repeat;"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="assets/js/waco-pages.js?v=2.2.0"></script>
+</body>
+</html>

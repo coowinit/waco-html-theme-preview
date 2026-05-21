@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WACO Home Page</title>
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Page CSS -->
+  <link rel="stylesheet" href="assets/css/waco-pages.css?v=2.2.0" />
+</head>
+<body>
+
+  <!--
+    WACO HOME PAGE v1.0.14
+    - No header / navigation / footer
+    - Hero uses 1920x800 Swiper banner images
+    - Hero background always covers the full banner area
+    - Applications section uses Swiper carousel
+    - Placeholder images are neutral and generic
+    - Background images remain inline for easy maintenance
+  -->
+
+  <main class="waco-page waco-home-page">
+
+    <!-- 01. Hero Swiper -->
+    <section class="waco-hero-slider-section">
+      <div class="swiper waco-hero-swiper">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <div
+              class="waco-hero-slide"
+              style="background: linear-gradient(90deg, rgba(14, 24, 19, 0.84) 0%, rgba(14, 24, 19, 0.62) 45%, rgba(14, 24, 19, 0.20) 100%), url('assets/images/home/hero-slide-01.jpg') center / cover no-repeat;"
+            >
+              <div class="waco-container">
+                <div class="waco-hero-slide-content">
+                  <span class="waco-kicker waco-kicker-light">WPC Outdoor Solutions</span>
+                  <h1 class="waco-hero-title">Composite Decking for Modern Outdoor Spaces</h1>
+                  <p class="waco-hero-desc">
+                    Short hero description placeholder. This area introduces the brand, product range and key value.
+                  </p>
+                  <div class="waco-btn-group">
+                    <a class="waco-btn waco-btn-light" href="/products/">View Products</a>
+                    <a class="waco-btn waco-btn-ghost-light" href="/quote/">Request Samples</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div
+              class="waco-hero-slide"
+              style="background: linear-gradient(90deg, rgba(14, 24, 19, 0.84) 0%, rgba(14, 24, 19, 0.60) 45%, rgba(14, 24, 19, 0.20) 100%), url('assets/images/home/hero-slide-02.jpg') center / cover no-repeat;"
+            >
+              <div class="waco-container">
+                <div class="waco-hero-slide-content">
+                  <span class="waco-kicker waco-kicker-light">Decking & Cladding</span>
+                  <h1 class="waco-hero-title">Clean Layout for Product Presentation</h1>
+                  <p class="waco-hero-desc">
+                    Hero slide description placeholder. Replace this with a product value statement or campaign message.
+                  </p>
+                  <div class="waco-btn-group">
+                    <a class="waco-btn waco-btn-light" href="/composite-decking/">View Decking</a>
+                    <a class="waco-btn waco-btn-ghost-light" href="/colours/">Explore Colours</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div
+              class="waco-hero-slide"
+              style="background: linear-gradient(90deg, rgba(14, 24, 19, 0.84) 0%, rgba(14, 24, 19, 0.60) 45%, rgba(14, 24, 19, 0.20) 100%), url('assets/images/home/hero-slide-03.jpg') center / cover no-repeat;"
+            >
+              <div class="waco-container">
+                <div class="waco-hero-slide-content">
+                  <span class="waco-kicker waco-kicker-light">Project Support</span>
+                  <h1 class="waco-hero-title">Flexible Page Template for Future Sites</h1>
+                  <p class="waco-hero-desc">
+                    This layout can later be reused for other industries by replacing images, text and links.
+                  </p>
+                  <div class="waco-btn-group">
+                    <a class="waco-btn waco-btn-light" href="/projects/">View Projects</a>
+                    <a class="waco-btn waco-btn-ghost-light" href="/quote/">Get a Quote</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <button class="waco-hero-arrow waco-hero-prev" type="button" aria-label="Previous slide">←</button>
+        <button class="waco-hero-arrow waco-hero-next" type="button" aria-label="Next slide">→</button>
+        <div class="swiper-pagination waco-hero-pagination"></div>
+      </div>
+    </section>
+
+    <!-- 02. Product Range -->
+    <section class="waco-section waco-products-section">
+      <div class="waco-container">
+        <div class="waco-section-heading waco-heading-split waco-reveal">
+          <div>
+            <span class="waco-eyebrow">Product Range</span>
+            <h2>Product category layout title placeholder.</h2>
+          </div>
+          <p>Product category description placeholder. The text can be replaced later according to SEO and marketing needs.</p>
+        </div>
+
+        <div class="waco-product-layout">
+          <a class="waco-media-card waco-media-card-large waco-reveal" href="/composite-decking/">
+            <div class="waco-card-media waco-card-media-large" style="background: url('assets/images/home/product-decking.jpg') center / cover no-repeat;"></div>
+            <div class="waco-card-body">
+              <span class="waco-card-tag">Main Product</span>
+              <h3>Composite Decking</h3>
+              <p>Category description placeholder. Add a concise two-line overview to keep the card balanced.</p>
+              <span class="waco-arrow-link">View Decking</span>
+            </div>
+          </a>
+
+          <div class="waco-product-grid">
+            <a class="waco-media-card waco-reveal" href="/wall-cladding/">
+              <div class="waco-card-media" style="background: url('assets/images/home/product-wall-cladding.jpg') center / cover no-repeat;"></div>
+              <div class="waco-card-body">
+                <span class="waco-card-tag">Wall Finish</span>
+                <h3>Wall Cladding</h3>
+                <p>Category description placeholder.</p>
+                <span class="waco-arrow-link">View Cladding</span>
+              </div>
+            </a>
+
+            <a class="waco-media-card waco-reveal" href="/colours/">
+              <div class="waco-card-media" style="background: url('assets/images/home/product-colours.jpg') center / cover no-repeat;"></div>
+              <div class="waco-card-body">
+                <span class="waco-card-tag">Samples</span>
+                <h3>Colours &amp; Finishes</h3>
+                <p>Category description placeholder.</p>
+                <span class="waco-arrow-link">Explore Colours</span>
+              </div>
+            </a>
+
+            <a class="waco-media-card waco-reveal" href="/installation/">
+              <div class="waco-card-media" style="background: url('assets/images/home/product-accessories.jpg') center / cover no-repeat;"></div>
+              <div class="waco-card-body">
+                <span class="waco-card-tag">Installation</span>
+                <h3>Accessories</h3>
+                <p>Category description placeholder.</p>
+                <span class="waco-arrow-link">View Guide</span>
+              </div>
+            </a>
+
+            <a class="waco-media-card waco-reveal" href="/projects/">
+              <div class="waco-card-media" style="background: url('assets/images/home/product-projects.jpg') center / cover no-repeat;"></div>
+              <div class="waco-card-body">
+                <span class="waco-card-tag">Applications</span>
+                <h3>Project Ideas</h3>
+                <p>Category description placeholder.</p>
+                <span class="waco-arrow-link">View Projects</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03. Advantages -->
+    <section class="waco-section waco-advantages-section">
+      <div class="waco-container">
+        <div class="waco-section-heading waco-heading-split waco-reveal">
+          <div>
+            <span class="waco-eyebrow">Why Choose WPC</span>
+            <h2>Advantage layout title placeholder.</h2>
+          </div>
+          <p>Advantage section description placeholder. The final copy can be added later.</p>
+        </div>
+
+        <div class="waco-feature-grid waco-feature-grid-4">
+          <article class="waco-feature-card waco-reveal"><div class="waco-icon-box">☔</div><h3>Weather Resistant</h3><p>Feature description placeholder.</p></article>
+          <article class="waco-feature-card waco-reveal"><div class="waco-icon-box">🧽</div><h3>Low Maintenance</h3><p>Feature description placeholder.</p></article>
+          <article class="waco-feature-card waco-reveal"><div class="waco-icon-box">👣</div><h3>Anti-slip Surface</h3><p>Feature description placeholder.</p></article>
+          <article class="waco-feature-card waco-reveal"><div class="waco-icon-box">♻</div><h3>Eco-conscious Material</h3><p>Feature description placeholder.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04. Applications Swiper -->
+    <section class="waco-section waco-dark-section waco-applications-section">
+      <div class="waco-container">
+        <div class="waco-section-heading waco-heading-split waco-reveal">
+          <div>
+            <span class="waco-eyebrow">Applications</span>
+            <h2>Application carousel layout title placeholder.</h2>
+          </div>
+          <p>Application description placeholder.</p>
+        </div>
+
+        <div class="swiper waco-app-swiper waco-reveal">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <article class="waco-media-card waco-media-card-dark">
+                <div class="waco-card-media waco-card-media-tall" style="background: url('assets/images/home/application-garden.jpg') center / cover no-repeat;"></div>
+                <div class="waco-card-body"><h3>Garden Decking</h3><p>Application description placeholder.</p></div>
+              </article>
+            </div>
+
+            <div class="swiper-slide">
+              <article class="waco-media-card waco-media-card-dark">
+                <div class="waco-card-media waco-card-media-tall" style="background: url('assets/images/home/application-poolside.jpg') center / cover no-repeat;"></div>
+                <div class="waco-card-body"><h3>Poolside Areas</h3><p>Application description placeholder.</p></div>
+              </article>
+            </div>
+
+            <div class="swiper-slide">
+              <article class="waco-media-card waco-media-card-dark">
+                <div class="waco-card-media waco-card-media-tall" style="background: url('assets/images/home/application-balcony.jpg') center / cover no-repeat;"></div>
+                <div class="waco-card-body"><h3>Balconies</h3><p>Application description placeholder.</p></div>
+              </article>
+            </div>
+
+            <div class="swiper-slide">
+              <article class="waco-media-card waco-media-card-dark">
+                <div class="waco-card-media waco-card-media-tall" style="background: url('assets/images/home/application-commercial.jpg') center / cover no-repeat;"></div>
+                <div class="waco-card-body"><h3>Commercial Spaces</h3><p>Application description placeholder.</p></div>
+              </article>
+            </div>
+
+            <div class="swiper-slide">
+              <article class="waco-media-card waco-media-card-dark">
+                <div class="waco-card-media waco-card-media-tall" style="background: url('assets/images/home/application-wall.jpg') center / cover no-repeat;"></div>
+                <div class="waco-card-body"><h3>Feature Walls</h3><p>Application description placeholder.</p></div>
+              </article>
+            </div>
+
+          </div>
+
+          <button class="waco-app-arrow waco-app-prev" type="button" aria-label="Previous application">←</button>
+          <button class="waco-app-arrow waco-app-next" type="button" aria-label="Next application">→</button>
+          <div class="swiper-pagination waco-app-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05. Featured Colours -->
+    <section class="waco-section waco-colours-section">
+      <div class="waco-container">
+        <div class="waco-section-heading waco-heading-split waco-reveal">
+          <div><span class="waco-eyebrow">Featured Colours</span><h2>Colour card layout title placeholder.</h2></div>
+          <p>Colour section description placeholder.</p>
+        </div>
+
+        <div class="waco-colour-grid">
+          <a class="waco-colour-card waco-reveal" href="/colours/"><div class="waco-colour-swatch" style="background: url('assets/images/colours/teak.jpg') center / cover no-repeat;"></div><div class="waco-colour-content"><h3>Teak</h3><p>Colour description placeholder.</p></div></a>
+          <a class="waco-colour-card waco-reveal" href="/colours/"><div class="waco-colour-swatch" style="background: url('assets/images/colours/walnut.jpg') center / cover no-repeat;"></div><div class="waco-colour-content"><h3>Walnut</h3><p>Colour description placeholder.</p></div></a>
+          <a class="waco-colour-card waco-reveal" href="/colours/"><div class="waco-colour-swatch" style="background: url('assets/images/colours/grey.jpg') center / cover no-repeat;"></div><div class="waco-colour-content"><h3>Grey</h3><p>Colour description placeholder.</p></div></a>
+          <a class="waco-colour-card waco-reveal" href="/colours/"><div class="waco-colour-swatch" style="background: url('assets/images/colours/charcoal.jpg') center / cover no-repeat;"></div><div class="waco-colour-content"><h3>Charcoal</h3><p>Colour description placeholder.</p></div></a>
+          <a class="waco-colour-card waco-reveal" href="/colours/"><div class="waco-colour-swatch" style="background: url('assets/images/colours/oak.jpg') center / cover no-repeat;"></div><div class="waco-colour-content"><h3>Oak</h3><p>Colour description placeholder.</p></div></a>
+          <a class="waco-colour-card waco-reveal" href="/colours/"><div class="waco-colour-swatch" style="background: url('assets/images/colours/coffee.jpg') center / cover no-repeat;"></div><div class="waco-colour-content"><h3>Coffee</h3><p>Colour description placeholder.</p></div></a>
+        </div>
+
+        <div class="waco-btn-group waco-section-actions waco-reveal">
+          <a class="waco-btn waco-btn-primary" href="/colours/">Explore All Colours</a>
+          <a class="waco-btn waco-btn-outline" href="/quote/">Request Samples</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06. Projects Preview -->
+    <section class="waco-section waco-projects-section">
+      <div class="waco-container">
+        <div class="waco-section-heading waco-heading-split waco-reveal">
+          <div>
+            <span class="waco-eyebrow">Project Inspiration</span>
+            <h2>Project gallery layout title placeholder.</h2>
+          </div>
+          <p>Project section description placeholder.</p>
+        </div>
+
+        <div class="waco-project-card-grid">
+          <a class="waco-media-card waco-project-card waco-reveal" href="/projects/">
+            <div class="waco-card-media waco-card-media-project" style="background: url('assets/images/home/project-large-garden.jpg') center / cover no-repeat;"></div>
+            <div class="waco-card-body">
+              <span class="waco-card-tag">Residential Decking</span>
+              <h3>Project title placeholder.</h3>
+              <p>Project description placeholder. This layout is easier to reuse with different images and products.</p>
+            </div>
+          </a>
+
+          <a class="waco-media-card waco-project-card waco-reveal" href="/projects/">
+            <div class="waco-card-media waco-card-media-project" style="background: url('assets/images/home/project-balcony.jpg') center / cover no-repeat;"></div>
+            <div class="waco-card-body">
+              <span class="waco-card-tag">Balcony</span>
+              <h3>Project title placeholder.</h3>
+              <p>Project description placeholder. Use this card for a project, case study or application example.</p>
+            </div>
+          </a>
+
+          <a class="waco-media-card waco-project-card waco-reveal" href="/projects/">
+            <div class="waco-card-media waco-card-media-project" style="background: url('assets/images/home/project-wall.jpg') center / cover no-repeat;"></div>
+            <div class="waco-card-body">
+              <span class="waco-card-tag">Wall Cladding</span>
+              <h3>Project title placeholder.</h3>
+              <p>Project description placeholder. The equal card layout works better for future template reuse.</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="waco-btn-group waco-section-actions waco-reveal">
+          <a class="waco-btn waco-btn-primary" href="/projects/">View More Projects</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07. CTA -->
+    <section class="waco-section waco-cta-section">
+      <div class="waco-container">
+        <div class="waco-cta-box waco-reveal">
+          <div class="waco-cta-content">
+            <h2>CTA layout title placeholder.</h2>
+            <p>CTA description placeholder. This area guides users to request samples, quotes or product recommendations.</p>
+            <div class="waco-btn-group">
+              <a class="waco-btn waco-btn-light" href="/quote/">Request Samples</a>
+              <a class="waco-btn waco-btn-ghost-light" href="/products/">View Products</a>
+            </div>
+          </div>
+          <div class="waco-cta-side">
+            <div class="waco-cta-panel">
+              <ul class="waco-check-list"><li>Support item placeholder</li><li>Support item placeholder</li><li>Support item placeholder</li><li>Support item placeholder</li></ul>
+            </div>
+            <div class="waco-cta-image" style="background: url('assets/images/home/cta-samples.jpg') center / cover no-repeat;"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Page JS -->
+  <script src="assets/js/waco-pages.js?v=2.2.0"></script>
+</body>
+</html>

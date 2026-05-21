@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WACO Contact Page</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="assets/css/waco-pages.css?v=2.2.0" />
+</head>
+<body>
+
+  <!--
+    WACO CONTACT PAGE v2.0.0
+    - No header / navigation / footer
+    - Inner banner: breadcrumb + page title
+    - Contact form fields:
+      Name / Phone / Email / Subject / Requirement Description
+    - Contact info cards
+    - Map placeholder
+    - CTA section
+  -->
+
+  <main class="waco-page waco-contact-page">
+
+    <!-- 01. Inner Page Banner -->
+    <section
+      class="waco-inner-hero waco-contact-inner-hero"
+      style="background: linear-gradient(90deg, rgba(14, 24, 19, 0.82) 0%, rgba(14, 24, 19, 0.58) 50%, rgba(14, 24, 19, 0.22) 100%), url('assets/images/contact/contact-hero.jpg') center / cover no-repeat;"
+    >
+      <div class="waco-container">
+        <div class="waco-inner-hero-content waco-reveal">
+          <nav class="waco-breadcrumb" aria-label="Breadcrumb">
+            <a href="/">Home</a>
+            <span>/</span>
+            <span>Contact</span>
+          </nav>
+          <h1>Contact Us</h1>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02. Contact Intro -->
+    <section class="waco-section waco-contact-intro-section">
+      <div class="waco-container">
+        <div class="waco-section-heading waco-heading-split waco-reveal">
+          <div>
+            <span class="waco-eyebrow">Get in Touch</span>
+            <h2>Contact page layout title placeholder.</h2>
+          </div>
+          <p>
+            Contact description placeholder. This page is prepared for customer inquiries, sample requests, quotation requests and project consultation.
+          </p>
+        </div>
+
+        <div class="waco-contact-top-grid">
+          <article class="waco-contact-info-card waco-reveal">
+            <div class="waco-icon-box">☎</div>
+            <h3>Phone Support</h3>
+            <p>+00 000 0000 0000</p>
+            <span>Phone contact placeholder for sales or support team.</span>
+          </article>
+
+          <article class="waco-contact-info-card waco-reveal">
+            <div class="waco-icon-box">@</div>
+            <h3>Email Support</h3>
+            <p>info@example.com</p>
+            <span>Email contact placeholder for product inquiries and quotation requests.</span>
+          </article>
+
+          <article class="waco-contact-info-card waco-reveal">
+            <div class="waco-icon-box">⌂</div>
+            <h3>Office Address</h3>
+            <p>Address placeholder</p>
+            <span>Use this area for company address, showroom address or service area.</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03. Contact Form -->
+    <section class="waco-section waco-contact-form-section">
+      <div class="waco-container">
+        <div class="waco-contact-layout">
+
+          <div class="waco-contact-form-card waco-reveal">
+            <span class="waco-eyebrow">Inquiry Form</span>
+            <h2>Send us your request.</h2>
+            <p>
+              Form description placeholder. Use this form for product questions, sample requests, quotation requests or project details.
+            </p>
+
+            <form class="waco-contact-form" action="#" method="post" data-waco-contact-form>
+              <div class="waco-form-grid">
+                <div class="waco-form-field">
+                  <label for="contactName">Name</label>
+                  <input id="contactName" name="name" type="text" placeholder="Your name" required />
+                </div>
+
+                <div class="waco-form-field">
+                  <label for="contactPhone">Phone</label>
+                  <input id="contactPhone" name="phone" type="tel" placeholder="Your phone number" required />
+                </div>
+
+                <div class="waco-form-field">
+                  <label for="contactEmail">Email</label>
+                  <input id="contactEmail" name="email" type="email" placeholder="Your email address" required />
+                </div>
+
+                <div class="waco-form-field">
+                  <label for="contactSubject">Subject</label>
+                  <input id="contactSubject" name="subject" type="text" placeholder="Inquiry subject" required />
+                </div>
+
+                <div class="waco-form-field waco-form-field-full">
+                  <label for="contactMessage">Requirement Description</label>
+                  <textarea id="contactMessage" name="message" rows="7" placeholder="Describe your requirement, project size, product interest, sample request or any questions..." required></textarea>
+                </div>
+              </div>
+
+              <div class="waco-form-footer">
+                <p>
+                  By submitting this form, customers can provide project details for future quotation or consultation workflow.
+                </p>
+                <button class="waco-btn waco-btn-primary" type="submit">Submit Inquiry</button>
+              </div>
+
+              <div class="waco-form-status" data-waco-contact-status aria-live="polite"></div>
+            </form>
+          </div>
+
+          <aside class="waco-contact-side waco-reveal">
+            <div class="waco-contact-side-card">
+              <span class="waco-eyebrow">Response Time</span>
+              <h3>We will reply as soon as possible.</h3>
+              <p>
+                Sidebar placeholder. Use this area for response time, business hours, sample policy or quotation workflow.
+              </p>
+              <ul class="waco-check-list">
+                <li>Product inquiry placeholder</li>
+                <li>Sample request placeholder</li>
+                <li>Quotation support placeholder</li>
+                <li>Project consultation placeholder</li>
+              </ul>
+            </div>
+
+            <div class="waco-contact-side-card">
+              <span class="waco-eyebrow">Business Hours</span>
+              <div class="waco-contact-hours">
+                <span><strong>Mon - Fri</strong><em>09:00 - 18:00</em></span>
+                <span><strong>Saturday</strong><em>By appointment</em></span>
+                <span><strong>Sunday</strong><em>Closed</em></span>
+              </div>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 04. Map Placeholder -->
+    <section class="waco-section waco-contact-map-section">
+      <div class="waco-container">
+        <div class="waco-contact-map-card waco-reveal">
+          <div class="waco-contact-map-image" style="background: url('assets/images/contact/contact-map.jpg') center / cover no-repeat;"></div>
+          <div class="waco-contact-map-content">
+            <span class="waco-eyebrow">Location</span>
+            <h2>Map placeholder layout title.</h2>
+            <p>
+              Map description placeholder. This area can later be replaced with Google Maps, store locator, showroom address or embedded map code.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05. CTA -->
+    <section class="waco-section waco-cta-section">
+      <div class="waco-container">
+        <div class="waco-cta-box waco-reveal">
+          <div class="waco-cta-content">
+            <h2>Need samples or product advice?</h2>
+            <p>
+              CTA description placeholder. Guide users to request samples, compare colours or ask for project recommendations.
+            </p>
+            <div class="waco-btn-group">
+              <a class="waco-btn waco-btn-light" href="products.html">View Products</a>
+              <a class="waco-btn waco-btn-ghost-light" href="downloads.html">Download Resources</a>
+            </div>
+          </div>
+          <div class="waco-cta-side">
+            <div class="waco-cta-panel">
+              <ul class="waco-check-list">
+                <li>Sample support placeholder</li>
+                <li>Quotation support placeholder</li>
+                <li>Colour selection placeholder</li>
+                <li>Project consultation placeholder</li>
+              </ul>
+            </div>
+            <div class="waco-cta-image" style="background: url('assets/images/contact/contact-cta.jpg') center / cover no-repeat;"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="assets/js/waco-pages.js?v=2.2.0"></script>
+</body>
+</html>

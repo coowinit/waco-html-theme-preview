@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WACO FAQ Page</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="assets/css/waco-pages.css?v=2.2.0" />
+</head>
+<body>
+
+  <!--
+    WACO FAQ PAGE v1.6.1
+    - No header / navigation / footer
+    - Inner banner: breadcrumb + page title
+    - Help cards
+    - FAQ category filter
+    - Accordion FAQ list
+    - CTA section
+  -->
+
+  <main class="waco-page waco-faq-page">
+
+    <!-- 01. Inner Page Banner -->
+    <section
+      class="waco-inner-hero waco-faq-inner-hero"
+      style="background: linear-gradient(90deg, rgba(14, 24, 19, 0.82) 0%, rgba(14, 24, 19, 0.58) 50%, rgba(14, 24, 19, 0.22) 100%), url('assets/images/faq/faq-hero.jpg') center / cover no-repeat;"
+    >
+      <div class="waco-container">
+        <div class="waco-inner-hero-content waco-reveal">
+          <nav class="waco-breadcrumb" aria-label="Breadcrumb">
+            <a href="/">Home</a>
+            <span>/</span>
+            <span>FAQ</span>
+          </nav>
+          <h1>FAQ</h1>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02. Help Overview -->
+    <section class="waco-section waco-faq-help-section">
+      <div class="waco-container">
+        <div class="waco-section-heading waco-heading-split waco-reveal">
+          <div>
+            <span class="waco-eyebrow">Help Center</span>
+            <h2>Frequently asked questions layout placeholder.</h2>
+          </div>
+          <p>
+            FAQ description placeholder. This page is prepared for product questions, installation questions, ordering questions and after-sales support.
+          </p>
+        </div>
+
+        <div class="waco-faq-help-grid">
+          <article class="waco-faq-help-card waco-reveal">
+            <div class="waco-icon-box">?</div>
+            <h3>Product Questions</h3>
+            <p>Help card description placeholder for product range, colour, material and application questions.</p>
+          </article>
+
+          <article class="waco-faq-help-card waco-reveal">
+            <div class="waco-icon-box">↧</div>
+            <h3>Installation Support</h3>
+            <p>Help card description placeholder for installation spacing, fixing clips, joists and accessories.</p>
+          </article>
+
+          <article class="waco-faq-help-card waco-reveal">
+            <div class="waco-icon-box">✓</div>
+            <h3>Ordering & Samples</h3>
+            <p>Help card description placeholder for samples, quotations, delivery and order support.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03. FAQ Accordion -->
+    <section class="waco-section waco-faq-list-section">
+      <div class="waco-container">
+        <div class="waco-section-heading waco-heading-split waco-reveal">
+          <div>
+            <span class="waco-eyebrow">Questions</span>
+            <h2>FAQ accordion layout title placeholder.</h2>
+          </div>
+          <p>
+            Use category filters to quickly browse related answers. This structure is ready for future WordPress dynamic FAQ content.
+          </p>
+        </div>
+
+        <div class="waco-faq-controls waco-reveal">
+
+          <div class="waco-faq-filter" data-waco-faq-filter>
+            <button class="is-active" type="button" data-filter="all">All</button>
+            <button type="button" data-filter="products">Products</button>
+            <button type="button" data-filter="installation">Installation</button>
+            <button type="button" data-filter="orders">Orders</button>
+            <button type="button" data-filter="after-sales">After-sales</button>
+          </div>
+        </div>
+
+        <div class="waco-faq-layout">
+          <aside class="waco-faq-side-note waco-reveal">
+            <div class="waco-faq-side-card">
+              <span class="waco-eyebrow">Quick Note</span>
+              <h3>Need more specific help?</h3>
+              <p>
+                Side note placeholder. If customers cannot find an answer, guide them to contact support, request samples or send project details.
+              </p>
+              <a class="waco-btn waco-btn-primary" href="/contact/">Contact Support</a>
+            </div>
+          </aside>
+
+          <div class="waco-faq-accordion waco-reveal" data-waco-faq-list>
+            <article class="waco-faq-item is-open" data-category="products">
+              <button class="waco-faq-question" type="button" aria-expanded="true">
+                <span>What is the main difference between composite decking and traditional wood?</span>
+                <strong>+</strong>
+              </button>
+              <div class="waco-faq-answer">
+                <p>
+                  FAQ answer placeholder. Composite decking is designed for low maintenance, stable outdoor performance and consistent appearance.
+                  This answer area can include product comparison details and buying advice.
+                </p>
+              </div>
+            </article>
+
+            <article class="waco-faq-item" data-category="products">
+              <button class="waco-faq-question" type="button" aria-expanded="false">
+                <span>Can I request colour samples before placing an order?</span>
+                <strong>+</strong>
+              </button>
+              <div class="waco-faq-answer">
+                <p>
+                  FAQ answer placeholder. Customers can request sample pieces to compare colour, surface texture and product style before making a final decision.
+                </p>
+              </div>
+            </article>
+
+            <article class="waco-faq-item" data-category="products">
+              <button class="waco-faq-question" type="button" aria-expanded="false">
+                <span>Which product range is suitable for balcony or garden projects?</span>
+                <strong>+</strong>
+              </button>
+              <div class="waco-faq-answer">
+                <p>
+                  FAQ answer placeholder. Product recommendations can depend on project usage, substructure, colour preference and installation environment.
+                </p>
+              </div>
+            </article>
+
+            <article class="waco-faq-item" data-category="installation">
+              <button class="waco-faq-question" type="button" aria-expanded="false">
+                <span>What spacing should be reserved during installation?</span>
+                <strong>+</strong>
+              </button>
+              <div class="waco-faq-answer">
+                <p>
+                  FAQ answer placeholder. Installation spacing depends on product length, temperature changes, drainage and project requirements.
+                  This section can be replaced with your detailed installation guide.
+                </p>
+              </div>
+            </article>
+
+            <article class="waco-faq-item" data-category="installation">
+              <button class="waco-faq-question" type="button" aria-expanded="false">
+                <span>Do I need special clips or accessories?</span>
+                <strong>+</strong>
+              </button>
+              <div class="waco-faq-answer">
+                <p>
+                  FAQ answer placeholder. Hidden clips, joists, trims and other accessories can help create a cleaner installation finish and more stable structure.
+                </p>
+              </div>
+            </article>
+
+            <article class="waco-faq-item" data-category="installation">
+              <button class="waco-faq-question" type="button" aria-expanded="false">
+                <span>Can the products be installed by homeowners?</span>
+                <strong>+</strong>
+              </button>
+              <div class="waco-faq-answer">
+                <p>
+                  FAQ answer placeholder. Some simple projects may be suitable for experienced DIY users, while larger projects should be handled by installers.
+                </p>
+              </div>
+            </article>
+
+            <article class="waco-faq-item" data-category="orders">
+              <button class="waco-faq-question" type="button" aria-expanded="false">
+                <span>How can I get a quotation for my project?</span>
+                <strong>+</strong>
+              </button>
+              <div class="waco-faq-answer">
+                <p>
+                  FAQ answer placeholder. Customers can send project dimensions, product preferences, colour choices and delivery requirements for a quotation.
+                </p>
+              </div>
+            </article>
+
+            <article class="waco-faq-item" data-category="orders">
+              <button class="waco-faq-question" type="button" aria-expanded="false">
+                <span>How long does sample or product delivery usually take?</span>
+                <strong>+</strong>
+              </button>
+              <div class="waco-faq-answer">
+                <p>
+                  FAQ answer placeholder. Delivery time can vary based on region, stock, product type and shipping method. Replace this with your real policy later.
+                </p>
+              </div>
+            </article>
+
+            <article class="waco-faq-item" data-category="after-sales">
+              <button class="waco-faq-question" type="button" aria-expanded="false">
+                <span>How should the product be cleaned and maintained?</span>
+                <strong>+</strong>
+              </button>
+              <div class="waco-faq-answer">
+                <p>
+                  FAQ answer placeholder. Regular cleaning with water and mild soap is often suitable for general maintenance. Avoid sharp tools and harsh chemicals.
+                </p>
+              </div>
+            </article>
+
+            <article class="waco-faq-item" data-category="after-sales">
+              <button class="waco-faq-question" type="button" aria-expanded="false">
+                <span>What should I do if I need after-sales support?</span>
+                <strong>+</strong>
+              </button>
+              <div class="waco-faq-answer">
+                <p>
+                  FAQ answer placeholder. Customers can provide order details, photos, project information and issue descriptions to receive support.
+                </p>
+              </div>
+            </article>
+
+            <div class="waco-faq-empty" data-waco-faq-empty>
+              No matching questions found. Try another keyword or category.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04. CTA -->
+    <section class="waco-section waco-cta-section">
+      <div class="waco-container">
+        <div class="waco-cta-box waco-reveal">
+          <div class="waco-cta-content">
+            <h2>Still have questions?</h2>
+            <p>
+              CTA description placeholder. Guide users to send project details, request samples or contact your team for support.
+            </p>
+            <div class="waco-btn-group">
+              <a class="waco-btn waco-btn-light" href="/contact/">Contact Us</a>
+              <a class="waco-btn waco-btn-ghost-light" href="/quote/">Request Samples</a>
+            </div>
+          </div>
+          <div class="waco-cta-side">
+            <div class="waco-cta-panel">
+              <ul class="waco-check-list">
+                <li>Product support placeholder</li>
+                <li>Installation guide placeholder</li>
+                <li>Sample request placeholder</li>
+                <li>After-sales support placeholder</li>
+              </ul>
+            </div>
+            <div class="waco-cta-image" style="background: url('assets/images/faq/faq-cta.jpg') center / cover no-repeat;"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="assets/js/waco-pages.js?v=2.2.0"></script>
+</body>
+</html>

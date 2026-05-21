@@ -1,0 +1,7488 @@
+/* =========================================================
+  WACO PAGES CSS
+  Version: 2.2.0
+  Clean rebuild after v1.0.13
+  - Minimum readable small text: 14px
+  - Hero arrows hidden
+  - Project Inspiration: real 3-column equal cards
+  - No legacy override stacking
+========================================================= */
+
+:root {
+  --waco-primary: #234031;
+  --waco-primary-dark: #16291f;
+  --waco-accent: #b88952;
+  --waco-accent-soft: #efe2d2;
+  --waco-dark: #111827;
+  --waco-text: #374151;
+  --waco-muted: #6b7280;
+  --waco-line: rgba(17, 24, 39, 0.10);
+  --waco-line-light: rgba(255, 255, 255, 0.12);
+  --waco-bg: #f7f3eb;
+  --waco-bg-soft: #fbfaf7;
+  --waco-card: #ffffff;
+  --waco-radius-xl: 34px;
+  --waco-radius-lg: 24px;
+  --waco-radius-md: 18px;
+  --waco-radius-sm: 12px;
+  --waco-shadow: 0 22px 58px rgba(17, 24, 39, 0.10);
+  --waco-shadow-soft: 0 12px 30px rgba(17, 24, 39, 0.075);
+  --waco-container: 1180px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--waco-text);
+  background: var(--waco-bg-soft);
+}
+
+img { display: block; max-width: 100%; }
+
+a { color: inherit; text-decoration: none; }
+
+button, a { -webkit-tap-highlight-color: transparent; }
+
+.waco-page {
+  overflow: hidden;
+  color: var(--waco-text);
+  background:
+    radial-gradient(circle at top left, rgba(184, 137, 82, 0.08), transparent 34%),
+    linear-gradient(180deg, #fbfaf7 0%, #f7f3eb 52%, #fbfaf7 100%);
+}
+
+.waco-container {
+  width: min(var(--waco-container), calc(100% - 40px));
+  margin: 0 auto;
+}
+
+/* Section rhythm */
+.waco-section { padding: 64px 0; }
+.waco-products-section { padding-top: 62px; padding-bottom: 58px; }
+.waco-advantages-section { padding-top: 58px; padding-bottom: 58px; }
+.waco-applications-section { padding-top: 72px; padding-bottom: 72px; }
+.waco-colours-section { padding-top: 64px; padding-bottom: 58px; }
+.waco-projects-section { padding-top: 64px; padding-bottom: 58px; }
+.waco-cta-section { padding-top: 58px; padding-bottom: 86px; }
+
+.waco-dark-section {
+  color: #ffffff;
+  background:
+    radial-gradient(circle at top right, rgba(184, 137, 82, 0.10), transparent 34%),
+    linear-gradient(180deg, #182b21 0%, #132319 100%);
+}
+
+.waco-section-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 0.98fr) minmax(260px, 0.62fr);
+  gap: 32px;
+  align-items: end;
+  margin-bottom: 28px;
+}
+
+.waco-section-heading h2,
+.waco-hero-title {
+  margin: 0;
+  color: var(--waco-dark);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.waco-section-heading h2 {
+  max-width: 620px;
+  font-size: clamp(30px, 3.35vw, 48px);
+}
+
+.waco-section-heading p {
+  margin: 0;
+  color: var(--waco-muted);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.waco-dark-section .waco-section-heading h2,
+.waco-dark-section .waco-eyebrow { color: #ffffff; }
+
+.waco-dark-section .waco-section-heading p { color: rgba(255, 255, 255, 0.68); }
+
+.waco-eyebrow,
+.waco-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 14px;
+  color: var(--waco-primary);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.waco-eyebrow::before {
+  content: "";
+  width: 30px;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--waco-accent);
+}
+
+.waco-kicker-light {
+  padding: 7px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.20);
+  border-radius: 999px;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(16px);
+}
+
+.waco-kicker-light::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: #d7b27b;
+  box-shadow: 0 0 0 5px rgba(215, 178, 123, 0.18);
+}
+
+.waco-btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.waco-section-actions { margin-top: 26px; }
+
+.waco-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 12px 20px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+  cursor: pointer;
+}
+
+.waco-btn:hover { transform: translateY(-2px); }
+
+.waco-btn-primary {
+  color: #ffffff;
+  background: var(--waco-primary);
+  box-shadow: 0 14px 28px rgba(35, 64, 49, 0.22);
+}
+
+.waco-btn-primary:hover { background: var(--waco-primary-dark); }
+
+.waco-btn-light {
+  color: var(--waco-primary-dark);
+  background: rgba(255, 255, 255, 0.92);
+  border-color: rgba(255, 255, 255, 0.58);
+}
+
+.waco-btn-outline {
+  color: var(--waco-primary-dark);
+  background: transparent;
+  border-color: rgba(35, 64, 49, 0.22);
+}
+
+.waco-btn-outline:hover { background: rgba(35, 64, 49, 0.07); }
+
+.waco-btn-ghost-light {
+  color: #ffffff;
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.32);
+}
+
+.waco-btn-ghost-light:hover { background: rgba(255, 255, 255, 0.12); }
+
+.waco-reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.waco-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hero Swiper */
+.waco-hero-slider-section {
+  position: relative;
+  height: 700px;
+  background: var(--waco-bg-soft);
+}
+
+.waco-hero-swiper,
+.waco-hero-swiper .swiper-wrapper,
+.waco-hero-swiper .swiper-slide,
+.waco-hero-slide {
+  width: 100%;
+  height: 700px;
+}
+
+.waco-hero-slide {
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+.waco-hero-slide::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 96px;
+  pointer-events: none;
+  background: linear-gradient(180deg, transparent, rgba(247, 243, 235, 0.96));
+}
+
+.waco-hero-slide-content {
+  position: relative;
+  z-index: 2;
+  max-width: 780px;
+  color: #ffffff;
+}
+
+.waco-hero-title {
+  color: #ffffff;
+  font-size: clamp(40px, 5.4vw, 72px);
+  line-height: 1.04;
+  max-width: 820px;
+}
+
+.waco-hero-desc {
+  max-width: 600px;
+  margin: 20px 0 30px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 16px;
+  line-height: 1.72;
+}
+
+.waco-hero-arrow {
+  display: none !important;
+}
+
+.waco-app-arrow {
+  position: absolute;
+  z-index: 10;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 999px;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(12px);
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.waco-app-arrow:hover {
+  background: rgba(255, 255, 255, 0.20);
+  transform: translateY(-2px);
+}
+
+.waco-hero-pagination {
+  bottom: 28px !important;
+  z-index: 12;
+}
+
+.waco-hero-pagination .swiper-pagination-bullet,
+.waco-app-pagination .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.58);
+  opacity: 1;
+}
+
+.waco-hero-pagination .swiper-pagination-bullet-active,
+.waco-app-pagination .swiper-pagination-bullet-active {
+  width: 26px;
+  border-radius: 999px;
+  background: #ffffff;
+}
+
+/* Layout grids */
+.waco-bento-grid,
+.waco-feature-grid,
+.waco-gallery-grid,
+.waco-colour-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.waco-product-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.02fr) minmax(0, 1.78fr);
+  gap: 22px;
+  align-items: stretch;
+}
+
+.waco-product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.waco-product-layout > .waco-media-card-large { height: 610px; }
+.waco-product-grid > .waco-media-card { height: 294px; }
+
+.waco-media-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--waco-line);
+  border-radius: var(--waco-radius-lg);
+  background: var(--waco-card);
+  box-shadow: var(--waco-shadow-soft);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.waco-media-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--waco-shadow);
+}
+
+.waco-media-card-dark {
+  border-color: var(--waco-line-light);
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.20);
+}
+
+.waco-media-card-dark .waco-card-body h3 { color: #ffffff; }
+.waco-media-card-dark .waco-card-body p { color: rgba(255, 255, 255, 0.72); }
+
+.waco-card-media {
+  height: 142px;
+  flex: 0 0 auto;
+  background-color: #e5e7eb;
+}
+
+.waco-product-layout > .waco-media-card-large .waco-card-media { height: 388px; }
+.waco-card-media-tall { height: 250px; }
+
+.waco-card-body {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: 20px 22px 28px;
+}
+
+.waco-card-tag {
+  display: inline-flex;
+  max-width: 100%;
+  min-height: 30px;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  color: var(--waco-primary);
+  background: rgba(35, 64, 49, 0.08);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.waco-card-body h3 {
+  margin: 0 0 8px;
+  color: var(--waco-dark);
+  font-size: clamp(20px, 1.55vw, 24px);
+  line-height: 1.18;
+  letter-spacing: -0.025em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.waco-card-body p {
+  margin: 0 0 16px;
+  color: var(--waco-muted);
+  font-size: 14px;
+  line-height: 1.55;
+  min-height: calc(14px * 1.55 * 2);
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.waco-arrow-link {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 8px;
+  color: var(--waco-primary-dark);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.waco-arrow-link::after {
+  content: "→";
+  transition: transform 0.25s ease;
+}
+
+.waco-media-card:hover .waco-arrow-link::after { transform: translateX(4px); }
+
+/* Features */
+.waco-feature-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.waco-feature-card {
+  padding: 24px;
+  border: 1px solid var(--waco-line);
+  border-radius: var(--waco-radius-lg);
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: var(--waco-shadow-soft);
+  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+}
+
+.waco-feature-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(184, 137, 82, 0.36);
+  box-shadow: var(--waco-shadow);
+}
+
+.waco-icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 18px;
+  border-radius: 16px;
+  color: var(--waco-primary);
+  background: var(--waco-accent-soft);
+  font-size: 22px;
+}
+
+.waco-feature-card h3 {
+  margin: 0 0 10px;
+  color: var(--waco-dark);
+  font-size: 17px;
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+}
+
+.waco-feature-card p {
+  margin: 0;
+  color: var(--waco-muted);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+/* Applications Swiper */
+.waco-app-swiper {
+  position: relative;
+  overflow: hidden;
+  padding: 4px 2px 52px;
+}
+
+.waco-app-swiper .swiper-slide { height: auto; }
+.waco-app-swiper .waco-media-card { height: 100%; }
+
+.waco-app-arrow {
+  top: auto;
+  bottom: 0;
+}
+
+.waco-app-prev { right: 56px; }
+.waco-app-next { right: 2px; }
+
+.waco-app-pagination {
+  bottom: 12px !important;
+  left: 0 !important;
+  width: auto !important;
+  text-align: left;
+}
+
+/* Colours */
+.waco-colour-grid {
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+}
+
+.waco-colour-card {
+  overflow: hidden;
+  border: 1px solid var(--waco-line);
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: var(--waco-shadow-soft);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.waco-colour-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--waco-shadow);
+}
+
+.waco-colour-swatch { height: 140px; }
+.waco-colour-content { padding: 14px; }
+
+.waco-colour-content h3 {
+  margin: 0 0 6px;
+  color: var(--waco-dark);
+  font-size: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.waco-colour-content p {
+  margin: 0;
+  color: var(--waco-muted);
+  font-size: 14px;
+  line-height: 1.5;
+  min-height: calc(14px * 1.5 * 2);
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+/* Projects: real 3-column equal card grid */
+.waco-project-card-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 22px !important;
+  align-items: stretch !important;
+}
+
+.waco-project-card-grid > .waco-media-card,
+.waco-project-card {
+  height: 430px !important;
+  min-height: 430px !important;
+}
+
+.waco-card-media-project {
+  height: 245px !important;
+  flex: 0 0 auto;
+}
+
+/* CTA */
+.waco-cta-box {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(340px, 0.72fr);
+  gap: 30px;
+  padding: clamp(28px, 4.5vw, 44px);
+  border-radius: var(--waco-radius-xl);
+  color: #ffffff;
+  background:
+    radial-gradient(circle at top right, rgba(184, 137, 82, 0.16), transparent 34%),
+    linear-gradient(120deg, #203829 0%, #16291f 100%);
+  box-shadow: 0 28px 78px rgba(22, 41, 31, 0.22);
+}
+
+.waco-cta-content h2 {
+  margin: 0 0 16px;
+  color: #ffffff;
+  font-size: clamp(32px, 4.2vw, 52px);
+  line-height: 1.04;
+  letter-spacing: -0.04em;
+}
+
+.waco-cta-content p {
+  max-width: 620px;
+  margin: 0 0 24px;
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.waco-cta-side {
+  display: grid;
+  gap: 16px;
+  align-content: start;
+}
+
+.waco-cta-panel {
+  padding: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.waco-check-list {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.waco-check-list li {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.waco-check-list li::before {
+  content: "✓";
+  flex: 0 0 auto;
+  color: #e6c89a;
+  font-weight: 800;
+}
+
+.waco-cta-image {
+  height: 170px;
+  border-radius: 24px;
+  opacity: 0.78;
+  filter: saturate(0.7) contrast(0.9);
+  box-shadow: 0 16px 42px rgba(0, 0, 0, 0.12);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .waco-section { padding: 62px 0; }
+
+  .waco-section-heading,
+  .waco-cta-box { grid-template-columns: 1fr; }
+
+  .waco-product-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .waco-product-layout > .waco-media-card-large,
+  .waco-product-grid > .waco-media-card,
+  .waco-project-card-grid > .waco-media-card,
+  .waco-project-card {
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  .waco-product-layout > .waco-media-card-large .waco-card-media {
+    height: 340px;
+  }
+
+  .waco-project-card-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+
+  .waco-project-card-grid .waco-card-media-project {
+    height: 210px !important;
+  }
+
+  .waco-feature-grid { grid-template-columns: repeat(2, 1fr); }
+  .waco-colour-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 760px) {
+  .waco-container { width: min(100% - 28px, var(--waco-container)); }
+
+  .waco-section,
+  .waco-products-section,
+  .waco-advantages-section,
+  .waco-colours-section,
+  .waco-projects-section {
+    padding: 52px 0;
+  }
+
+  .waco-applications-section { padding: 60px 0; }
+  .waco-cta-section { padding: 52px 0 70px; }
+
+  .waco-hero-slider-section,
+  .waco-hero-swiper,
+  .waco-hero-swiper .swiper-wrapper,
+  .waco-hero-swiper .swiper-slide,
+  .waco-hero-slide {
+    height: 580px;
+  }
+
+  .waco-product-grid,
+  .waco-project-card-grid,
+  .waco-feature-grid,
+  .waco-colour-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .waco-card-media,
+  .waco-product-layout > .waco-media-card-large .waco-card-media,
+  .waco-card-media-tall,
+  .waco-card-media-project {
+    height: 220px !important;
+  }
+
+  .waco-section-heading { gap: 16px; margin-bottom: 24px; }
+}
+
+@media (max-width: 480px) {
+  .waco-btn { width: 100%; }
+  .waco-card-body,
+  .waco-feature-card,
+  .waco-cta-panel { padding: 20px; }
+}
+
+
+/* =========================================================
+  PRODUCTS PAGE
+  Version: 2.2.0
+========================================================= */
+
+.waco-products-page {
+  background:
+    radial-gradient(circle at top left, rgba(184, 137, 82, 0.08), transparent 34%),
+    linear-gradient(180deg, #fbfaf7 0%, #f7f3eb 52%, #fbfaf7 100%);
+}
+
+/* Products hero */
+.waco-products-hero {
+  position: relative;
+  min-height: 560px;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}
+
+.waco-products-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 90px;
+  pointer-events: none;
+  background: linear-gradient(180deg, transparent, rgba(247, 243, 235, 0.96));
+}
+
+.waco-products-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 100px 0 120px;
+}
+
+.waco-products-hero-content h1 {
+  margin: 0;
+  max-width: 820px;
+  color: #ffffff;
+  font-size: clamp(40px, 5.2vw, 72px);
+  line-height: 1.04;
+  letter-spacing: -0.04em;
+}
+
+.waco-products-hero-content p {
+  max-width: 640px;
+  margin: 20px 0 30px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 16px;
+  line-height: 1.72;
+}
+
+/* Category overview */
+.waco-product-category-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.waco-product-category-card,
+.waco-product-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--waco-line);
+  border-radius: var(--waco-radius-lg);
+  background: #ffffff;
+  box-shadow: var(--waco-shadow-soft);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.waco-product-category-card:hover,
+.waco-product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--waco-shadow);
+}
+
+.waco-product-category-media {
+  height: 260px;
+  flex: 0 0 auto;
+  background-color: #e5e7eb;
+}
+
+.waco-product-category-body {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: 22px 22px 30px;
+}
+
+.waco-product-category-body h3 {
+  margin: 0 0 8px;
+  color: var(--waco-dark);
+  font-size: clamp(22px, 2vw, 30px);
+  line-height: 1.16;
+  letter-spacing: -0.03em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.waco-product-category-body p {
+  margin: 0 0 16px;
+  color: var(--waco-muted);
+  font-size: 14px;
+  line-height: 1.55;
+  min-height: calc(14px * 1.55 * 2);
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+/* Product filter */
+.waco-product-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: -4px 0 28px;
+}
+
+.waco-product-filter button {
+  min-height: 42px;
+  padding: 10px 18px;
+  border: 1px solid rgba(35, 64, 49, 0.16);
+  border-radius: 999px;
+  color: var(--waco-primary-dark);
+  background: rgba(255, 255, 255, 0.72);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+
+.waco-product-filter button:hover {
+  transform: translateY(-2px);
+  background: rgba(35, 64, 49, 0.08);
+}
+
+.waco-product-filter button.is-active {
+  color: #ffffff;
+  border-color: var(--waco-primary);
+  background: var(--waco-primary);
+}
+
+/* Product grid */
+.waco-product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.waco-product-card {
+  min-height: 480px;
+}
+
+.waco-product-card.is-hidden {
+  display: none;
+}
+
+.waco-product-card-media {
+  height: 210px;
+  flex: 0 0 auto;
+  background-color: #e5e7eb;
+}
+
+.waco-product-card-body {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: 20px 20px 28px;
+}
+
+.waco-product-card-body h3 {
+  margin: 0 0 8px;
+  color: var(--waco-dark);
+  font-size: 20px;
+  line-height: 1.18;
+  letter-spacing: -0.025em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.waco-product-card-body p {
+  margin: 0 0 16px;
+  color: var(--waco-muted);
+  font-size: 14px;
+  line-height: 1.55;
+  min-height: calc(14px * 1.55 * 2);
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.waco-product-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 18px;
+}
+
+.waco-product-meta span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  color: var(--waco-primary-dark);
+  background: rgba(35, 64, 49, 0.07);
+  font-size: 14px;
+  line-height: 1;
+}
+
+/* Guide box */
+.waco-product-guide-section {
+  padding-top: 58px;
+  padding-bottom: 58px;
+}
+
+.waco-product-guide-box {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: 34px;
+  align-items: stretch;
+  padding: clamp(28px, 4.5vw, 44px);
+  border: 1px solid var(--waco-line);
+  border-radius: var(--waco-radius-xl);
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: var(--waco-shadow-soft);
+}
+
+.waco-product-guide-content h2 {
+  margin: 0 0 16px;
+  color: var(--waco-dark);
+  font-size: clamp(30px, 3.6vw, 50px);
+  line-height: 1.04;
+  letter-spacing: -0.04em;
+}
+
+.waco-product-guide-content p {
+  margin: 0;
+  color: var(--waco-muted);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.waco-product-guide-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.waco-product-guide-grid article {
+  padding: 24px;
+  border-radius: 22px;
+  background: #ffffff;
+  box-shadow: var(--waco-shadow-soft);
+}
+
+.waco-product-guide-grid h3 {
+  margin: 0 0 10px;
+  color: var(--waco-dark);
+  font-size: 20px;
+  line-height: 1.18;
+}
+
+.waco-product-guide-grid p {
+  margin: 0;
+  color: var(--waco-muted);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+/* Responsive product page */
+@media (max-width: 1180px) {
+  .waco-product-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1024px) {
+  .waco-product-category-grid,
+  .waco-product-guide-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .waco-product-guide-box {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .waco-products-hero {
+    min-height: 520px;
+  }
+
+  .waco-products-hero-content {
+    padding: 84px 0 110px;
+  }
+
+  .waco-product-category-grid,
+  .waco-product-grid,
+  .waco-product-guide-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .waco-product-category-media,
+  .waco-product-card-media {
+    height: 220px;
+  }
+
+  .waco-product-card {
+    min-height: 0;
+  }
+
+  .waco-product-filter {
+    gap: 10px;
+  }
+
+  .waco-product-filter button {
+    flex: 1 1 auto;
+  }
+}
+
+
+/* =========================================================
+  PRODUCTS PAGE v1.1.1 OVERRIDE
+========================================================= */
+
+.waco-inner-hero {
+  position: relative;
+  min-height: 360px !important;
+  height: 360px !important;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}
+
+.waco-inner-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 64px;
+  pointer-events: none;
+  background: linear-gradient(180deg, transparent, rgba(247, 243, 235, 0.96));
+}
+
+.waco-inner-hero-content {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  min-height: 360px;
+  text-align: center;
+}
+
+.waco-inner-hero-content h1 {
+  margin: 10px 0 0;
+  color: #ffffff;
+  font-size: clamp(42px, 5vw, 72px);
+  line-height: 1.04;
+  letter-spacing: -0.04em;
+}
+
+.waco-breadcrumb {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.waco-breadcrumb a {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.waco-products-page .waco-product-list-section {
+  padding-top: 64px;
+}
+
+.waco-product-categories-section,
+.waco-product-guide-section {
+  display: none !important;
+}
+
+.waco-product-category-menu {
+  margin: -2px 0 34px;
+  padding: 14px;
+  border: 1px solid var(--waco-line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.62);
+  box-shadow: var(--waco-shadow-soft);
+}
+
+.waco-product-category-menu button {
+  min-height: 44px;
+  padding: 10px 20px;
+  border-radius: 999px;
+}
+
+.waco-shop-product-grid,
+.waco-products-page .waco-product-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 24px !important;
+}
+
+.waco-shop-card,
+.waco-products-page .waco-product-card {
+  min-height: 520px !important;
+  height: 520px !important;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--waco-line);
+  border-radius: var(--waco-radius-lg);
+  background: #ffffff;
+  box-shadow: var(--waco-shadow-soft);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.waco-shop-card:hover,
+.waco-products-page .waco-product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--waco-shadow);
+}
+
+.waco-products-page .waco-product-card-media {
+  display: block;
+  height: 270px !important;
+  flex: 0 0 auto;
+  background-color: #e5e7eb;
+}
+
+.waco-products-page .waco-product-card-body {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: 22px 24px 28px;
+}
+
+.waco-products-page .waco-product-card-body h3 {
+  margin: 0 0 10px;
+  color: var(--waco-dark);
+  font-size: clamp(22px, 1.8vw, 28px);
+  line-height: 1.16;
+  letter-spacing: -0.025em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.waco-products-page .waco-product-card-body p {
+  margin: 0 0 16px;
+  color: var(--waco-muted);
+  font-size: 14px;
+  line-height: 1.55;
+  min-height: calc(14px * 1.55 * 2);
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.waco-products-page .waco-product-meta,
+.waco-products-page .waco-product-card-body > .waco-card-tag {
+  display: none !important;
+}
+
+.waco-product-price {
+  margin-top: auto;
+  margin-bottom: 16px;
+  color: var(--waco-primary-dark);
+  font-size: 22px;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.waco-product-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.waco-cart-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  color: #ffffff;
+  background: var(--waco-primary);
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1;
+  box-shadow: 0 12px 26px rgba(35, 64, 49, 0.18);
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.waco-cart-btn:hover {
+  transform: translateY(-2px);
+  background: var(--waco-primary-dark);
+}
+
+.waco-view-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 10px 14px;
+  border: 1px solid rgba(35, 64, 49, 0.18);
+  border-radius: 999px;
+  color: var(--waco-primary-dark);
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.waco-view-link:hover {
+  transform: translateY(-2px);
+  background: rgba(35, 64, 49, 0.06);
+}
+
+.waco-pagination {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 38px;
+}
+
+.waco-pagination a,
+.waco-pagination span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  height: 44px;
+  padding: 0 14px;
+  border: 1px solid rgba(35, 64, 49, 0.14);
+  border-radius: 999px;
+  color: var(--waco-primary-dark);
+  background: rgba(255, 255, 255, 0.78);
+  font-size: 14px;
+  font-weight: 800;
+  box-shadow: 0 10px 24px rgba(17, 24, 39, 0.05);
+}
+
+.waco-pagination a.is-active,
+.waco-pagination a:hover {
+  color: #ffffff;
+  border-color: var(--waco-primary);
+  background: var(--waco-primary);
+}
+
+@media (max-width: 1024px) {
+  .waco-shop-product-grid,
+  .waco-products-page .waco-product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .waco-shop-card,
+  .waco-products-page .waco-product-card {
+    height: 500px !important;
+    min-height: 500px !important;
+  }
+
+  .waco-products-page .waco-product-card-media {
+    height: 250px !important;
+  }
+
+  .waco-product-category-menu {
+    border-radius: 28px;
+  }
+}
+
+@media (max-width: 760px) {
+  .waco-inner-hero {
+    min-height: 300px !important;
+    height: 300px !important;
+  }
+
+  .waco-inner-hero-content {
+    min-height: 300px;
+  }
+
+  .waco-inner-hero-content h1 {
+    font-size: clamp(36px, 10vw, 52px);
+  }
+
+  .waco-shop-product-grid,
+  .waco-products-page .waco-product-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .waco-shop-card,
+  .waco-products-page .waco-product-card {
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  .waco-products-page .waco-product-card-media {
+    height: 230px !important;
+  }
+
+  .waco-product-category-menu {
+    border-radius: 24px;
+  }
+
+  .waco-product-category-menu button {
+    flex: 1 1 calc(50% - 10px);
+  }
+
+  .waco-cart-btn,
+  .waco-view-link {
+    flex: 1 1 auto;
+  }
+}
+
+/* =========================================================
+  PRODUCT DETAIL PAGE v1.2.0
+========================================================= */
+.waco-product-detail-section{padding-top:70px;padding-bottom:64px;}
+.waco-product-detail-layout{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(360px,.82fr);gap:44px;align-items:start;}
+.waco-product-gallery{display:grid;gap:16px;}
+.waco-product-main-image{min-height:560px;border:1px solid var(--waco-line);border-radius:var(--waco-radius-xl);background-color:#e5e7eb;box-shadow:var(--waco-shadow-soft);}
+.waco-product-thumb-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;}
+.waco-product-thumb-grid button{overflow:hidden;height:120px;padding:0;border:2px solid transparent;border-radius:20px;background:transparent;cursor:pointer;box-shadow:var(--waco-shadow-soft);transition:transform .25s ease,border-color .25s ease;}
+.waco-product-thumb-grid button:hover{transform:translateY(-3px);}
+.waco-product-thumb-grid button.is-active{border-color:var(--waco-primary);}
+.waco-product-thumb-grid span{display:block;width:100%;height:100%;}
+.waco-product-summary{position:sticky;top:24px;padding:clamp(26px,4vw,38px);border:1px solid var(--waco-line);border-radius:var(--waco-radius-xl);background:rgba(255,255,255,.78);box-shadow:var(--waco-shadow-soft);}
+.waco-product-badge{display:inline-flex;align-items:center;min-height:30px;margin-bottom:14px;padding:6px 12px;border-radius:999px;color:var(--waco-primary);background:rgba(35,64,49,.08);font-size:14px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;}
+.waco-product-summary h2{margin:0 0 14px;color:var(--waco-dark);font-size:clamp(34px,4vw,54px);line-height:1.04;letter-spacing:-.04em;}
+.waco-product-summary p{margin:0;color:var(--waco-muted);font-size:15px;line-height:1.7;}
+.waco-product-detail-price{margin:26px 0;color:var(--waco-primary-dark);font-size:clamp(30px,4vw,46px);line-height:1;font-weight:900;letter-spacing:-.04em;}
+.waco-product-option-group{display:grid;gap:12px;margin-bottom:22px;}
+.waco-product-option-group h3{margin:0;color:var(--waco-dark);font-size:16px;line-height:1.2;}
+.waco-product-options{display:flex;flex-wrap:wrap;gap:10px;}
+.waco-product-options button{min-height:42px;padding:10px 16px;border:1px solid rgba(35,64,49,.16);border-radius:999px;color:var(--waco-primary-dark);background:#fff;font-size:14px;font-weight:800;cursor:pointer;transition:background .25s ease,color .25s ease,transform .25s ease,border-color .25s ease;}
+.waco-product-options button:hover{transform:translateY(-2px);background:rgba(35,64,49,.06);}
+.waco-product-options button.is-active{color:#fff;border-color:var(--waco-primary);background:var(--waco-primary);}
+.waco-product-purchase{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:28px 0;}
+.waco-quantity-control{display:inline-flex;overflow:hidden;height:46px;border:1px solid rgba(35,64,49,.18);border-radius:999px;background:#fff;}
+.waco-quantity-control button,.waco-quantity-control input{width:44px;border:0;color:var(--waco-primary-dark);background:transparent;font-size:14px;font-weight:800;text-align:center;}
+.waco-quantity-control button{cursor:pointer;}
+.waco-quantity-control input{width:56px;outline:none;appearance:textfield;}
+.waco-quantity-control input::-webkit-inner-spin-button,.waco-quantity-control input::-webkit-outer-spin-button{appearance:none;margin:0;}
+.waco-detail-cart-btn,.waco-detail-inquiry-btn{min-height:46px;}
+.waco-product-summary-list{display:grid;gap:10px;margin:0;padding:22px 0 0;border-top:1px solid var(--waco-line);list-style:none;}
+.waco-product-summary-list li{color:var(--waco-muted);font-size:14px;line-height:1.5;}
+.waco-product-summary-list strong{color:var(--waco-dark);}
+.waco-product-info-section{padding-top:54px;padding-bottom:62px;}
+.waco-product-tabs{border:1px solid var(--waco-line);border-radius:var(--waco-radius-xl);background:rgba(255,255,255,.74);box-shadow:var(--waco-shadow-soft);overflow:hidden;}
+.waco-tab-nav{display:flex;flex-wrap:wrap;border-bottom:1px solid var(--waco-line);background:rgba(255,255,255,.54);}
+.waco-tab-nav button{min-height:58px;padding:16px 24px;border:0;border-right:1px solid var(--waco-line);color:var(--waco-primary-dark);background:transparent;font-size:14px;font-weight:900;cursor:pointer;}
+.waco-tab-nav button.is-active{color:#fff;background:var(--waco-primary);}
+.waco-tab-panel{display:none;padding:clamp(26px,4vw,40px);}
+.waco-tab-panel.is-active{display:block;}
+.waco-tab-content-grid{display:grid;grid-template-columns:minmax(0,.95fr) minmax(320px,.72fr);gap:34px;align-items:center;}
+.waco-tab-content-grid h2{margin:0 0 16px;color:var(--waco-dark);font-size:clamp(30px,3.6vw,48px);line-height:1.04;letter-spacing:-.04em;}
+.waco-tab-content-grid p{margin:0 0 14px;color:var(--waco-muted);font-size:15px;line-height:1.7;}
+.waco-tab-image{min-height:280px;border-radius:24px;background-color:#e5e7eb;box-shadow:var(--waco-shadow-soft);}
+.waco-spec-table{display:grid;border:1px solid var(--waco-line);border-radius:24px;overflow:hidden;}
+.waco-spec-table div{display:grid;grid-template-columns:220px 1fr;min-height:58px;border-bottom:1px solid var(--waco-line);}
+.waco-spec-table div:last-child{border-bottom:0;}
+.waco-spec-table span,.waco-spec-table strong{display:flex;align-items:center;padding:16px 20px;font-size:14px;line-height:1.45;}
+.waco-spec-table span{color:var(--waco-primary-dark);background:rgba(35,64,49,.06);font-weight:800;}
+.waco-spec-table strong{color:var(--waco-text);background:#fff;font-weight:700;}
+.waco-installation-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;}
+.waco-installation-grid article{padding:26px;border-radius:24px;background:#fff;box-shadow:var(--waco-shadow-soft);}
+.waco-installation-grid span{display:inline-flex;margin-bottom:18px;color:var(--waco-accent);font-size:28px;line-height:1;font-weight:900;}
+.waco-installation-grid h3{margin:0 0 10px;color:var(--waco-dark);font-size:20px;line-height:1.18;}
+.waco-installation-grid p{margin:0;color:var(--waco-muted);font-size:14px;line-height:1.55;}
+.waco-related-products-section{padding-top:64px;padding-bottom:64px;}
+@media (max-width:1024px){.waco-product-detail-layout{grid-template-columns:1fr;}.waco-product-summary{position:static;}.waco-product-main-image{min-height:480px;}.waco-tab-content-grid{grid-template-columns:1fr;}.waco-installation-grid{grid-template-columns:1fr;}}
+@media (max-width:760px){.waco-product-detail-section{padding-top:52px;padding-bottom:52px;}.waco-product-main-image{min-height:340px;}.waco-product-thumb-grid{gap:10px;}.waco-product-thumb-grid button{height:72px;border-radius:14px;}.waco-product-summary{padding:24px;}.waco-product-purchase{align-items:stretch;}.waco-quantity-control{width:100%;justify-content:space-between;}.waco-detail-cart-btn,.waco-detail-inquiry-btn{flex:1 1 auto;}.waco-tab-nav button{flex:1 1 auto;min-height:52px;border-bottom:1px solid var(--waco-line);}.waco-spec-table div{grid-template-columns:1fr;}}
+
+
+/* =========================================================
+  PRODUCT DETAIL PAGE v1.2.1 OVERRIDE
+  - Product gallery changed to Swiper
+  - Desktop thumbnails: 5
+  - Mobile thumbnails: 4
+  - Gallery arrows visible on main image
+  - Product detail two-column ratio refined
+  - Related product card whitespace reduced
+========================================================= */
+
+/* Detail layout ratio refinement */
+.waco-product-detail-layout {
+  grid-template-columns: minmax(0, 1.16fr) minmax(360px, 0.74fr) !important;
+  gap: 38px !important;
+}
+
+/* Swiper gallery */
+.waco-product-gallery {
+  min-width: 0;
+}
+
+.waco-product-main-swiper {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--waco-line);
+  border-radius: var(--waco-radius-xl);
+  background: #e5e7eb;
+  box-shadow: var(--waco-shadow-soft);
+}
+
+.waco-product-main-swiper .swiper-slide {
+  height: auto;
+}
+
+.waco-product-main-swiper .waco-product-main-image {
+  min-height: 520px;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* Remove old thumb-grid visual if legacy markup appears */
+.waco-product-thumb-grid {
+  display: none !important;
+}
+
+.waco-product-thumb-swiper {
+  overflow: hidden;
+  margin-top: 16px;
+  padding: 2px 2px 4px;
+}
+
+.waco-product-thumb-swiper .swiper-slide {
+  cursor: pointer;
+}
+
+.waco-product-thumb-image {
+  height: 106px;
+  border: 2px solid transparent;
+  border-radius: 18px;
+  background-color: #e5e7eb;
+  box-shadow: var(--waco-shadow-soft);
+  transition: border-color 0.25s ease, transform 0.25s ease, opacity 0.25s ease;
+  opacity: 0.72;
+}
+
+.waco-product-thumb-swiper .swiper-slide:hover .waco-product-thumb-image {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.waco-product-thumb-swiper .swiper-slide-thumb-active .waco-product-thumb-image {
+  border-color: var(--waco-primary);
+  opacity: 1;
+}
+
+/* Main image arrows */
+.waco-detail-gallery-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  border-radius: 999px;
+  color: #ffffff;
+  background: rgba(22, 41, 31, 0.52);
+  box-shadow: 0 12px 30px rgba(17, 24, 39, 0.16);
+  backdrop-filter: blur(12px);
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.waco-detail-gallery-arrow:hover {
+  background: rgba(22, 41, 31, 0.76);
+  transform: translateY(-50%) scale(1.04);
+}
+
+.waco-detail-gallery-prev {
+  left: 18px;
+}
+
+.waco-detail-gallery-next {
+  right: 18px;
+}
+
+/* Right summary slightly tighter */
+.waco-product-summary {
+  padding: clamp(24px, 3.4vw, 34px) !important;
+}
+
+.waco-product-summary h2 {
+  font-size: clamp(32px, 3.6vw, 50px) !important;
+}
+
+.waco-product-detail-price {
+  margin: 22px 0 !important;
+}
+
+/* Related products: reduce empty space between description and price */
+.waco-related-products-section .waco-shop-card,
+.waco-related-products-section .waco-product-card {
+  height: 455px !important;
+  min-height: 455px !important;
+}
+
+.waco-related-products-section .waco-product-card-media {
+  height: 235px !important;
+}
+
+.waco-related-products-section .waco-product-card-body {
+  padding: 20px 22px 24px !important;
+}
+
+.waco-related-products-section .waco-product-card-body p {
+  margin-bottom: 14px !important;
+  min-height: 43.4px !important;
+}
+
+.waco-related-products-section .waco-product-price {
+  margin-top: 0 !important;
+  margin-bottom: 14px !important;
+  font-size: 20px !important;
+}
+
+/* Keep product list page cards unchanged */
+.waco-products-page .waco-shop-card,
+.waco-products-page .waco-product-card {
+  height: 520px !important;
+  min-height: 520px !important;
+}
+
+.waco-products-page .waco-product-card-media {
+  height: 270px !important;
+}
+
+@media (max-width: 1024px) {
+  .waco-product-detail-layout {
+    grid-template-columns: 1fr !important;
+  }
+
+  .waco-product-main-swiper .waco-product-main-image {
+    min-height: 460px;
+  }
+
+  .waco-related-products-section .waco-shop-card,
+  .waco-related-products-section .waco-product-card {
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  .waco-products-page .waco-shop-card,
+  .waco-products-page .waco-product-card {
+    height: 500px !important;
+    min-height: 500px !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .waco-product-main-swiper .waco-product-main-image {
+    min-height: 340px;
+  }
+
+  .waco-product-thumb-image {
+    height: 78px;
+    border-radius: 14px;
+  }
+
+  .waco-detail-gallery-arrow {
+    width: 40px;
+    height: 40px;
+  }
+
+  .waco-detail-gallery-prev {
+    left: 12px;
+  }
+
+  .waco-detail-gallery-next {
+    right: 12px;
+  }
+
+  .waco-products-page .waco-shop-card,
+  .waco-products-page .waco-product-card {
+    height: auto !important;
+    min-height: 0 !important;
+  }
+}
+
+
+/* =========================================================
+  PRODUCT DETAIL PAGE v1.2.2 FINAL GALLERY FIX
+  - Replaces broken Swiper-dependent gallery with a stable carousel
+  - Main image uses a fixed overflow-hidden track
+  - Desktop thumbnails: 5
+  - Mobile thumbnails: 4
+  - Colour buttons switch corresponding image
+========================================================= */
+
+/* Refine detail columns */
+.waco-product-detail-layout {
+  grid-template-columns: minmax(0, 1.08fr) minmax(360px, 0.82fr) !important;
+  gap: 42px !important;
+  align-items: start !important;
+}
+
+.waco-product-gallery {
+  width: 100%;
+  min-width: 0;
+  display: grid !important;
+  gap: 16px !important;
+}
+
+/* Hide old gallery structures if any legacy markup remains */
+.waco-product-main-swiper,
+.waco-product-thumb-swiper,
+.waco-product-thumb-grid {
+  display: none !important;
+}
+
+.waco-product-main-carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid var(--waco-line);
+  border-radius: var(--waco-radius-xl);
+  background: #e5e7eb;
+  box-shadow: var(--waco-shadow-soft);
+}
+
+.waco-product-main-track {
+  display: flex;
+  width: 100%;
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.45s ease;
+  will-change: transform;
+}
+
+.waco-product-main-slide {
+  flex: 0 0 100%;
+  width: 100%;
+  min-width: 100%;
+}
+
+.waco-product-main-slide .waco-product-main-image,
+.waco-product-main-carousel .waco-product-main-image {
+  width: 100%;
+  min-height: 540px;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Main image arrows */
+.waco-detail-gallery-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 8;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  border-radius: 999px;
+  color: #ffffff;
+  background: rgba(22, 41, 31, 0.56);
+  box-shadow: 0 12px 30px rgba(17, 24, 39, 0.16);
+  backdrop-filter: blur(12px);
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.waco-detail-gallery-arrow:hover {
+  background: rgba(22, 41, 31, 0.78);
+  transform: translateY(-50%) scale(1.04);
+}
+
+.waco-detail-gallery-prev { left: 18px; }
+.waco-detail-gallery-next { right: 18px; }
+
+/* Stable thumbnail grid: PC 5 columns */
+.waco-product-thumb-grid-v2 {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.waco-product-thumb-grid-v2 button {
+  overflow: hidden;
+  height: 104px;
+  padding: 0;
+  border: 2px solid transparent;
+  border-radius: 18px;
+  background: transparent;
+  cursor: pointer;
+  box-shadow: var(--waco-shadow-soft);
+  transition: transform 0.25s ease, border-color 0.25s ease, opacity 0.25s ease;
+  opacity: 0.72;
+}
+
+.waco-product-thumb-grid-v2 button:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.waco-product-thumb-grid-v2 button.is-active {
+  border-color: var(--waco-primary);
+  opacity: 1;
+}
+
+.waco-product-thumb-grid-v2 span {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Product summary proportion */
+.waco-product-summary {
+  padding: clamp(24px, 3.4vw, 34px) !important;
+}
+
+.waco-product-summary h2 {
+  font-size: clamp(32px, 3.5vw, 50px) !important;
+}
+
+/* Related Products: remove excessive empty space between description and price */
+.waco-related-products-section .waco-shop-card,
+.waco-related-products-section .waco-product-card {
+  height: 445px !important;
+  min-height: 445px !important;
+}
+
+.waco-related-products-section .waco-product-card-media {
+  height: 225px !important;
+}
+
+.waco-related-products-section .waco-product-card-body {
+  padding: 20px 22px 24px !important;
+}
+
+.waco-related-products-section .waco-product-card-body p {
+  margin-bottom: 12px !important;
+  min-height: 43.4px !important;
+}
+
+.waco-related-products-section .waco-product-price {
+  margin-top: 0 !important;
+  margin-bottom: 14px !important;
+  font-size: 20px !important;
+}
+
+@media (max-width: 1024px) {
+  .waco-product-detail-layout {
+    grid-template-columns: 1fr !important;
+  }
+
+  .waco-product-main-slide .waco-product-main-image,
+  .waco-product-main-carousel .waco-product-main-image {
+    min-height: 460px;
+  }
+
+  .waco-related-products-section .waco-shop-card,
+  .waco-related-products-section .waco-product-card {
+    height: auto !important;
+    min-height: 0 !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .waco-product-main-slide .waco-product-main-image,
+  .waco-product-main-carousel .waco-product-main-image {
+    min-height: 340px;
+  }
+
+  .waco-product-thumb-grid-v2 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .waco-product-thumb-grid-v2 button {
+    height: 76px;
+    border-radius: 14px;
+  }
+
+  .waco-detail-gallery-arrow {
+    width: 40px;
+    height: 40px;
+  }
+
+  .waco-detail-gallery-prev { left: 12px; }
+  .waco-detail-gallery-next { right: 12px; }
+}
+
+
+/* =========================================================
+  PRODUCT DETAIL PAGE v1.2.3 MAGNIFIER
+  - JS-powered magnifier for product main image
+  - Desktop hover only
+  - Keeps current stable custom carousel
+========================================================= */
+
+.waco-product-main-carousel {
+  cursor: zoom-in;
+}
+
+.waco-product-main-slide .waco-product-main-image {
+  position: relative;
+}
+
+.waco-zoom-lens {
+  position: absolute;
+  z-index: 12;
+  width: 168px;
+  height: 168px;
+  border: 2px solid rgba(255, 255, 255, 0.82);
+  border-radius: 999px;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.92);
+  background-repeat: no-repeat;
+  background-size: 220% 220%;
+  box-shadow:
+    0 18px 42px rgba(17, 24, 39, 0.22),
+    inset 0 0 0 1px rgba(22, 41, 31, 0.12);
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+.waco-product-main-image.is-zooming .waco-zoom-lens {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+@media (max-width: 760px) {
+  .waco-product-main-carousel {
+    cursor: default;
+  }
+
+  .waco-zoom-lens {
+    display: none !important;
+  }
+}
+
+
+/* =========================================================
+  PRODUCT DETAIL PAGE v1.2.4 WOOCOMMERCE-STYLE ZOOM
+  - Replaces circular lens magnifier
+  - Hover zoom scales the product image itself
+  - Transform origin follows cursor position
+  - Click opens a lightbox-style preview
+========================================================= */
+
+/* Disable previous circular magnifier effect */
+.waco-zoom-lens {
+  display: none !important;
+}
+
+.waco-product-main-image.is-zooming .waco-zoom-lens {
+  display: none !important;
+}
+
+/* WooCommerce-like hover zoom */
+.waco-product-main-carousel {
+  cursor: zoom-in;
+}
+
+.waco-product-main-carousel .waco-product-main-slide {
+  overflow: hidden;
+}
+
+.waco-product-main-carousel .waco-product-main-image {
+  transition: transform 0.22s ease;
+  transform: scale(1);
+  will-change: transform, transform-origin;
+}
+
+.waco-product-main-carousel .waco-product-main-image.is-wc-zooming {
+  transform: scale(1.85);
+}
+
+/* Zoom icon button in the upper right corner */
+.waco-wc-zoom-trigger {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  z-index: 9;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border: 1px solid rgba(255, 255, 255, 0.44);
+  border-radius: 999px;
+  color: #ffffff;
+  background: rgba(22, 41, 31, 0.58);
+  box-shadow: 0 12px 30px rgba(17, 24, 39, 0.16);
+  backdrop-filter: blur(12px);
+  cursor: pointer;
+  font-size: 22px;
+  line-height: 1;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.waco-wc-zoom-trigger:hover {
+  background: rgba(22, 41, 31, 0.82);
+  transform: translateY(-2px);
+}
+
+/* Lightbox */
+.waco-product-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 52px;
+  background: rgba(10, 16, 13, 0.86);
+  backdrop-filter: blur(14px);
+}
+
+.waco-product-lightbox.is-open {
+  display: flex;
+}
+
+.waco-product-lightbox-image {
+  width: min(1120px, calc(100vw - 160px));
+  height: min(760px, calc(100vh - 120px));
+  border-radius: 28px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.42);
+}
+
+.waco-product-lightbox-close,
+.waco-product-lightbox-arrow {
+  position: absolute;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 999px;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(12px);
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.waco-product-lightbox-close:hover,
+.waco-product-lightbox-arrow:hover {
+  background: rgba(255, 255, 255, 0.18);
+  transform: translateY(-2px);
+}
+
+.waco-product-lightbox-close {
+  top: 28px;
+  right: 28px;
+  width: 48px;
+  height: 48px;
+  font-size: 28px;
+  line-height: 1;
+}
+
+.waco-product-lightbox-arrow {
+  top: 50%;
+  width: 52px;
+  height: 52px;
+  font-size: 24px;
+}
+
+.waco-product-lightbox-prev {
+  left: 28px;
+}
+
+.waco-product-lightbox-next {
+  right: 28px;
+}
+
+@media (max-width: 760px) {
+  .waco-product-main-carousel {
+    cursor: default;
+  }
+
+  .waco-product-main-carousel .waco-product-main-image.is-wc-zooming {
+    transform: scale(1);
+  }
+
+  .waco-wc-zoom-trigger {
+    width: 40px;
+    height: 40px;
+    top: 12px;
+    right: 12px;
+    font-size: 18px;
+  }
+
+  .waco-product-lightbox {
+    padding: 20px;
+  }
+
+  .waco-product-lightbox-image {
+    width: calc(100vw - 40px);
+    height: calc(100vh - 120px);
+    border-radius: 20px;
+  }
+
+  .waco-product-lightbox-close {
+    top: 14px;
+    right: 14px;
+  }
+
+  .waco-product-lightbox-prev {
+    left: 14px;
+  }
+
+  .waco-product-lightbox-next {
+    right: 14px;
+  }
+}
+
+
+/* =========================================================
+  v1.2.5 HOMEPAGE PRODUCT RANGE FIX
+  Reason:
+  Product listing/detail page styles used `.waco-product-grid`, which also exists on the homepage.
+  This final scoped layer restores the homepage Product Range layout and prevents shop card styles
+  from changing the homepage category cards.
+========================================================= */
+
+/* Homepage Product Range: left feature card + right 2×2 card grid */
+.waco-page:not(.waco-products-page):not(.waco-product-detail-page) .waco-product-layout {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1.75fr) !important;
+  gap: 22px !important;
+  align-items: stretch !important;
+}
+
+.waco-page:not(.waco-products-page):not(.waco-product-detail-page) .waco-product-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 22px !important;
+  align-content: stretch !important;
+}
+
+/* Restore homepage Product Range card proportions */
+.waco-page:not(.waco-products-page):not(.waco-product-detail-page) .waco-product-layout > .waco-media-card-large {
+  height: 610px !important;
+  min-height: 610px !important;
+}
+
+.waco-page:not(.waco-products-page):not(.waco-product-detail-page) .waco-product-grid > .waco-media-card {
+  height: 294px !important;
+  min-height: 294px !important;
+}
+
+/* Restore homepage Product Range image heights */
+.waco-page:not(.waco-products-page):not(.waco-product-detail-page) .waco-product-layout > .waco-media-card-large .waco-card-media {
+  height: 388px !important;
+}
+
+.waco-page:not(.waco-products-page):not(.waco-product-detail-page) .waco-product-grid > .waco-media-card .waco-card-media {
+  height: 142px !important;
+}
+
+/* Restore homepage card body; do not inherit shop card product body rules */
+.waco-page:not(.waco-products-page):not(.waco-product-detail-page) .waco-product-layout .waco-card-body,
+.waco-page:not(.waco-products-page):not(.waco-product-detail-page) .waco-product-grid .waco-card-body {
+  display: flex !important;
+  flex: 1 1 auto !important;
+  flex-direction: column !important;
+  padding: 20px 22px 28px !important;
+}
+
+.waco-page:not(.waco-products-page):not(.waco-product-detail-page) .waco-product-layout .waco-card-body h3,
+.waco-page:not(.waco-products-page):not(.waco-product-detail-page) .waco-product-grid .waco-card-body h3 {
+  margin: 0 0 8px !important;
+  color: var(--waco-dark) !important;
+  font-size: clamp(20px, 1.55vw, 24px) !important;
+  line-height: 1.18 !important;
+  letter-spacing: -0.025em !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+.waco-page:not(.waco-products-page):not(.waco-product-detail-page) .waco-product-layout .waco-card-body p,
+.waco-page:not(.waco-products-page):not(.waco-product-detail-page) .waco-product-grid .waco-card-body p {
+  margin: 0 0 16px !important;
+  color: var(--waco-muted) !important;
+  font-size: 14px !important;
+  line-height: 1.55 !important;
+  min-height: calc(14px * 1.55 * 2) !important;
+  overflow: hidden !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+}
+
+/* Make sure homepage tags and action links remain visible */
+.waco-page:not(.waco-products-page):not(.waco-product-detail-page) .waco-product-layout .waco-card-tag,
+.waco-page:not(.waco-products-page):not(.waco-product-detail-page) .waco-product-grid .waco-card-tag {
+  display: inline-flex !important;
+}
+
+.waco-page:not(.waco-products-page):not(.waco-product-detail-page) .waco-product-layout .waco-arrow-link,
+.waco-page:not(.waco-products-page):not(.waco-product-detail-page) .waco-product-grid .waco-arrow-link {
+  display: inline-flex !important;
+  margin-top: auto !important;
+}
+
+/* Homepage should never inherit shop price / cart actions inside Product Range */
+.waco-page:not(.waco-products-page):not(.waco-product-detail-page) .waco-product-layout .waco-product-price,
+.waco-page:not(.waco-products-page):not(.waco-product-detail-page) .waco-product-grid .waco-product-price,
+.waco-page:not(.waco-products-page):not(.waco-product-detail-page) .waco-product-layout .waco-product-actions,
+.waco-page:not(.waco-products-page):not(.waco-product-detail-page) .waco-product-grid .waco-product-actions {
+  display: none !important;
+}
+
+@media (max-width: 1024px) {
+  .waco-page:not(.waco-products-page):not(.waco-product-detail-page) .waco-product-layout {
+    grid-template-columns: 1fr !important;
+  }
+
+  .waco-page:not(.waco-products-page):not(.waco-product-detail-page) .waco-product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .waco-page:not(.waco-products-page):not(.waco-product-detail-page) .waco-product-layout > .waco-media-card-large,
+  .waco-page:not(.waco-products-page):not(.waco-product-detail-page) .waco-product-grid > .waco-media-card {
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  .waco-page:not(.waco-products-page):not(.waco-product-detail-page) .waco-product-layout > .waco-media-card-large .waco-card-media {
+    height: 340px !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .waco-page:not(.waco-products-page):not(.waco-product-detail-page) .waco-product-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .waco-page:not(.waco-products-page):not(.waco-product-detail-page) .waco-product-layout .waco-card-media,
+  .waco-page:not(.waco-products-page):not(.waco-product-detail-page) .waco-product-grid .waco-card-media,
+  .waco-page:not(.waco-products-page):not(.waco-product-detail-page) .waco-product-layout > .waco-media-card-large .waco-card-media {
+    height: 220px !important;
+  }
+}
+
+
+/* =========================================================
+  PRODUCT DETAIL 02 v1.3.0
+  Swiper gallery test version.
+  Scoped to `.waco-product-detail-swiper-page` so it does not affect original `product-detail.html`.
+========================================================= */
+
+.waco-product-detail-swiper-page .waco-product-gallery {
+  width: 100%;
+  min-width: 0;
+  display: grid !important;
+  gap: 16px !important;
+}
+
+.waco-product-detail-swiper-page .waco-pd2-main-swiper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid var(--waco-line);
+  border-radius: var(--waco-radius-xl);
+  background: #e5e7eb;
+  box-shadow: var(--waco-shadow-soft);
+  cursor: zoom-in;
+}
+
+.waco-product-detail-swiper-page .waco-pd2-main-swiper .swiper-wrapper {
+  align-items: stretch;
+}
+
+.waco-product-detail-swiper-page .waco-pd2-main-swiper .swiper-slide {
+  width: 100% !important;
+  height: auto;
+  overflow: hidden;
+}
+
+.waco-product-detail-swiper-page .waco-pd2-main-image {
+  width: 100%;
+  min-height: 540px;
+  background-color: #e5e7eb;
+  transition: transform 0.22s ease;
+  transform: scale(1);
+  will-change: transform, transform-origin;
+}
+
+.waco-product-detail-swiper-page .waco-pd2-main-image.is-wc-zooming {
+  transform: scale(1.85);
+}
+
+.waco-product-detail-swiper-page .waco-pd2-thumb-swiper {
+  width: 100%;
+  overflow: hidden;
+  padding: 2px 2px 4px;
+}
+
+.waco-product-detail-swiper-page .waco-pd2-thumb-swiper .swiper-wrapper {
+  align-items: stretch;
+}
+
+.waco-product-detail-swiper-page .waco-pd2-thumb-swiper .swiper-slide {
+  height: auto;
+  cursor: pointer;
+}
+
+.waco-product-detail-swiper-page .waco-pd2-thumb-image {
+  height: 104px;
+  border: 2px solid transparent;
+  border-radius: 18px;
+  background-color: #e5e7eb;
+  box-shadow: var(--waco-shadow-soft);
+  opacity: 0.72;
+  transition: border-color 0.25s ease, transform 0.25s ease, opacity 0.25s ease;
+}
+
+.waco-product-detail-swiper-page .waco-pd2-thumb-swiper .swiper-slide:hover .waco-pd2-thumb-image {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.waco-product-detail-swiper-page .waco-pd2-thumb-swiper .swiper-slide-thumb-active .waco-pd2-thumb-image,
+.waco-product-detail-swiper-page .waco-pd2-thumb-swiper .swiper-slide.is-active .waco-pd2-thumb-image {
+  border-color: var(--waco-primary);
+  opacity: 1;
+}
+
+/* Make sure detail 02 arrows use gallery arrow style and stay visible */
+.waco-product-detail-swiper-page .waco-detail-gallery-arrow {
+  display: inline-flex !important;
+}
+
+/* Avoid original stable carousel rules applying to detail 02 */
+.waco-product-detail-swiper-page .waco-product-main-carousel,
+.waco-product-detail-swiper-page .waco-product-thumb-grid-v2,
+.waco-product-detail-swiper-page .waco-product-main-track {
+  display: none !important;
+}
+
+@media (max-width: 1024px) {
+  .waco-product-detail-swiper-page .waco-pd2-main-image {
+    min-height: 460px;
+  }
+}
+
+@media (max-width: 760px) {
+  .waco-product-detail-swiper-page .waco-pd2-main-swiper {
+    cursor: default;
+  }
+
+  .waco-product-detail-swiper-page .waco-pd2-main-image {
+    min-height: 340px;
+  }
+
+  .waco-product-detail-swiper-page .waco-pd2-main-image.is-wc-zooming {
+    transform: scale(1);
+  }
+
+  .waco-product-detail-swiper-page .waco-pd2-thumb-image {
+    height: 76px;
+    border-radius: 14px;
+  }
+}
+
+
+/* =========================================================
+  BLOG LIST PAGE v1.4.0
+========================================================= */
+
+.waco-blog-page .waco-blog-featured-section {
+  padding-top: 64px;
+  padding-bottom: 58px;
+}
+
+.waco-blog-page .waco-blog-list-section {
+  padding-top: 58px;
+  padding-bottom: 64px;
+}
+
+/* Featured article */
+.waco-featured-blog-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.16fr) minmax(360px, 0.84fr);
+  gap: 0;
+  overflow: hidden;
+  border: 1px solid var(--waco-line);
+  border-radius: var(--waco-radius-xl);
+  background: #ffffff;
+  box-shadow: var(--waco-shadow-soft);
+}
+
+.waco-featured-blog-media {
+  min-height: 420px;
+  background-color: #e5e7eb;
+}
+
+.waco-featured-blog-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(28px, 4.5vw, 52px);
+}
+
+.waco-featured-blog-content h3 {
+  margin: 14px 0 16px;
+  color: var(--waco-dark);
+  font-size: clamp(30px, 3.6vw, 48px);
+  line-height: 1.06;
+  letter-spacing: -0.04em;
+}
+
+.waco-featured-blog-content p {
+  margin: 0 0 22px;
+  color: var(--waco-muted);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* Blog filter */
+.waco-blog-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: -2px 0 34px;
+  padding: 14px;
+  border: 1px solid var(--waco-line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.62);
+  box-shadow: var(--waco-shadow-soft);
+}
+
+.waco-blog-filter button {
+  min-height: 44px;
+  padding: 10px 20px;
+  border: 1px solid rgba(35, 64, 49, 0.16);
+  border-radius: 999px;
+  color: var(--waco-primary-dark);
+  background: rgba(255, 255, 255, 0.72);
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+
+.waco-blog-filter button:hover {
+  transform: translateY(-2px);
+  background: rgba(35, 64, 49, 0.08);
+}
+
+.waco-blog-filter button.is-active {
+  color: #ffffff;
+  border-color: var(--waco-primary);
+  background: var(--waco-primary);
+}
+
+/* Blog grid */
+.waco-blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.waco-blog-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: 500px;
+  border: 1px solid var(--waco-line);
+  border-radius: var(--waco-radius-lg);
+  background: #ffffff;
+  box-shadow: var(--waco-shadow-soft);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.waco-blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--waco-shadow);
+}
+
+.waco-blog-card.is-hidden {
+  display: none;
+}
+
+.waco-blog-card-media {
+  display: block;
+  height: 250px;
+  flex: 0 0 auto;
+  background-color: #e5e7eb;
+}
+
+.waco-blog-card-body {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: 22px 24px 28px;
+}
+
+.waco-blog-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  color: var(--waco-muted);
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.waco-blog-meta span:first-child {
+  display: inline-flex;
+  min-height: 28px;
+  align-items: center;
+  padding: 5px 10px;
+  border-radius: 999px;
+  color: var(--waco-primary);
+  background: rgba(35, 64, 49, 0.08);
+  font-weight: 800;
+}
+
+.waco-blog-card-body h3 {
+  margin: 14px 0 10px;
+  color: var(--waco-dark);
+  font-size: clamp(21px, 1.8vw, 28px);
+  line-height: 1.16;
+  letter-spacing: -0.025em;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.waco-blog-card-body p {
+  margin: 0 0 18px;
+  color: var(--waco-muted);
+  font-size: 14px;
+  line-height: 1.55;
+  min-height: calc(14px * 1.55 * 2);
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.waco-blog-card-body .waco-arrow-link {
+  margin-top: auto;
+}
+
+/* Reuse pagination styling, but keep blog page safe */
+.waco-blog-page .waco-pagination {
+  margin-top: 40px;
+}
+
+@media (max-width: 1024px) {
+  .waco-featured-blog-card {
+    grid-template-columns: 1fr;
+  }
+
+  .waco-featured-blog-media {
+    min-height: 340px;
+  }
+
+  .waco-blog-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .waco-blog-filter {
+    border-radius: 28px;
+  }
+}
+
+@media (max-width: 760px) {
+  .waco-blog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .waco-blog-card {
+    min-height: 0;
+  }
+
+  .waco-blog-card-media {
+    height: 220px;
+  }
+
+  .waco-featured-blog-media {
+    min-height: 260px;
+  }
+
+  .waco-blog-filter {
+    border-radius: 24px;
+  }
+
+  .waco-blog-filter button {
+    flex: 1 1 calc(50% - 10px);
+  }
+}
+
+
+/* =========================================================
+  BLOG LIST PAGE v1.4.1
+  Featured article image changed to Swiper carousel.
+========================================================= */
+
+.waco-featured-blog-swiper {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  background: #e5e7eb;
+}
+
+.waco-featured-blog-swiper .swiper-wrapper,
+.waco-featured-blog-swiper .swiper-slide {
+  height: 100%;
+}
+
+.waco-featured-blog-swiper .waco-featured-blog-media {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+}
+
+.waco-featured-blog-pagination {
+  position: absolute;
+  z-index: 4;
+  left: 0;
+  right: 0;
+  bottom: 18px !important;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.waco-featured-blog-pagination .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  margin: 0 !important;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  opacity: 1;
+  transition: width 0.25s ease, background 0.25s ease;
+}
+
+.waco-featured-blog-pagination .swiper-pagination-bullet-active {
+  width: 26px;
+  background: #ffffff;
+}
+
+@media (max-width: 1024px) {
+  .waco-featured-blog-swiper .waco-featured-blog-media {
+    min-height: 340px;
+  }
+}
+
+@media (max-width: 760px) {
+  .waco-featured-blog-swiper .waco-featured-blog-media {
+    min-height: 260px;
+  }
+
+  .waco-featured-blog-pagination {
+    bottom: 14px !important;
+  }
+}
+
+
+/* =========================================================
+  BLOG LIST PAGE v1.4.2 FEATURED SWIPER FIX
+  Fix:
+  The featured blog Swiper image area was not being reliably stretched,
+  so the left image appeared blank and the pagination dots were invisible.
+========================================================= */
+
+.waco-blog-page .waco-featured-blog-card {
+  align-items: stretch !important;
+}
+
+.waco-blog-page .waco-featured-blog-swiper {
+  position: relative !important;
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 420px !important;
+  overflow: hidden !important;
+  background: #e5e7eb !important;
+}
+
+.waco-blog-page .waco-featured-blog-swiper .swiper-wrapper {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 420px !important;
+}
+
+.waco-blog-page .waco-featured-blog-swiper .swiper-slide {
+  width: 100% !important;
+  height: auto !important;
+  min-height: 420px !important;
+}
+
+.waco-blog-page .waco-featured-blog-swiper .waco-featured-blog-media {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 420px !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+/* Make dots clearly visible over the image */
+.waco-blog-page .waco-featured-blog-pagination {
+  position: absolute !important;
+  z-index: 20 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 20px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 8px !important;
+  width: 100% !important;
+  height: 18px !important;
+  pointer-events: auto !important;
+}
+
+.waco-blog-page .waco-featured-blog-pagination .swiper-pagination-bullet {
+  display: inline-flex !important;
+  width: 8px !important;
+  height: 8px !important;
+  margin: 0 !important;
+  border-radius: 999px !important;
+  background: rgba(255, 255, 255, 0.72) !important;
+  opacity: 1 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.16) !important;
+  transition: width 0.25s ease, background 0.25s ease !important;
+}
+
+.waco-blog-page .waco-featured-blog-pagination .swiper-pagination-bullet-active {
+  width: 26px !important;
+  background: #ffffff !important;
+}
+
+@media (max-width: 1024px) {
+  .waco-blog-page .waco-featured-blog-swiper,
+  .waco-blog-page .waco-featured-blog-swiper .swiper-wrapper,
+  .waco-blog-page .waco-featured-blog-swiper .swiper-slide,
+  .waco-blog-page .waco-featured-blog-swiper .waco-featured-blog-media {
+    min-height: 340px !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .waco-blog-page .waco-featured-blog-swiper,
+  .waco-blog-page .waco-featured-blog-swiper .swiper-wrapper,
+  .waco-blog-page .waco-featured-blog-swiper .swiper-slide,
+  .waco-blog-page .waco-featured-blog-swiper .waco-featured-blog-media {
+    min-height: 260px !important;
+  }
+
+  .waco-blog-page .waco-featured-blog-pagination {
+    bottom: 14px !important;
+  }
+}
+
+
+/* =========================================================
+  BLOG LIST PAGE v1.4.3 FEATURED POSTS CAROUSEL
+  Change:
+  The featured section is now 3 recommended blog cards in a Swiper carousel.
+  Pagination dots sit below the entire card, not inside the image.
+========================================================= */
+
+.waco-blog-page .waco-featured-posts-wrap {
+  position: relative;
+}
+
+.waco-blog-page .waco-featured-posts-swiper {
+  width: 100%;
+  overflow: hidden;
+  border-radius: var(--waco-radius-xl);
+}
+
+.waco-blog-page .waco-featured-posts-swiper .swiper-wrapper {
+  align-items: stretch;
+}
+
+.waco-blog-page .waco-featured-posts-swiper .swiper-slide {
+  height: auto;
+}
+
+.waco-blog-page .waco-featured-posts-swiper .waco-featured-blog-card {
+  height: 100%;
+  min-height: 420px;
+}
+
+/* In v1.4.3 the media is a normal block again, not a nested image-only swiper. */
+.waco-blog-page .waco-featured-posts-swiper .waco-featured-blog-media {
+  display: block !important;
+  width: 100% !important;
+  min-height: 420px !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+/* Dots are outside and below the whole featured card. */
+.waco-blog-page .waco-featured-posts-pagination {
+  position: static !important;
+  z-index: 2;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 8px !important;
+  width: 100% !important;
+  min-height: 22px;
+  margin-top: 18px;
+}
+
+.waco-blog-page .waco-featured-posts-pagination .swiper-pagination-bullet {
+  display: inline-flex !important;
+  width: 8px !important;
+  height: 8px !important;
+  margin: 0 !important;
+  border-radius: 999px !important;
+  background: rgba(35, 64, 49, 0.34) !important;
+  opacity: 1 !important;
+  transition: width 0.25s ease, background 0.25s ease !important;
+}
+
+.waco-blog-page .waco-featured-posts-pagination .swiper-pagination-bullet-active {
+  width: 26px !important;
+  background: var(--waco-primary) !important;
+}
+
+/* Hide old image-only featured pagination if legacy markup/classes remain. */
+.waco-blog-page .waco-featured-blog-pagination {
+  display: none !important;
+}
+
+@media (max-width: 1024px) {
+  .waco-blog-page .waco-featured-posts-swiper .waco-featured-blog-card {
+    min-height: 0;
+  }
+
+  .waco-blog-page .waco-featured-posts-swiper .waco-featured-blog-media {
+    min-height: 340px !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .waco-blog-page .waco-featured-posts-swiper .waco-featured-blog-media {
+    min-height: 260px !important;
+  }
+
+  .waco-blog-page .waco-featured-posts-pagination {
+    margin-top: 14px;
+  }
+}
+
+
+/* =========================================================
+  BLOG DETAIL PAGE v1.5.0
+  Right sidebar TOC is generated from article h2 tags only.
+========================================================= */
+
+.waco-blog-detail-section {
+  padding-top: 70px;
+  padding-bottom: 64px;
+}
+
+.waco-blog-detail-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 42px;
+  align-items: start;
+}
+
+.waco-article-card {
+  overflow: hidden;
+  border: 1px solid var(--waco-line);
+  border-radius: var(--waco-radius-xl);
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: var(--waco-shadow-soft);
+}
+
+.waco-article-header {
+  padding: clamp(28px, 4.5vw, 54px) clamp(24px, 4.5vw, 56px) 30px;
+}
+
+.waco-article-header h1 {
+  max-width: 820px;
+  margin: 16px 0;
+  color: var(--waco-dark);
+  font-size: clamp(36px, 5vw, 64px);
+  line-height: 1.04;
+  letter-spacing: -0.045em;
+}
+
+.waco-article-header p {
+  max-width: 780px;
+  margin: 0;
+  color: var(--waco-muted);
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.waco-article-hero-image {
+  min-height: 430px;
+  background-color: #e5e7eb;
+}
+
+.waco-article-content {
+  padding: clamp(28px, 4.5vw, 56px);
+}
+
+.waco-article-content > *:first-child {
+  margin-top: 0;
+}
+
+.waco-article-content p {
+  margin: 0 0 22px;
+  color: var(--waco-text);
+  font-size: 16px;
+  line-height: 1.82;
+}
+
+.waco-article-content h2 {
+  scroll-margin-top: 110px;
+  margin: 48px 0 18px;
+  color: var(--waco-dark);
+  font-size: clamp(28px, 3vw, 42px);
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+}
+
+.waco-article-content ul {
+  display: grid;
+  gap: 10px;
+  margin: 0 0 26px;
+  padding-left: 22px;
+  color: var(--waco-text);
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.waco-article-content blockquote {
+  margin: 34px 0;
+  padding: 24px 28px;
+  border-left: 4px solid var(--waco-accent);
+  border-radius: 18px;
+  color: var(--waco-primary-dark);
+  background: rgba(35, 64, 49, 0.06);
+  font-size: 18px;
+  line-height: 1.65;
+  font-weight: 700;
+}
+
+.waco-article-sidebar {
+  position: sticky;
+  top: 24px;
+  display: grid;
+  gap: 18px;
+}
+
+.waco-article-toc-card,
+.waco-article-side-card {
+  border: 1px solid var(--waco-line);
+  border-radius: var(--waco-radius-lg);
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: var(--waco-shadow-soft);
+}
+
+.waco-article-toc-card {
+  padding: 24px;
+}
+
+.waco-article-toc-card .waco-eyebrow {
+  margin-bottom: 12px;
+}
+
+.waco-article-toc-card h2 {
+  margin: 0 0 18px;
+  color: var(--waco-dark);
+  font-size: 24px;
+  line-height: 1.16;
+  letter-spacing: -0.03em;
+}
+
+.waco-article-toc {
+  display: grid;
+  gap: 8px;
+}
+
+.waco-article-toc a {
+  display: block;
+  padding: 10px 12px;
+  border-radius: 12px;
+  color: var(--waco-muted);
+  font-size: 14px;
+  line-height: 1.45;
+  font-weight: 700;
+  transition: background 0.22s ease, color 0.22s ease, transform 0.22s ease;
+}
+
+.waco-article-toc a:hover {
+  transform: translateX(3px);
+  color: var(--waco-primary-dark);
+  background: rgba(35, 64, 49, 0.06);
+}
+
+.waco-article-toc a.is-active {
+  color: #ffffff;
+  background: var(--waco-primary);
+}
+
+.waco-article-toc-empty {
+  margin: 0;
+  color: var(--waco-muted);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.waco-article-side-card {
+  padding: 24px;
+}
+
+.waco-article-side-card h3 {
+  margin: 0 0 10px;
+  color: var(--waco-dark);
+  font-size: 22px;
+  line-height: 1.18;
+}
+
+.waco-article-side-card p {
+  margin: 0 0 18px;
+  color: var(--waco-muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.waco-related-blog-section {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+@media (max-width: 1024px) {
+  .waco-blog-detail-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .waco-article-sidebar {
+    position: static;
+    order: -1;
+  }
+
+  .waco-article-toc {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .waco-article-hero-image {
+    min-height: 340px;
+  }
+}
+
+@media (max-width: 760px) {
+  .waco-blog-detail-section {
+    padding-top: 52px;
+    padding-bottom: 52px;
+  }
+
+  .waco-article-header,
+  .waco-article-content {
+    padding: 24px;
+  }
+
+  .waco-article-hero-image {
+    min-height: 240px;
+  }
+
+  .waco-article-toc {
+    grid-template-columns: 1fr;
+  }
+
+  .waco-article-content p,
+  .waco-article-content ul {
+    font-size: 15px;
+  }
+}
+
+
+/* =========================================================
+  BLOG DETAIL PAGE v1.5.1
+  - Sidebar TOC remains visible on desktop
+  - Added right-side Tags module
+========================================================= */
+
+/* Keep the whole right sidebar visible while reading on desktop */
+.waco-blog-detail-page .waco-article-sidebar {
+  position: sticky !important;
+  top: 28px !important;
+  align-self: start !important;
+  max-height: calc(100vh - 56px);
+  overflow: visible;
+}
+
+/* Make the directory itself scrollable if the article has many h2 sections */
+.waco-blog-detail-page .waco-article-toc-card {
+  max-height: calc(100vh - 56px);
+  overflow: hidden;
+}
+
+.waco-blog-detail-page .waco-article-toc {
+  max-height: min(420px, calc(100vh - 230px));
+  overflow-y: auto;
+  padding-right: 4px;
+  scrollbar-width: thin;
+}
+
+.waco-blog-detail-page .waco-article-toc::-webkit-scrollbar {
+  width: 6px;
+}
+
+.waco-blog-detail-page .waco-article-toc::-webkit-scrollbar-track {
+  background: rgba(35, 64, 49, 0.06);
+  border-radius: 999px;
+}
+
+.waco-blog-detail-page .waco-article-toc::-webkit-scrollbar-thumb {
+  background: rgba(35, 64, 49, 0.28);
+  border-radius: 999px;
+}
+
+/* Tags module */
+.waco-article-tags-card {
+  padding: 24px;
+  border: 1px solid var(--waco-line);
+  border-radius: var(--waco-radius-lg);
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: var(--waco-shadow-soft);
+}
+
+.waco-article-tags-card .waco-eyebrow {
+  margin-bottom: 12px;
+}
+
+.waco-article-tags-card h2 {
+  margin: 0 0 18px;
+  color: var(--waco-dark);
+  font-size: 24px;
+  line-height: 1.16;
+  letter-spacing: -0.03em;
+}
+
+.waco-article-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.waco-article-tags a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 8px 12px;
+  border: 1px solid rgba(35, 64, 49, 0.14);
+  border-radius: 999px;
+  color: var(--waco-primary-dark);
+  background: rgba(35, 64, 49, 0.06);
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 800;
+  transition: transform 0.22s ease, background 0.22s ease, color 0.22s ease;
+}
+
+.waco-article-tags a:hover {
+  transform: translateY(-2px);
+  color: #ffffff;
+  background: var(--waco-primary);
+}
+
+/* On tablet/mobile, the sidebar should return to normal document flow */
+@media (max-width: 1024px) {
+  .waco-blog-detail-page .waco-article-sidebar {
+    position: static !important;
+    max-height: none;
+  }
+
+  .waco-blog-detail-page .waco-article-toc-card,
+  .waco-blog-detail-page .waco-article-toc {
+    max-height: none;
+    overflow: visible;
+  }
+}
+
+
+/* =========================================================
+  BLOG DETAIL PAGE v1.5.2 STICKY TOC FIX
+  Reason:
+  Global `.waco-page { overflow: hidden; }` can prevent sticky from working.
+  Fix:
+  Restore overflow visibility for blog detail ancestors and make the TOC card itself sticky.
+========================================================= */
+
+/* Sticky needs visible overflow on its ancestor chain */
+.waco-blog-detail-page,
+.waco-blog-detail-page .waco-blog-detail-section,
+.waco-blog-detail-page .waco-container,
+.waco-blog-detail-page .waco-blog-detail-layout,
+.waco-blog-detail-page .waco-article-sidebar {
+  overflow: visible !important;
+}
+
+/* Sidebar remains normal, only the TOC card sticks */
+.waco-blog-detail-page .waco-article-sidebar {
+  position: relative !important;
+  top: auto !important;
+  align-self: stretch !important;
+  max-height: none !important;
+  display: grid;
+  gap: 18px;
+}
+
+/* Actual sticky target */
+.waco-blog-detail-page .waco-article-toc-card {
+  position: sticky !important;
+  top: 28px !important;
+  z-index: 6;
+  align-self: start;
+  max-height: calc(100vh - 56px);
+  overflow: hidden;
+}
+
+/* If there are many H2 headings, scroll inside the TOC list */
+.waco-blog-detail-page .waco-article-toc {
+  max-height: min(460px, calc(100vh - 230px));
+  overflow-y: auto;
+}
+
+/* Keep Tags and sidebar CTA normal below the sticky TOC */
+.waco-blog-detail-page .waco-article-tags-card,
+.waco-blog-detail-page .waco-article-side-card {
+  position: relative;
+  z-index: 1;
+}
+
+/* Mobile/tablet: return to normal flow */
+@media (max-width: 1024px) {
+  .waco-blog-detail-page .waco-article-toc-card {
+    position: static !important;
+    top: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  .waco-blog-detail-page .waco-article-toc {
+    max-height: none !important;
+    overflow: visible !important;
+  }
+}
+
+
+/* =========================================================
+  BLOG DETAIL PAGE v1.5.3 SIDEBAR SCROLL FIX
+  Change:
+  Instead of making only the TOC card sticky, make the entire right sidebar sticky.
+  This way TOC + Tags + CTA move together and stop naturally at the bottom of
+  the article layout, avoiding the translucent overlap problem.
+========================================================= */
+
+/* Sticky still needs visible overflow on the ancestor chain */
+.waco-blog-detail-page,
+.waco-blog-detail-page .waco-blog-detail-section,
+.waco-blog-detail-page .waco-container,
+.waco-blog-detail-page .waco-blog-detail-layout {
+  overflow: visible !important;
+}
+
+.waco-blog-detail-page .waco-blog-detail-layout {
+  align-items: start !important;
+}
+
+/* The whole right column sticks and stops at the bottom of the grid/content area */
+.waco-blog-detail-page .waco-article-sidebar {
+  position: sticky !important;
+  top: 28px !important;
+  align-self: start !important;
+  max-height: none !important;
+  overflow: visible !important;
+  display: grid !important;
+  gap: 18px !important;
+}
+
+/* TOC is no longer independently sticky, so it will not overlay Tags/CTA */
+.waco-blog-detail-page .waco-article-toc-card {
+  position: relative !important;
+  top: auto !important;
+  z-index: 1 !important;
+  max-height: none !important;
+  overflow: visible !important;
+  background: rgba(255, 255, 255, 0.94) !important;
+}
+
+/* Keep directory readable; no internal scroll needed for this template */
+.waco-blog-detail-page .waco-article-toc {
+  max-height: none !important;
+  overflow: visible !important;
+}
+
+/* Make all right-column cards more solid so they do not look messy over content */
+.waco-blog-detail-page .waco-article-toc-card,
+.waco-blog-detail-page .waco-article-tags-card,
+.waco-blog-detail-page .waco-article-side-card {
+  background: rgba(255, 255, 255, 0.94) !important;
+}
+
+/* Tablet/mobile: return right sidebar to normal document flow */
+@media (max-width: 1024px) {
+  .waco-blog-detail-page .waco-article-sidebar {
+    position: static !important;
+    top: auto !important;
+  }
+}
+
+
+/* =========================================================
+  BLOG DETAIL PAGE v1.5.4 ARTICLE TYPOGRAPHY SYSTEM
+  Optimized styles for common HTML tags inside `.waco-article-content`.
+========================================================= */
+
+/* Base text rhythm */
+.waco-blog-detail-page .waco-article-content {
+  color: var(--waco-text);
+  font-size: 16px;
+  line-height: 1.82;
+}
+
+.waco-blog-detail-page .waco-article-content > * {
+  margin-top: 0;
+}
+
+.waco-blog-detail-page .waco-article-content p {
+  margin: 0 0 24px;
+  color: var(--waco-text);
+  font-size: 16px;
+  line-height: 1.82;
+}
+
+/* Heading scale inside article */
+.waco-blog-detail-page .waco-article-content h1,
+.waco-blog-detail-page .waco-article-content h2,
+.waco-blog-detail-page .waco-article-content h3,
+.waco-blog-detail-page .waco-article-content h4,
+.waco-blog-detail-page .waco-article-content h5,
+.waco-blog-detail-page .waco-article-content h6 {
+  color: var(--waco-dark);
+  font-weight: 900;
+  letter-spacing: -0.035em;
+}
+
+.waco-blog-detail-page .waco-article-content h1 {
+  margin: 58px 0 22px;
+  font-size: clamp(38px, 4.8vw, 60px);
+  line-height: 1.04;
+}
+
+.waco-blog-detail-page .waco-article-content h2 {
+  scroll-margin-top: 110px;
+  margin: 56px 0 20px;
+  font-size: clamp(30px, 3.4vw, 44px);
+  line-height: 1.1;
+}
+
+.waco-blog-detail-page .waco-article-content h3 {
+  margin: 40px 0 16px;
+  font-size: clamp(24px, 2.5vw, 32px);
+  line-height: 1.15;
+}
+
+.waco-blog-detail-page .waco-article-content h4 {
+  margin: 34px 0 14px;
+  font-size: clamp(20px, 2vw, 26px);
+  line-height: 1.2;
+}
+
+.waco-blog-detail-page .waco-article-content h5 {
+  margin: 30px 0 12px;
+  font-size: 18px;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+.waco-blog-detail-page .waco-article-content h6 {
+  margin: 26px 0 10px;
+  color: var(--waco-primary-dark);
+  font-size: 15px;
+  line-height: 1.25;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* Lists */
+.waco-blog-detail-page .waco-article-content ul,
+.waco-blog-detail-page .waco-article-content ol {
+  display: grid;
+  gap: 12px;
+  margin: 0 0 30px;
+  padding-left: 24px;
+  color: var(--waco-text);
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.waco-blog-detail-page .waco-article-content li {
+  padding-left: 4px;
+}
+
+.waco-blog-detail-page .waco-article-content li::marker {
+  color: var(--waco-primary);
+  font-weight: 900;
+}
+
+.waco-blog-detail-page .waco-article-content li > ul,
+.waco-blog-detail-page .waco-article-content li > ol {
+  margin: 12px 0 4px;
+}
+
+/* Links */
+.waco-blog-detail-page .waco-article-content a {
+  color: var(--waco-primary);
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* Inline code and code blocks */
+.waco-blog-detail-page .waco-article-content code {
+  padding: 0.16em 0.42em;
+  border: 1px solid rgba(35, 64, 49, 0.14);
+  border-radius: 8px;
+  color: var(--waco-primary-dark);
+  background: rgba(35, 64, 49, 0.06);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-size: 0.92em;
+}
+
+.waco-blog-detail-page .waco-article-content pre {
+  overflow: auto;
+  margin: 0 0 34px;
+  padding: 22px;
+  border: 1px solid rgba(35, 64, 49, 0.16);
+  border-radius: 22px;
+  background: #10241b;
+  box-shadow: var(--waco-shadow-soft);
+}
+
+.waco-blog-detail-page .waco-article-content pre code {
+  display: block;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  color: rgba(255, 255, 255, 0.88);
+  background: transparent;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* Blockquote */
+.waco-blog-detail-page .waco-article-content blockquote {
+  margin: 38px 0;
+  padding: 26px 30px;
+  border-left: 4px solid var(--waco-accent);
+  border-radius: 20px;
+  color: var(--waco-primary-dark);
+  background: rgba(35, 64, 49, 0.06);
+  font-size: 18px;
+  line-height: 1.68;
+  font-weight: 800;
+}
+
+/* Figures and images */
+.waco-blog-detail-page .waco-article-content figure {
+  margin: 38px 0;
+}
+
+.waco-blog-detail-page .waco-article-content img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 24px;
+  background: #e5e7eb;
+  box-shadow: var(--waco-shadow-soft);
+}
+
+.waco-blog-detail-page .waco-article-content figcaption {
+  margin-top: 12px;
+  color: var(--waco-muted);
+  font-size: 14px;
+  line-height: 1.55;
+  text-align: center;
+}
+
+/* Two-column image grid */
+.waco-article-image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  margin: 38px 0;
+}
+
+.waco-article-image-grid figure {
+  margin: 0 !important;
+}
+
+/* Table */
+.waco-article-table-wrap {
+  overflow-x: auto;
+  margin: 0 0 38px;
+  border: 1px solid var(--waco-line);
+  border-radius: 24px;
+  background: #ffffff;
+  box-shadow: var(--waco-shadow-soft);
+}
+
+.waco-blog-detail-page .waco-article-content table {
+  width: 100%;
+  min-width: 680px;
+  border-collapse: collapse;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.waco-blog-detail-page .waco-article-content th,
+.waco-blog-detail-page .waco-article-content td {
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--waco-line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.waco-blog-detail-page .waco-article-content th {
+  color: var(--waco-primary-dark);
+  background: rgba(35, 64, 49, 0.08);
+  font-weight: 900;
+}
+
+.waco-blog-detail-page .waco-article-content tr:last-child td {
+  border-bottom: 0;
+}
+
+.waco-blog-detail-page .waco-article-content tr:nth-child(even) td {
+  background: rgba(35, 64, 49, 0.025);
+}
+
+/* Description list */
+.waco-blog-detail-page .waco-article-content dl {
+  display: grid;
+  gap: 0;
+  margin: 0 0 36px;
+  border: 1px solid var(--waco-line);
+  border-radius: 22px;
+  background: #ffffff;
+  overflow: hidden;
+  box-shadow: var(--waco-shadow-soft);
+}
+
+.waco-blog-detail-page .waco-article-content dt {
+  padding: 18px 22px 8px;
+  color: var(--waco-primary-dark);
+  font-size: 16px;
+  line-height: 1.35;
+  font-weight: 900;
+}
+
+.waco-blog-detail-page .waco-article-content dd {
+  margin: 0;
+  padding: 0 22px 18px;
+  border-bottom: 1px solid var(--waco-line);
+  color: var(--waco-muted);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.waco-blog-detail-page .waco-article-content dd:last-child {
+  border-bottom: 0;
+}
+
+/* Custom div blocks */
+.waco-article-note,
+.waco-article-callout {
+  margin: 34px 0;
+  padding: 24px 26px;
+  border: 1px solid rgba(35, 64, 49, 0.14);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.76);
+  box-shadow: var(--waco-shadow-soft);
+}
+
+.waco-article-note {
+  border-left: 4px solid var(--waco-accent);
+}
+
+.waco-article-callout {
+  background: linear-gradient(135deg, rgba(35, 64, 49, 0.08), rgba(184, 137, 82, 0.08));
+}
+
+.waco-article-callout h3 {
+  margin-top: 0 !important;
+}
+
+.waco-article-callout p:last-child,
+.waco-article-note p:last-child {
+  margin-bottom: 0;
+}
+
+/* Article spacing final cleanup */
+.waco-blog-detail-page .waco-article-content > *:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 760px) {
+  .waco-blog-detail-page .waco-article-content {
+    font-size: 15px;
+  }
+
+  .waco-blog-detail-page .waco-article-content p,
+  .waco-blog-detail-page .waco-article-content ul,
+  .waco-blog-detail-page .waco-article-content ol {
+    font-size: 15px;
+  }
+
+  .waco-article-image-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .waco-blog-detail-page .waco-article-content figure,
+  .waco-article-image-grid,
+  .waco-article-note,
+  .waco-article-callout {
+    margin: 28px 0;
+  }
+
+  .waco-blog-detail-page .waco-article-content img {
+    border-radius: 18px;
+  }
+}
+
+
+/* =========================================================
+  BLOG DETAIL PAGE v1.5.5 READABILITY + REVEAL FIX
+  - Prevent blog detail article from staying hidden if reveal JS fails or loads late.
+  - Reduce h2~h6 article heading sizes.
+========================================================= */
+
+/* Article content must always be visible.
+   This avoids `.waco-reveal { opacity: 0; }` hiding the blog body during local preview,
+   cache issues, or JS loading failures. */
+.waco-blog-detail-page .waco-article-card.waco-reveal,
+.waco-blog-detail-page .waco-article-sidebar.waco-reveal {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* Smaller article heading scale */
+.waco-blog-detail-page .waco-article-content h2 {
+  margin: 48px 0 18px !important;
+  font-size: clamp(25px, 2.45vw, 34px) !important;
+  line-height: 1.16 !important;
+  letter-spacing: -0.032em !important;
+}
+
+.waco-blog-detail-page .waco-article-content h3 {
+  margin: 34px 0 14px !important;
+  font-size: clamp(21px, 2.05vw, 28px) !important;
+  line-height: 1.18 !important;
+  letter-spacing: -0.028em !important;
+}
+
+.waco-blog-detail-page .waco-article-content h4 {
+  margin: 30px 0 12px !important;
+  font-size: clamp(18px, 1.65vw, 23px) !important;
+  line-height: 1.22 !important;
+  letter-spacing: -0.02em !important;
+}
+
+.waco-blog-detail-page .waco-article-content h5 {
+  margin: 26px 0 10px !important;
+  font-size: 16px !important;
+  line-height: 1.28 !important;
+  letter-spacing: -0.01em !important;
+}
+
+.waco-blog-detail-page .waco-article-content h6 {
+  margin: 24px 0 10px !important;
+  font-size: 14px !important;
+  line-height: 1.3 !important;
+  letter-spacing: 0.06em !important;
+}
+
+/* Keep paragraph/list spacing comfortable after reducing heading sizes */
+.waco-blog-detail-page .waco-article-content p {
+  margin-bottom: 22px !important;
+}
+
+.waco-blog-detail-page .waco-article-content ul,
+.waco-blog-detail-page .waco-article-content ol {
+  gap: 10px !important;
+  margin-bottom: 28px !important;
+}
+
+@media (max-width: 760px) {
+  .waco-blog-detail-page .waco-article-content h2 {
+    font-size: clamp(24px, 7vw, 30px) !important;
+  }
+
+  .waco-blog-detail-page .waco-article-content h3 {
+    font-size: clamp(20px, 6vw, 25px) !important;
+  }
+
+  .waco-blog-detail-page .waco-article-content h4 {
+    font-size: 18px !important;
+  }
+}
+
+
+/* =========================================================
+  BLOG DETAIL PAGE v1.5.6 TOC TIMELINE STYLE
+  - Keeps auto-generated h2 directory logic unchanged
+  - Adds vertical line + chapter dots
+  - Active section highlights the dot and title
+========================================================= */
+
+.waco-blog-detail-page .waco-article-toc-card {
+  background: rgba(255, 255, 255, 0.96) !important;
+}
+
+/* Timeline container */
+.waco-blog-detail-page .waco-article-toc {
+  position: relative;
+  display: grid;
+  gap: 2px !important;
+  padding: 2px 0 2px 22px !important;
+}
+
+/* Vertical timeline line */
+.waco-blog-detail-page .waco-article-toc::before {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 10px;
+  bottom: 10px;
+  width: 2px;
+  border-radius: 999px;
+  background: linear-gradient(
+    180deg,
+    rgba(184, 137, 82, 0.18),
+    rgba(35, 64, 49, 0.22),
+    rgba(184, 137, 82, 0.18)
+  );
+}
+
+/* TOC item */
+.waco-blog-detail-page .waco-article-toc a {
+  position: relative;
+  display: block;
+  padding: 10px 12px 10px 14px !important;
+  border-radius: 14px !important;
+  color: var(--waco-muted) !important;
+  background: transparent !important;
+  font-size: 14px !important;
+  line-height: 1.45 !important;
+  font-weight: 800 !important;
+  transition:
+    color 0.22s ease,
+    background 0.22s ease,
+    transform 0.22s ease;
+}
+
+/* Timeline dot */
+.waco-blog-detail-page .waco-article-toc a::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  border: 2px solid rgba(35, 64, 49, 0.28);
+  border-radius: 999px;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.9);
+  transform: translateY(-50%);
+  transition:
+    border-color 0.22s ease,
+    background 0.22s ease,
+    box-shadow 0.22s ease,
+    transform 0.22s ease;
+}
+
+.waco-blog-detail-page .waco-article-toc a:hover {
+  transform: translateX(3px);
+  color: var(--waco-primary-dark) !important;
+  background: rgba(35, 64, 49, 0.055) !important;
+}
+
+.waco-blog-detail-page .waco-article-toc a:hover::before {
+  border-color: var(--waco-primary);
+  background: rgba(35, 64, 49, 0.14);
+}
+
+/* Active item: do not use a full green pill; highlight like a timeline state */
+.waco-blog-detail-page .waco-article-toc a.is-active {
+  color: var(--waco-primary-dark) !important;
+  background: rgba(35, 64, 49, 0.08) !important;
+  transform: translateX(3px);
+}
+
+.waco-blog-detail-page .waco-article-toc a.is-active::before {
+  width: 13px;
+  height: 13px;
+  border-color: var(--waco-primary);
+  background: var(--waco-primary);
+  box-shadow:
+    0 0 0 4px #ffffff,
+    0 0 0 8px rgba(35, 64, 49, 0.12);
+}
+
+/* Tiny active connector to visually lock item to the line */
+.waco-blog-detail-page .waco-article-toc a.is-active::after {
+  content: "";
+  position: absolute;
+  left: -11px;
+  top: 50%;
+  width: 10px;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--waco-primary);
+  transform: translateY(-50%);
+}
+
+/* Empty state should not show the timeline line */
+.waco-blog-detail-page .waco-article-toc:has(.waco-article-toc-empty)::before {
+  display: none;
+}
+
+/* Fallback if :has is unsupported: empty message remains readable */
+.waco-blog-detail-page .waco-article-toc-empty {
+  position: relative;
+  z-index: 1;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: rgba(35, 64, 49, 0.055);
+}
+
+@media (max-width: 1024px) {
+  .waco-blog-detail-page .waco-article-toc {
+    padding-left: 22px !important;
+  }
+}
+
+
+/* =========================================================
+  BLOG DETAIL PAGE v1.5.7 POST FOOTER MODULES
+  - Left column below article: Author box + Previous/Next + Recommended articles
+========================================================= */
+
+.waco-blog-detail-main-column {
+  display: grid;
+  gap: 24px;
+  min-width: 0;
+}
+
+/* Keep the new left-column modules visible even if reveal JS is delayed */
+.waco-blog-detail-page .waco-article-author-card,
+.waco-blog-detail-page .waco-article-post-nav,
+.waco-blog-detail-page .waco-article-inline-recommend {
+  opacity: 1;
+  transform: none;
+}
+
+/* Author box */
+.waco-article-author-card {
+  display: grid;
+  grid-template-columns: 86px minmax(0, 1fr);
+  gap: 22px;
+  align-items: start;
+  padding: clamp(24px, 3.5vw, 34px);
+  border: 1px solid var(--waco-line);
+  border-radius: var(--waco-radius-xl);
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: var(--waco-shadow-soft);
+}
+
+.waco-author-avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 86px;
+  height: 86px;
+  border-radius: 28px;
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--waco-primary), #2f5a44);
+  font-size: 34px;
+  line-height: 1;
+  font-weight: 900;
+  box-shadow: 0 18px 36px rgba(35, 64, 49, 0.18);
+}
+
+.waco-author-content .waco-eyebrow {
+  margin-bottom: 10px;
+}
+
+.waco-author-content h2 {
+  margin: 0 0 10px;
+  color: var(--waco-dark);
+  font-size: clamp(24px, 2.4vw, 32px);
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+}
+
+.waco-author-content p {
+  margin: 0 0 18px;
+  color: var(--waco-muted);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.waco-author-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.waco-author-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 9px 14px;
+  border: 1px solid rgba(35, 64, 49, 0.16);
+  border-radius: 999px;
+  color: var(--waco-primary-dark);
+  background: rgba(35, 64, 49, 0.06);
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 800;
+  transition: transform 0.22s ease, background 0.22s ease, color 0.22s ease;
+}
+
+.waco-author-links a:hover {
+  transform: translateY(-2px);
+  color: #ffffff;
+  background: var(--waco-primary);
+}
+
+/* Previous / Next links */
+.waco-article-post-nav {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.waco-post-nav-card {
+  position: relative;
+  display: grid;
+  gap: 10px;
+  min-height: 150px;
+  padding: 24px;
+  border: 1px solid var(--waco-line);
+  border-radius: var(--waco-radius-lg);
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: var(--waco-shadow-soft);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.waco-post-nav-card:hover {
+  transform: translateY(-4px);
+  background: #ffffff;
+  box-shadow: var(--waco-shadow);
+}
+
+.waco-post-nav-card span {
+  color: var(--waco-muted);
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+.waco-post-nav-card strong {
+  color: var(--waco-dark);
+  font-size: clamp(18px, 2vw, 24px);
+  line-height: 1.18;
+  letter-spacing: -0.025em;
+}
+
+.waco-post-nav-prev::before,
+.waco-post-nav-next::before {
+  color: var(--waco-primary);
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.waco-post-nav-prev::before {
+  content: "←";
+}
+
+.waco-post-nav-next {
+  text-align: right;
+}
+
+.waco-post-nav-next::before {
+  content: "→";
+  justify-self: end;
+}
+
+/* Inline recommended articles */
+.waco-article-inline-recommend {
+  padding: clamp(24px, 3.5vw, 34px);
+  border: 1px solid var(--waco-line);
+  border-radius: var(--waco-radius-xl);
+  background: rgba(255, 255, 255, 0.84);
+  box-shadow: var(--waco-shadow-soft);
+}
+
+.waco-article-inline-recommend .waco-section-heading {
+  margin-bottom: 22px;
+}
+
+.waco-article-inline-recommend .waco-section-heading h2 {
+  font-size: clamp(26px, 3vw, 38px);
+}
+
+.waco-inline-recommend-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.waco-inline-recommend-card {
+  overflow: hidden;
+  border: 1px solid var(--waco-line);
+  border-radius: 24px;
+  background: #ffffff;
+  box-shadow: 0 14px 34px rgba(17, 24, 39, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.waco-inline-recommend-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--waco-shadow-soft);
+}
+
+.waco-inline-recommend-media {
+  display: block;
+  height: 180px;
+  background-color: #e5e7eb;
+}
+
+.waco-inline-recommend-body {
+  display: flex;
+  min-height: 190px;
+  flex-direction: column;
+  padding: 18px 20px 22px;
+}
+
+.waco-inline-recommend-body h3 {
+  margin: 14px 0 18px;
+  color: var(--waco-dark);
+  font-size: clamp(18px, 2vw, 24px);
+  line-height: 1.16;
+  letter-spacing: -0.025em;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.waco-inline-recommend-body .waco-arrow-link {
+  margin-top: auto;
+}
+
+/* The global related articles section can remain as a wider site-level recommendation area */
+.waco-related-blog-section {
+  padding-top: 58px;
+}
+
+@media (max-width: 1024px) {
+  .waco-article-post-nav,
+  .waco-inline-recommend-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .waco-post-nav-next {
+    text-align: left;
+  }
+
+  .waco-post-nav-next::before {
+    justify-self: start;
+  }
+}
+
+@media (max-width: 760px) {
+  .waco-article-author-card {
+    grid-template-columns: 1fr;
+  }
+
+  .waco-author-avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 22px;
+    font-size: 28px;
+  }
+
+  .waco-post-nav-card {
+    min-height: 130px;
+    padding: 22px;
+  }
+
+  .waco-inline-recommend-media {
+    height: 210px;
+  }
+
+  .waco-inline-recommend-body {
+    min-height: 0;
+  }
+}
+
+
+/* =========================================================
+  FAQ PAGE v1.6.0
+========================================================= */
+
+.waco-faq-page .waco-faq-help-section {
+  padding-top: 64px;
+  padding-bottom: 58px;
+}
+
+.waco-faq-help-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.waco-faq-help-card {
+  padding: 26px;
+  border: 1px solid var(--waco-line);
+  border-radius: var(--waco-radius-lg);
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: var(--waco-shadow-soft);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.waco-faq-help-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--waco-shadow);
+}
+
+.waco-faq-help-card h3 {
+  margin: 0 0 10px;
+  color: var(--waco-dark);
+  font-size: 22px;
+  line-height: 1.18;
+  letter-spacing: -0.025em;
+}
+
+.waco-faq-help-card p {
+  margin: 0;
+  color: var(--waco-muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.waco-faq-list-section {
+  padding-top: 58px;
+  padding-bottom: 66px;
+}
+
+.waco-faq-controls {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.1fr);
+  gap: 16px;
+  align-items: end;
+  margin: -4px 0 30px;
+}
+
+.waco-faq-search {
+  display: grid;
+  gap: 8px;
+}
+
+.waco-faq-search span {
+  color: var(--waco-primary-dark);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.waco-faq-search input {
+  width: 100%;
+  min-height: 52px;
+  padding: 0 18px;
+  border: 1px solid rgba(35, 64, 49, 0.16);
+  border-radius: 999px;
+  color: var(--waco-primary-dark);
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: var(--waco-shadow-soft);
+  font-size: 14px;
+  font-weight: 700;
+  outline: none;
+}
+
+.waco-faq-search input:focus {
+  border-color: var(--waco-primary);
+  background: #ffffff;
+}
+
+.waco-faq-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-end;
+  padding: 12px;
+  border: 1px solid var(--waco-line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.62);
+  box-shadow: var(--waco-shadow-soft);
+}
+
+.waco-faq-filter button {
+  min-height: 40px;
+  padding: 9px 16px;
+  border: 1px solid rgba(35, 64, 49, 0.16);
+  border-radius: 999px;
+  color: var(--waco-primary-dark);
+  background: rgba(255, 255, 255, 0.72);
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+
+.waco-faq-filter button:hover {
+  transform: translateY(-2px);
+  background: rgba(35, 64, 49, 0.08);
+}
+
+.waco-faq-filter button.is-active {
+  color: #ffffff;
+  border-color: var(--waco-primary);
+  background: var(--waco-primary);
+}
+
+/* FAQ layout */
+.waco-faq-layout {
+  display: grid;
+  grid-template-columns: 310px minmax(0, 1fr);
+  gap: 26px;
+  align-items: start;
+}
+
+.waco-faq-side-note {
+  position: sticky;
+  top: 28px;
+}
+
+.waco-faq-side-card {
+  padding: 26px;
+  border: 1px solid var(--waco-line);
+  border-radius: var(--waco-radius-lg);
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: var(--waco-shadow-soft);
+}
+
+.waco-faq-side-card h3 {
+  margin: 0 0 12px;
+  color: var(--waco-dark);
+  font-size: 26px;
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+}
+
+.waco-faq-side-card p {
+  margin: 0 0 20px;
+  color: var(--waco-muted);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.waco-faq-accordion {
+  display: grid;
+  gap: 14px;
+}
+
+.waco-faq-item {
+  overflow: hidden;
+  border: 1px solid var(--waco-line);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.84);
+  box-shadow: var(--waco-shadow-soft);
+}
+
+.waco-faq-item.is-hidden {
+  display: none;
+}
+
+.waco-faq-question {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 34px;
+  gap: 16px;
+  align-items: center;
+  width: 100%;
+  min-height: 72px;
+  padding: 20px 22px;
+  border: 0;
+  color: var(--waco-dark);
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+}
+
+.waco-faq-question span {
+  font-size: clamp(17px, 1.55vw, 22px);
+  line-height: 1.28;
+  font-weight: 900;
+  letter-spacing: -0.025em;
+}
+
+.waco-faq-question strong {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  color: var(--waco-primary);
+  background: rgba(35, 64, 49, 0.08);
+  font-size: 22px;
+  line-height: 1;
+  transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease;
+}
+
+.waco-faq-item.is-open .waco-faq-question strong {
+  color: #ffffff;
+  background: var(--waco-primary);
+  transform: rotate(45deg);
+}
+
+.waco-faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.32s ease;
+}
+
+.waco-faq-answer p {
+  margin: 0;
+  padding: 0 22px 22px;
+  color: var(--waco-muted);
+  font-size: 15px;
+  line-height: 1.72;
+}
+
+.waco-faq-empty {
+  display: none;
+  padding: 26px;
+  border: 1px dashed rgba(35, 64, 49, 0.22);
+  border-radius: 22px;
+  color: var(--waco-muted);
+  background: rgba(255, 255, 255, 0.62);
+  font-size: 15px;
+  line-height: 1.65;
+  text-align: center;
+}
+
+.waco-faq-empty.is-visible {
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  .waco-faq-help-grid,
+  .waco-faq-layout,
+  .waco-faq-controls {
+    grid-template-columns: 1fr;
+  }
+
+  .waco-faq-side-note {
+    position: static;
+  }
+
+  .waco-faq-filter {
+    justify-content: flex-start;
+    border-radius: 28px;
+  }
+}
+
+@media (max-width: 760px) {
+  .waco-faq-help-grid {
+    gap: 16px;
+  }
+
+  .waco-faq-help-card,
+  .waco-faq-side-card {
+    padding: 22px;
+  }
+
+  .waco-faq-filter {
+    border-radius: 24px;
+  }
+
+  .waco-faq-filter button {
+    flex: 1 1 calc(50% - 10px);
+  }
+
+  .waco-faq-question {
+    min-height: 66px;
+    padding: 18px 18px;
+  }
+
+  .waco-faq-answer p {
+    padding: 0 18px 20px;
+  }
+}
+
+
+/* =========================================================
+  FAQ PAGE v1.6.1
+  - Search box removed
+  - Category buttons become the main FAQ navigation
+  - First FAQ remains open by default
+========================================================= */
+
+.waco-faq-page .waco-faq-controls {
+  display: block !important;
+  margin: -4px 0 30px !important;
+}
+
+.waco-faq-page .waco-faq-search {
+  display: none !important;
+}
+
+.waco-faq-page .waco-faq-filter {
+  justify-content: center !important;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.waco-faq-page .waco-faq-item.is-open .waco-faq-answer {
+  max-height: none;
+}
+
+@media (max-width: 1024px) {
+  .waco-faq-page .waco-faq-filter {
+    width: 100%;
+    justify-content: flex-start !important;
+  }
+}
+
+
+/* =========================================================
+  DOWNLOADS PAGE v1.7.0
+========================================================= */
+
+.waco-downloads-page .waco-download-overview-section {
+  padding-top: 64px;
+  padding-bottom: 58px;
+}
+
+.waco-download-overview-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.waco-download-overview-card {
+  padding: 26px;
+  border: 1px solid var(--waco-line);
+  border-radius: var(--waco-radius-lg);
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: var(--waco-shadow-soft);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.waco-download-overview-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--waco-shadow);
+}
+
+.waco-download-icon,
+.waco-file-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--waco-primary), #2f5a44);
+  font-weight: 900;
+  letter-spacing: 0.04em;
+}
+
+.waco-download-icon {
+  width: 58px;
+  height: 58px;
+  margin-bottom: 22px;
+  border-radius: 20px;
+  font-size: 15px;
+  box-shadow: 0 16px 34px rgba(35, 64, 49, 0.18);
+}
+
+.waco-download-overview-card h3 {
+  margin: 0 0 10px;
+  color: var(--waco-dark);
+  font-size: 22px;
+  line-height: 1.18;
+  letter-spacing: -0.025em;
+}
+
+.waco-download-overview-card p {
+  margin: 0;
+  color: var(--waco-muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Download list */
+.waco-download-list-section {
+  padding-top: 58px;
+  padding-bottom: 66px;
+}
+
+.waco-download-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  width: fit-content;
+  max-width: 100%;
+  margin: -4px auto 30px;
+  padding: 12px;
+  border: 1px solid var(--waco-line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.62);
+  box-shadow: var(--waco-shadow-soft);
+}
+
+.waco-download-filter button {
+  min-height: 40px;
+  padding: 9px 16px;
+  border: 1px solid rgba(35, 64, 49, 0.16);
+  border-radius: 999px;
+  color: var(--waco-primary-dark);
+  background: rgba(255, 255, 255, 0.72);
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+
+.waco-download-filter button:hover {
+  transform: translateY(-2px);
+  background: rgba(35, 64, 49, 0.08);
+}
+
+.waco-download-filter button.is-active {
+  color: #ffffff;
+  border-color: var(--waco-primary);
+  background: var(--waco-primary);
+}
+
+/* Downloads layout */
+.waco-download-layout {
+  display: grid;
+  grid-template-columns: 310px minmax(0, 1fr);
+  gap: 26px;
+  align-items: start;
+}
+
+.waco-download-side {
+  position: sticky;
+  top: 28px;
+  display: grid;
+  gap: 18px;
+}
+
+.waco-download-side-card {
+  padding: 26px;
+  border: 1px solid var(--waco-line);
+  border-radius: var(--waco-radius-lg);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: var(--waco-shadow-soft);
+}
+
+.waco-download-side-card h3 {
+  margin: 0 0 12px;
+  color: var(--waco-dark);
+  font-size: 26px;
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+}
+
+.waco-download-side-card p {
+  margin: 0 0 20px;
+  color: var(--waco-muted);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.waco-download-type-list {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.waco-download-type-list li {
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+  padding: 12px;
+  border-radius: 16px;
+  background: rgba(35, 64, 49, 0.055);
+}
+
+.waco-download-type-list strong {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 34px;
+  border-radius: 12px;
+  color: #ffffff;
+  background: var(--waco-primary);
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 900;
+}
+
+.waco-download-type-list span {
+  color: var(--waco-muted);
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+/* Cards */
+.waco-download-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.waco-download-card {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr) auto;
+  gap: 18px;
+  align-items: center;
+  padding: 22px;
+  border: 1px solid var(--waco-line);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: var(--waco-shadow-soft);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.waco-download-card:hover {
+  transform: translateY(-4px);
+  background: #ffffff;
+  box-shadow: var(--waco-shadow);
+}
+
+.waco-download-card.is-hidden {
+  display: none;
+}
+
+.waco-file-badge {
+  width: 62px;
+  height: 62px;
+  border-radius: 20px;
+  font-size: 14px;
+  box-shadow: 0 14px 30px rgba(35, 64, 49, 0.16);
+}
+
+.waco-download-card-content {
+  min-width: 0;
+}
+
+.waco-download-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.waco-download-meta span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 26px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  color: var(--waco-primary-dark);
+  background: rgba(35, 64, 49, 0.07);
+  font-size: 13px;
+  line-height: 1;
+  font-weight: 800;
+}
+
+.waco-download-card h3 {
+  margin: 0 0 8px;
+  color: var(--waco-dark);
+  font-size: clamp(20px, 1.8vw, 27px);
+  line-height: 1.16;
+  letter-spacing: -0.025em;
+}
+
+.waco-download-card p {
+  margin: 0;
+  color: var(--waco-muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.waco-download-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  color: #ffffff;
+  background: var(--waco-primary);
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 900;
+  box-shadow: 0 12px 26px rgba(35, 64, 49, 0.18);
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.waco-download-btn:hover {
+  transform: translateY(-2px);
+  background: var(--waco-primary-dark);
+}
+
+.waco-download-empty {
+  display: none;
+  padding: 28px;
+  border: 1px dashed rgba(35, 64, 49, 0.22);
+  border-radius: 22px;
+  color: var(--waco-muted);
+  background: rgba(255, 255, 255, 0.62);
+  font-size: 15px;
+  line-height: 1.65;
+  text-align: center;
+}
+
+.waco-download-empty.is-visible {
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  .waco-download-overview-grid,
+  .waco-download-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .waco-download-side {
+    position: static;
+  }
+
+  .waco-download-filter {
+    width: 100%;
+    justify-content: flex-start;
+    border-radius: 28px;
+  }
+}
+
+@media (max-width: 760px) {
+  .waco-download-overview-card,
+  .waco-download-side-card {
+    padding: 22px;
+  }
+
+  .waco-download-filter {
+    border-radius: 24px;
+  }
+
+  .waco-download-filter button {
+    flex: 1 1 calc(50% - 10px);
+  }
+
+  .waco-download-card {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .waco-download-btn {
+    width: 100%;
+  }
+}
+
+
+/* =========================================================
+  PROJECTS PAGE v1.8.0
+========================================================= */
+
+.waco-projects-page .waco-projects-list-section {
+  padding-top: 64px;
+  padding-bottom: 66px;
+}
+
+/* Filter */
+.waco-project-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  width: fit-content;
+  max-width: 100%;
+  margin: -4px auto 32px;
+  padding: 12px;
+  border: 1px solid var(--waco-line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.62);
+  box-shadow: var(--waco-shadow-soft);
+}
+
+.waco-project-filter button {
+  min-height: 40px;
+  padding: 9px 16px;
+  border: 1px solid rgba(35, 64, 49, 0.16);
+  border-radius: 999px;
+  color: var(--waco-primary-dark);
+  background: rgba(255, 255, 255, 0.72);
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+
+.waco-project-filter button:hover {
+  transform: translateY(-2px);
+  background: rgba(35, 64, 49, 0.08);
+}
+
+.waco-project-filter button.is-active {
+  color: #ffffff;
+  border-color: var(--waco-primary);
+  background: var(--waco-primary);
+}
+
+/* Project grid */
+.waco-project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.waco-project-card.is-hidden {
+  display: none;
+}
+
+.waco-project-card-button {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  min-height: 470px;
+  padding: 0;
+  border: 1px solid var(--waco-line);
+  border-radius: var(--waco-radius-lg);
+  background: #ffffff;
+  box-shadow: var(--waco-shadow-soft);
+  cursor: pointer;
+  text-align: left;
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.waco-project-card-button:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--waco-shadow);
+}
+
+.waco-project-card-media {
+  display: block;
+  height: 285px;
+  flex: 0 0 auto;
+  background-color: #e5e7eb;
+}
+
+.waco-project-card-body {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: 22px 24px 28px;
+}
+
+.waco-project-card-meta {
+  display: inline-flex;
+  width: fit-content;
+  min-height: 28px;
+  align-items: center;
+  margin-bottom: 14px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  color: var(--waco-primary);
+  background: rgba(35, 64, 49, 0.08);
+  font-size: 13px;
+  line-height: 1;
+  font-weight: 800;
+}
+
+.waco-project-card-body strong {
+  margin: 0 0 10px;
+  color: var(--waco-dark);
+  font-size: clamp(22px, 1.9vw, 30px);
+  line-height: 1.14;
+  letter-spacing: -0.03em;
+}
+
+.waco-project-card-body > span:last-child {
+  margin-top: auto;
+  color: var(--waco-muted);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.waco-project-empty {
+  display: none;
+  margin-top: 26px;
+  padding: 28px;
+  border: 1px dashed rgba(35, 64, 49, 0.22);
+  border-radius: 22px;
+  color: var(--waco-muted);
+  background: rgba(255, 255, 255, 0.62);
+  font-size: 15px;
+  line-height: 1.65;
+  text-align: center;
+}
+
+.waco-project-empty.is-visible {
+  display: block;
+}
+
+/* Modal */
+.waco-project-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: none;
+  padding: 32px;
+  overflow-y: auto;
+}
+
+.waco-project-modal.is-open {
+  display: block;
+}
+
+.waco-project-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 16, 13, 0.84);
+  backdrop-filter: blur(14px);
+}
+
+.waco-project-modal-dialog {
+  position: relative;
+  z-index: 2;
+  width: min(1100px, calc(100vw - 64px));
+  margin: 0 auto;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 30px;
+  background: #ffffff;
+  box-shadow: 0 34px 100px rgba(0, 0, 0, 0.35);
+}
+
+.waco-project-modal-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  z-index: 8;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(255, 255, 255, 0.36);
+  border-radius: 999px;
+  color: #ffffff;
+  background: rgba(22, 41, 31, 0.64);
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  font-size: 28px;
+  line-height: 1;
+}
+
+.waco-project-modal-gallery {
+  padding: 0;
+  background: #e5e7eb;
+}
+
+.waco-project-modal-main-swiper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  background: #e5e7eb;
+}
+
+.waco-project-modal-main-swiper .swiper-slide {
+  height: auto;
+}
+
+.waco-project-modal-main-image {
+  min-height: 560px;
+  background-color: #e5e7eb;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.waco-project-modal-thumb-swiper {
+  padding: 14px 18px 18px;
+  background: rgba(16, 36, 27, 0.06);
+}
+
+.waco-project-modal-thumb-swiper .swiper-slide {
+  cursor: pointer;
+}
+
+.waco-project-modal-thumb-image {
+  height: 88px;
+  border: 2px solid transparent;
+  border-radius: 16px;
+  background-color: #e5e7eb;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.7;
+  transition: border-color 0.22s ease, opacity 0.22s ease, transform 0.22s ease;
+}
+
+.waco-project-modal-thumb-swiper .swiper-slide:hover .waco-project-modal-thumb-image {
+  opacity: 0.92;
+  transform: translateY(-2px);
+}
+
+.waco-project-modal-thumb-swiper .swiper-slide-thumb-active .waco-project-modal-thumb-image {
+  border-color: var(--waco-primary);
+  opacity: 1;
+}
+
+.waco-project-modal-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 6;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  border-radius: 999px;
+  color: #ffffff;
+  background: rgba(22, 41, 31, 0.56);
+  box-shadow: 0 12px 30px rgba(17, 24, 39, 0.16);
+  backdrop-filter: blur(12px);
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.waco-project-modal-arrow:hover {
+  background: rgba(22, 41, 31, 0.78);
+  transform: translateY(-50%) scale(1.04);
+}
+
+.waco-project-modal-prev {
+  left: 18px;
+}
+
+.waco-project-modal-next {
+  right: 18px;
+}
+
+/* Modal content */
+.waco-project-modal-content {
+  padding: clamp(26px, 4vw, 46px);
+}
+
+.waco-project-modal-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.waco-project-modal-meta span {
+  display: inline-flex;
+  min-height: 28px;
+  align-items: center;
+  padding: 5px 10px;
+  border-radius: 999px;
+  color: var(--waco-primary);
+  background: rgba(35, 64, 49, 0.08);
+  font-size: 13px;
+  line-height: 1;
+  font-weight: 800;
+}
+
+.waco-project-modal-content h2 {
+  margin: 0 0 18px;
+  color: var(--waco-dark);
+  font-size: clamp(32px, 4vw, 52px);
+  line-height: 1.06;
+  letter-spacing: -0.04em;
+}
+
+.waco-project-modal-text {
+  color: var(--waco-text);
+  font-size: 16px;
+  line-height: 1.78;
+}
+
+.waco-project-modal-text p {
+  margin: 0 0 18px;
+}
+
+.waco-project-modal-text p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 1024px) {
+  .waco-project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .waco-project-filter {
+    width: 100%;
+    justify-content: flex-start;
+    border-radius: 28px;
+  }
+
+  .waco-project-modal-main-image {
+    min-height: 460px;
+  }
+}
+
+@media (max-width: 760px) {
+  .waco-project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .waco-project-card-button {
+    min-height: 0;
+  }
+
+  .waco-project-card-media {
+    height: 230px;
+  }
+
+  .waco-project-filter {
+    border-radius: 24px;
+  }
+
+  .waco-project-filter button {
+    flex: 1 1 calc(50% - 10px);
+  }
+
+  .waco-project-modal {
+    padding: 18px;
+  }
+
+  .waco-project-modal-dialog {
+    width: calc(100vw - 36px);
+    border-radius: 24px;
+  }
+
+  .waco-project-modal-main-image {
+    min-height: 320px;
+  }
+
+  .waco-project-modal-thumb-image {
+    height: 72px;
+    border-radius: 12px;
+  }
+
+  .waco-project-modal-arrow {
+    width: 40px;
+    height: 40px;
+  }
+
+  .waco-project-modal-prev {
+    left: 12px;
+  }
+
+  .waco-project-modal-next {
+    right: 12px;
+  }
+}
+
+
+/* =========================================================
+  PROJECTS PAGE v1.8.1 MODAL UX FIX
+  - Modal max width changed to 900px
+  - Close button remains visible
+  - Modal fits within viewport height
+  - Gallery stays compact
+  - Project text area scrolls when content is long
+========================================================= */
+
+.waco-project-modal {
+  padding: 28px !important;
+  overflow: hidden !important;
+}
+
+.waco-project-modal-dialog {
+  width: min(900px, calc(100vw - 56px)) !important;
+  max-height: calc(100vh - 56px) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+  border-radius: 28px !important;
+}
+
+/* Keep close button visible while modal content scrolls */
+.waco-project-modal-close {
+  position: absolute !important;
+  top: 16px !important;
+  right: 16px !important;
+  z-index: 30 !important;
+  width: 46px !important;
+  height: 46px !important;
+  color: #ffffff !important;
+  background: rgba(22, 41, 31, 0.82) !important;
+  border-color: rgba(255, 255, 255, 0.42) !important;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.22) !important;
+}
+
+.waco-project-modal-close:hover {
+  background: rgba(22, 41, 31, 0.96) !important;
+}
+
+/* Gallery is fixed-height and does not push the close button away */
+.waco-project-modal-gallery {
+  flex: 0 0 auto !important;
+}
+
+.waco-project-modal-main-image {
+  min-height: 0 !important;
+  height: clamp(320px, 46vh, 430px) !important;
+}
+
+.waco-project-modal-thumb-swiper {
+  padding: 12px 16px 16px !important;
+}
+
+.waco-project-modal-thumb-image {
+  height: 68px !important;
+  border-radius: 13px !important;
+}
+
+/* Content area can scroll independently for longer 200-400 word case text */
+.waco-project-modal-content {
+  flex: 1 1 auto !important;
+  min-height: 0 !important;
+  overflow-y: auto !important;
+  padding: clamp(24px, 3.2vw, 34px) !important;
+  scrollbar-width: thin;
+}
+
+.waco-project-modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.waco-project-modal-content::-webkit-scrollbar-track {
+  background: rgba(35, 64, 49, 0.06);
+  border-radius: 999px;
+}
+
+.waco-project-modal-content::-webkit-scrollbar-thumb {
+  background: rgba(35, 64, 49, 0.32);
+  border-radius: 999px;
+}
+
+.waco-project-modal-content h2 {
+  font-size: clamp(30px, 3.2vw, 42px) !important;
+  line-height: 1.08 !important;
+  margin-bottom: 16px !important;
+}
+
+.waco-project-modal-text {
+  max-width: 760px;
+  font-size: 15px !important;
+  line-height: 1.76 !important;
+}
+
+.waco-project-modal-text p {
+  margin-bottom: 16px !important;
+}
+
+/* Slightly smaller gallery arrows for the 900px modal */
+.waco-project-modal-arrow {
+  width: 42px !important;
+  height: 42px !important;
+}
+
+.waco-project-modal-prev {
+  left: 16px !important;
+}
+
+.waco-project-modal-next {
+  right: 16px !important;
+}
+
+@media (max-width: 760px) {
+  .waco-project-modal {
+    padding: 14px !important;
+  }
+
+  .waco-project-modal-dialog {
+    width: calc(100vw - 28px) !important;
+    max-height: calc(100vh - 28px) !important;
+    border-radius: 22px !important;
+  }
+
+  .waco-project-modal-close {
+    top: 10px !important;
+    right: 10px !important;
+    width: 40px !important;
+    height: 40px !important;
+    font-size: 24px !important;
+  }
+
+  .waco-project-modal-main-image {
+    height: clamp(240px, 38vh, 320px) !important;
+  }
+
+  .waco-project-modal-thumb-image {
+    height: 58px !important;
+  }
+
+  .waco-project-modal-content {
+    padding: 22px !important;
+  }
+
+  .waco-project-modal-content h2 {
+    font-size: clamp(26px, 8vw, 34px) !important;
+  }
+}
+
+
+/* =========================================================
+  PROJECTS PAGE v1.8.2 GRID GAP + LOAD MORE
+  - Fix vertical spacing between project cards
+  - Add load more button layout
+  - Hidden-by-load-more state is separate from category filter state
+========================================================= */
+
+.waco-projects-page .waco-project-grid {
+  row-gap: 42px !important;
+  column-gap: 28px !important;
+  align-items: stretch !important;
+}
+
+.waco-projects-page .waco-project-card {
+  min-width: 0;
+}
+
+.waco-projects-page .waco-project-card-button {
+  min-height: 500px !important;
+  height: 100% !important;
+}
+
+/* Make body height predictable so rows calculate cleanly */
+.waco-projects-page .waco-project-card-body {
+  min-height: 215px !important;
+}
+
+.waco-projects-page .waco-project-card-body strong {
+  min-height: calc(1.14em * 2);
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.waco-project-card.is-load-hidden {
+  display: none !important;
+}
+
+.waco-project-load-more-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 42px;
+}
+
+.waco-project-load-more-wrap.is-hidden {
+  display: none !important;
+}
+
+.waco-project-load-more {
+  min-width: 190px;
+}
+
+@media (max-width: 1024px) {
+  .waco-projects-page .waco-project-grid {
+    row-gap: 30px !important;
+    column-gap: 22px !important;
+  }
+
+  .waco-projects-page .waco-project-card-button {
+    min-height: 480px !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .waco-projects-page .waco-project-grid {
+    row-gap: 22px !important;
+  }
+
+  .waco-projects-page .waco-project-card-button {
+    min-height: 0 !important;
+  }
+
+  .waco-projects-page .waco-project-card-body {
+    min-height: 0 !important;
+  }
+}
+
+
+/* =========================================================
+  PROJECTS PAGE v1.8.3 CARD GRID HEIGHT FIX
+  Problem:
+  The previous project cards used min-height + flex + height:100%.
+  In some viewport widths the CSS grid did not reserve the full card height,
+  causing the second row to visually overlap the first row content area and the
+  Load More button to appear too high.
+  Fix:
+  Use deterministic grid rows for project cards:
+  - outer project grid uses fixed auto rows on desktop
+  - each card button uses two explicit rows: media + body
+  - title/description are clamped to keep card height stable
+========================================================= */
+
+.waco-projects-page .waco-project-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  grid-auto-rows: 540px !important;
+  gap: 42px 28px !important;
+  align-items: stretch !important;
+  margin-bottom: 0 !important;
+}
+
+.waco-projects-page .waco-project-card {
+  display: block;
+  min-width: 0;
+  height: 100% !important;
+}
+
+.waco-projects-page .waco-project-card.is-hidden,
+.waco-projects-page .waco-project-card.is-load-hidden {
+  display: none !important;
+}
+
+.waco-projects-page .waco-project-card-button {
+  display: grid !important;
+  grid-template-rows: 300px minmax(0, 1fr) !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 0 !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+}
+
+.waco-projects-page .waco-project-card-media {
+  width: 100% !important;
+  height: 300px !important;
+  min-height: 300px !important;
+}
+
+.waco-projects-page .waco-project-card-body {
+  min-height: 0 !important;
+  padding: 24px 26px 28px !important;
+  overflow: hidden !important;
+}
+
+.waco-projects-page .waco-project-card-body strong {
+  min-height: 0 !important;
+  margin-bottom: 12px !important;
+  overflow: hidden !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+}
+
+.waco-projects-page .waco-project-card-body > span:last-child {
+  overflow: hidden !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+}
+
+/* Load More must always sit below the full grid, not between rows */
+.waco-projects-page .waco-project-load-more-wrap {
+  position: relative !important;
+  z-index: 2 !important;
+  display: flex !important;
+  justify-content: center !important;
+  clear: both !important;
+  margin-top: 58px !important;
+}
+
+.waco-projects-page .waco-project-load-more-wrap.is-hidden {
+  display: none !important;
+}
+
+@media (max-width: 1024px) {
+  .waco-projects-page .waco-project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    grid-auto-rows: 520px !important;
+    gap: 32px 22px !important;
+  }
+
+  .waco-projects-page .waco-project-card-button {
+    grid-template-rows: 280px minmax(0, 1fr) !important;
+  }
+
+  .waco-projects-page .waco-project-card-media {
+    height: 280px !important;
+    min-height: 280px !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .waco-projects-page .waco-project-grid {
+    grid-template-columns: 1fr !important;
+    grid-auto-rows: auto !important;
+    gap: 24px !important;
+  }
+
+  .waco-projects-page .waco-project-card {
+    height: auto !important;
+  }
+
+  .waco-projects-page .waco-project-card-button {
+    grid-template-rows: auto auto !important;
+    height: auto !important;
+  }
+
+  .waco-projects-page .waco-project-card-media {
+    height: 240px !important;
+    min-height: 240px !important;
+  }
+
+  .waco-projects-page .waco-project-card-body {
+    padding: 22px !important;
+  }
+
+  .waco-projects-page .waco-project-load-more-wrap {
+    margin-top: 34px !important;
+  }
+}
+
+
+/* =========================================================
+  PROJECTS PAGE v1.8.4 CARD CONTENT REFINEMENT
+  - Remove card tag label from project cards
+  - Smaller project title
+  - Project title max 2 lines
+  - Description max 2 lines
+  - Reduce the large gap between title and description
+========================================================= */
+
+/* Slightly more compact project cards now that the tag is removed */
+.waco-projects-page .waco-project-grid {
+  grid-auto-rows: 500px !important;
+  gap: 40px 28px !important;
+}
+
+.waco-projects-page .waco-project-card-button {
+  grid-template-rows: 285px minmax(0, 1fr) !important;
+}
+
+.waco-projects-page .waco-project-card-media {
+  height: 285px !important;
+  min-height: 285px !important;
+}
+
+/* Hide card tag/label only in the project grid.
+   Modal category tags remain visible because they use `.waco-project-modal-meta`. */
+.waco-projects-page .waco-project-card-meta {
+  display: none !important;
+}
+
+/* Remove previous auto spacing and make content flow naturally */
+.waco-projects-page .waco-project-card-body {
+  display: block !important;
+  min-height: 0 !important;
+  padding: 24px 26px 26px !important;
+  overflow: hidden !important;
+}
+
+.waco-projects-page .waco-project-card-body strong {
+  margin: 0 0 12px !important;
+  min-height: 0 !important;
+  color: var(--waco-dark) !important;
+  font-size: clamp(19px, 1.55vw, 25px) !important;
+  line-height: 1.18 !important;
+  letter-spacing: -0.026em !important;
+  overflow: hidden !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+}
+
+.waco-projects-page .waco-project-card-body > span:last-child {
+  margin-top: 0 !important;
+  color: var(--waco-muted) !important;
+  font-size: 14px !important;
+  line-height: 1.58 !important;
+  overflow: hidden !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+}
+
+/* Keep the Load More button visually separated from the grid */
+.waco-projects-page .waco-project-load-more-wrap {
+  margin-top: 46px !important;
+}
+
+@media (max-width: 1024px) {
+  .waco-projects-page .waco-project-grid {
+    grid-auto-rows: 480px !important;
+    gap: 32px 22px !important;
+  }
+
+  .waco-projects-page .waco-project-card-button {
+    grid-template-rows: 270px minmax(0, 1fr) !important;
+  }
+
+  .waco-projects-page .waco-project-card-media {
+    height: 270px !important;
+    min-height: 270px !important;
+  }
+
+  .waco-projects-page .waco-project-card-body strong {
+    font-size: clamp(19px, 2.4vw, 24px) !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .waco-projects-page .waco-project-grid {
+    grid-auto-rows: auto !important;
+    gap: 24px !important;
+  }
+
+  .waco-projects-page .waco-project-card-button {
+    grid-template-rows: auto auto !important;
+  }
+
+  .waco-projects-page .waco-project-card-media {
+    height: 230px !important;
+    min-height: 230px !important;
+  }
+
+  .waco-projects-page .waco-project-card-body {
+    padding: 22px !important;
+  }
+
+  .waco-projects-page .waco-project-card-body strong {
+    font-size: 22px !important;
+  }
+}
+
+
+/* =========================================================
+  PROJECTS PAGE v1.8.5 COMPACT CARD TEST
+  - Reduce the oversized blank area inside project cards
+  - Keep title max 2 lines
+  - Keep description max 2 lines
+  - Some HTML titles/descriptions are intentionally longer for visual testing
+========================================================= */
+
+.waco-projects-page .waco-project-grid {
+  grid-auto-rows: 410px !important;
+  gap: 34px 28px !important;
+}
+
+.waco-projects-page .waco-project-card-button {
+  grid-template-rows: 245px minmax(0, 1fr) !important;
+}
+
+.waco-projects-page .waco-project-card-media {
+  height: 245px !important;
+  min-height: 245px !important;
+}
+
+.waco-projects-page .waco-project-card-body {
+  display: grid !important;
+  grid-template-rows: auto auto;
+  align-content: start !important;
+  gap: 10px !important;
+  padding: 22px 24px 24px !important;
+}
+
+.waco-projects-page .waco-project-card-body strong {
+  margin: 0 !important;
+  max-height: calc(1.18em * 2) !important;
+  font-size: clamp(18px, 1.45vw, 23px) !important;
+  line-height: 1.18 !important;
+  letter-spacing: -0.024em !important;
+  overflow: hidden !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+}
+
+.waco-projects-page .waco-project-card-body > span:last-child {
+  margin: 0 !important;
+  max-height: calc(14px * 1.55 * 2) !important;
+  font-size: 14px !important;
+  line-height: 1.55 !important;
+  overflow: hidden !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+}
+
+/* Keep tags removed on grid cards */
+.waco-projects-page .waco-project-card-meta {
+  display: none !important;
+}
+
+.waco-projects-page .waco-project-load-more-wrap {
+  margin-top: 42px !important;
+}
+
+@media (max-width: 1024px) {
+  .waco-projects-page .waco-project-grid {
+    grid-auto-rows: 400px !important;
+    gap: 28px 22px !important;
+  }
+
+  .waco-projects-page .waco-project-card-button {
+    grid-template-rows: 235px minmax(0, 1fr) !important;
+  }
+
+  .waco-projects-page .waco-project-card-media {
+    height: 235px !important;
+    min-height: 235px !important;
+  }
+
+  .waco-projects-page .waco-project-card-body strong {
+    font-size: clamp(18px, 2.25vw, 22px) !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .waco-projects-page .waco-project-grid {
+    grid-auto-rows: auto !important;
+    gap: 22px !important;
+  }
+
+  .waco-projects-page .waco-project-card-button {
+    grid-template-rows: auto auto !important;
+  }
+
+  .waco-projects-page .waco-project-card-media {
+    height: 220px !important;
+    min-height: 220px !important;
+  }
+
+  .waco-projects-page .waco-project-card-body {
+    padding: 20px 22px 22px !important;
+  }
+
+  .waco-projects-page .waco-project-card-body strong {
+    font-size: 21px !important;
+  }
+}
+
+
+/* =========================================================
+  PROJECTS PAGE v1.8.6 AUTO-HEIGHT CARD FIX
+  Problem:
+  v1.8.5 still used a fixed desktop card row height, so the content area kept
+  unnecessary blank space below the 2-line description.
+  Fix:
+  - Project cards now use auto height.
+  - Image area keeps a stable fixed height.
+  - Text area height follows real content.
+  - Title remains max 2 lines.
+  - Description remains max 2 lines.
+========================================================= */
+
+.waco-projects-page .waco-project-grid {
+  grid-auto-rows: auto !important;
+  align-items: start !important;
+  gap: 36px 28px !important;
+}
+
+.waco-projects-page .waco-project-card {
+  height: auto !important;
+}
+
+.waco-projects-page .waco-project-card-button {
+  display: grid !important;
+  grid-template-rows: 245px auto !important;
+  height: auto !important;
+  min-height: 0 !important;
+  overflow: hidden !important;
+}
+
+.waco-projects-page .waco-project-card-media {
+  height: 245px !important;
+  min-height: 245px !important;
+}
+
+.waco-projects-page .waco-project-card-body {
+  display: grid !important;
+  grid-template-rows: auto auto !important;
+  align-content: start !important;
+  gap: 9px !important;
+  min-height: 0 !important;
+  height: auto !important;
+  padding: 20px 24px 22px !important;
+  overflow: hidden !important;
+}
+
+.waco-projects-page .waco-project-card-body strong {
+  margin: 0 !important;
+  min-height: 0 !important;
+  max-height: calc(1.18em * 2) !important;
+  font-size: clamp(18px, 1.42vw, 23px) !important;
+  line-height: 1.18 !important;
+  letter-spacing: -0.024em !important;
+  overflow: hidden !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+}
+
+.waco-projects-page .waco-project-card-body > span:last-child {
+  margin: 0 !important;
+  min-height: 0 !important;
+  max-height: calc(14px * 1.55 * 2) !important;
+  color: var(--waco-muted) !important;
+  font-size: 14px !important;
+  line-height: 1.55 !important;
+  overflow: hidden !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+}
+
+/* Keep project grid card tags hidden, but modal tags are still visible. */
+.waco-projects-page .waco-project-card-meta {
+  display: none !important;
+}
+
+.waco-projects-page .waco-project-load-more-wrap {
+  margin-top: 44px !important;
+}
+
+@media (max-width: 1024px) {
+  .waco-projects-page .waco-project-grid {
+    grid-auto-rows: auto !important;
+    gap: 30px 22px !important;
+  }
+
+  .waco-projects-page .waco-project-card-button {
+    grid-template-rows: 235px auto !important;
+  }
+
+  .waco-projects-page .waco-project-card-media {
+    height: 235px !important;
+    min-height: 235px !important;
+  }
+
+  .waco-projects-page .waco-project-card-body strong {
+    font-size: clamp(18px, 2.25vw, 22px) !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .waco-projects-page .waco-project-grid {
+    gap: 22px !important;
+  }
+
+  .waco-projects-page .waco-project-card-button {
+    grid-template-rows: auto auto !important;
+  }
+
+  .waco-projects-page .waco-project-card-media {
+    height: 220px !important;
+    min-height: 220px !important;
+  }
+
+  .waco-projects-page .waco-project-card-body {
+    padding: 20px 22px 22px !important;
+  }
+
+  .waco-projects-page .waco-project-card-body strong {
+    font-size: 21px !important;
+  }
+}
+
+
+/* =========================================================
+  PROJECTS PAGE v1.8.7 EQUAL ROW CARD HEIGHT
+  Goal:
+  Keep project cards content-based, but make cards in the same grid row align
+  to the same height automatically.
+
+  How it works:
+  - The grid row height is still automatic.
+  - The tallest card in each row defines that row height.
+  - Other cards stretch to 100% of that row height.
+  - Image height remains fixed.
+  - Text area remains compact.
+  - Title and description are still clamped to 2 lines.
+========================================================= */
+
+.waco-projects-page .waco-project-grid {
+  grid-auto-rows: auto !important;
+  align-items: stretch !important;
+  gap: 36px 28px !important;
+}
+
+.waco-projects-page .waco-project-card {
+  height: 100% !important;
+  min-height: 0 !important;
+}
+
+.waco-projects-page .waco-project-card-button {
+  display: grid !important;
+  grid-template-rows: 245px minmax(0, 1fr) !important;
+  height: 100% !important;
+  min-height: 0 !important;
+  overflow: hidden !important;
+}
+
+.waco-projects-page .waco-project-card-media {
+  height: 245px !important;
+  min-height: 245px !important;
+}
+
+.waco-projects-page .waco-project-card-body {
+  display: grid !important;
+  grid-template-rows: auto auto !important;
+  align-content: start !important;
+  gap: 9px !important;
+  min-height: 0 !important;
+  height: 100% !important;
+  padding: 20px 24px 22px !important;
+  overflow: hidden !important;
+}
+
+.waco-projects-page .waco-project-card-body strong {
+  margin: 0 !important;
+  min-height: 0 !important;
+  max-height: calc(1.18em * 2) !important;
+  color: var(--waco-dark) !important;
+  font-size: clamp(18px, 1.42vw, 23px) !important;
+  line-height: 1.18 !important;
+  letter-spacing: -0.024em !important;
+  overflow: hidden !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+}
+
+.waco-projects-page .waco-project-card-body > span:last-child {
+  margin: 0 !important;
+  min-height: 0 !important;
+  max-height: calc(14px * 1.55 * 2) !important;
+  color: var(--waco-muted) !important;
+  font-size: 14px !important;
+  line-height: 1.55 !important;
+  overflow: hidden !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+}
+
+/* Keep project grid card labels hidden. Modal labels are unaffected. */
+.waco-projects-page .waco-project-card-meta {
+  display: none !important;
+}
+
+/* Let the button stay clearly below the equal-height grid. */
+.waco-projects-page .waco-project-load-more-wrap {
+  margin-top: 46px !important;
+}
+
+@media (max-width: 1024px) {
+  .waco-projects-page .waco-project-grid {
+    align-items: stretch !important;
+    gap: 30px 22px !important;
+  }
+
+  .waco-projects-page .waco-project-card-button {
+    grid-template-rows: 235px minmax(0, 1fr) !important;
+  }
+
+  .waco-projects-page .waco-project-card-media {
+    height: 235px !important;
+    min-height: 235px !important;
+  }
+
+  .waco-projects-page .waco-project-card-body strong {
+    font-size: clamp(18px, 2.25vw, 22px) !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .waco-projects-page .waco-project-grid {
+    align-items: start !important;
+    gap: 22px !important;
+  }
+
+  .waco-projects-page .waco-project-card,
+  .waco-projects-page .waco-project-card-button {
+    height: auto !important;
+  }
+
+  .waco-projects-page .waco-project-card-button {
+    grid-template-rows: auto auto !important;
+  }
+
+  .waco-projects-page .waco-project-card-media {
+    height: 220px !important;
+    min-height: 220px !important;
+  }
+
+  .waco-projects-page .waco-project-card-body {
+    height: auto !important;
+    padding: 20px 22px 22px !important;
+  }
+
+  .waco-projects-page .waco-project-card-body strong {
+    font-size: 21px !important;
+  }
+}
+
+
+/* =========================================================
+  SEARCH / 404 / AUTHOR / TAG PAGES v1.9.0
+========================================================= */
+
+/* Search page */
+.waco-search-results-section,
+.waco-author-archive-section,
+.waco-tag-archive-section {
+  padding-top: 64px;
+  padding-bottom: 70px;
+}
+
+.waco-archive-search-box {
+  max-width: 860px;
+  margin: -2px auto 26px;
+  padding: 18px;
+  border: 1px solid var(--waco-line);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: var(--waco-shadow-soft);
+}
+
+.waco-archive-search-box label {
+  display: block;
+  margin: 0 0 10px 8px;
+  color: var(--waco-primary-dark);
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 900;
+}
+
+.waco-archive-search-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 12px;
+}
+
+.waco-archive-search-row input {
+  width: 100%;
+  min-height: 48px;
+  padding: 0 18px;
+  border: 1px solid rgba(35, 64, 49, 0.16);
+  border-radius: 999px;
+  color: var(--waco-primary-dark);
+  background: rgba(255, 255, 255, 0.88);
+  font-size: 14px;
+  font-weight: 700;
+  outline: none;
+}
+
+.waco-archive-search-row input:focus {
+  border-color: var(--waco-primary);
+  background: #ffffff;
+}
+
+.waco-archive-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto 32px;
+  padding: 12px;
+  border: 1px solid var(--waco-line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.62);
+  box-shadow: var(--waco-shadow-soft);
+}
+
+.waco-archive-filter button {
+  min-height: 40px;
+  padding: 9px 16px;
+  border: 1px solid rgba(35, 64, 49, 0.16);
+  border-radius: 999px;
+  color: var(--waco-primary-dark);
+  background: rgba(255, 255, 255, 0.72);
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+
+.waco-archive-filter button:hover {
+  transform: translateY(-2px);
+  background: rgba(35, 64, 49, 0.08);
+}
+
+.waco-archive-filter button.is-active {
+  color: #ffffff;
+  border-color: var(--waco-primary);
+  background: var(--waco-primary);
+}
+
+.waco-search-layout {
+  display: grid;
+  grid-template-columns: 310px minmax(0, 1fr);
+  gap: 26px;
+  align-items: start;
+}
+
+.waco-archive-sidebar {
+  position: sticky;
+  top: 28px;
+  display: grid;
+  gap: 18px;
+}
+
+.waco-archive-side-card,
+.waco-tag-summary-card,
+.waco-author-profile-card {
+  border: 1px solid var(--waco-line);
+  border-radius: var(--waco-radius-xl);
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: var(--waco-shadow-soft);
+}
+
+.waco-archive-side-card {
+  padding: 26px;
+}
+
+.waco-archive-side-card h3 {
+  margin: 0 0 12px;
+  color: var(--waco-dark);
+  font-size: 25px;
+  line-height: 1.15;
+  letter-spacing: -0.032em;
+}
+
+.waco-archive-side-card p {
+  margin: 0;
+  color: var(--waco-muted);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.waco-archive-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.waco-archive-tags a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 8px 12px;
+  border: 1px solid rgba(35, 64, 49, 0.14);
+  border-radius: 999px;
+  color: var(--waco-primary-dark);
+  background: rgba(35, 64, 49, 0.06);
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 800;
+  transition: transform 0.22s ease, background 0.22s ease, color 0.22s ease;
+}
+
+.waco-archive-tags a:hover,
+.waco-archive-tags a.is-active {
+  transform: translateY(-2px);
+  color: #ffffff;
+  background: var(--waco-primary);
+}
+
+.waco-search-result-list {
+  display: grid;
+  gap: 18px;
+}
+
+.waco-search-result-card {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 0;
+  overflow: hidden;
+  border: 1px solid var(--waco-line);
+  border-radius: 24px;
+  background: #ffffff;
+  box-shadow: var(--waco-shadow-soft);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.waco-search-result-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--waco-shadow);
+}
+
+.waco-search-result-card.is-hidden {
+  display: none;
+}
+
+.waco-search-result-media {
+  min-height: 190px;
+  background-color: #e5e7eb;
+}
+
+.waco-search-result-body {
+  display: flex;
+  flex-direction: column;
+  padding: 22px 24px 24px;
+}
+
+.waco-search-result-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.waco-search-result-meta span {
+  display: inline-flex;
+  min-height: 26px;
+  align-items: center;
+  padding: 5px 10px;
+  border-radius: 999px;
+  color: var(--waco-primary);
+  background: rgba(35, 64, 49, 0.08);
+  font-size: 13px;
+  line-height: 1;
+  font-weight: 800;
+}
+
+.waco-search-result-body h3 {
+  margin: 0 0 10px;
+  color: var(--waco-dark);
+  font-size: clamp(22px, 2.3vw, 32px);
+  line-height: 1.14;
+  letter-spacing: -0.03em;
+}
+
+.waco-search-result-body p {
+  margin: 0 0 16px;
+  color: var(--waco-muted);
+  font-size: 14px;
+  line-height: 1.62;
+}
+
+.waco-search-result-body .waco-arrow-link {
+  margin-top: auto;
+}
+
+.waco-archive-empty {
+  display: none;
+  padding: 26px;
+  border: 1px dashed rgba(35, 64, 49, 0.22);
+  border-radius: 22px;
+  color: var(--waco-muted);
+  background: rgba(255, 255, 255, 0.62);
+  font-size: 15px;
+  line-height: 1.65;
+  text-align: center;
+}
+
+.waco-archive-empty.is-visible {
+  display: block;
+}
+
+/* 404 page */
+.waco-error-section {
+  min-height: 100vh;
+  display: grid;
+  align-items: center;
+  padding: 80px 0;
+}
+
+.waco-error-card {
+  width: min(880px, 100%);
+  margin: 0 auto;
+  padding: clamp(32px, 6vw, 70px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 34px;
+  color: #ffffff;
+  background: rgba(14, 24, 19, 0.52);
+  box-shadow: 0 34px 100px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(18px);
+  text-align: center;
+}
+
+.waco-error-card .waco-eyebrow {
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.waco-error-code {
+  margin: 10px 0 4px;
+  font-size: clamp(90px, 15vw, 180px);
+  line-height: 0.9;
+  font-weight: 950;
+  letter-spacing: -0.08em;
+}
+
+.waco-error-card h1 {
+  margin: 0 0 14px;
+  color: #ffffff;
+  font-size: clamp(34px, 5vw, 64px);
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+}
+
+.waco-error-card p {
+  max-width: 640px;
+  margin: 0 auto 26px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.waco-error-search {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 12px;
+  max-width: 620px;
+  margin: 0 auto 24px;
+}
+
+.waco-error-search input {
+  min-height: 48px;
+  padding: 0 18px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.12);
+  outline: none;
+}
+
+.waco-error-search input::placeholder {
+  color: rgba(255, 255, 255, 0.64);
+}
+
+.waco-error-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 0 28px;
+}
+
+.waco-error-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 8px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 800;
+}
+
+/* Author page */
+.waco-author-profile-card {
+  display: grid;
+  grid-template-columns: 96px minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+  margin-bottom: 54px;
+  padding: clamp(26px, 4vw, 42px);
+}
+
+.waco-author-archive-avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 30px;
+}
+
+.waco-author-profile-content h2 {
+  margin: 0 0 12px;
+  color: var(--waco-dark);
+  font-size: clamp(30px, 3.6vw, 48px);
+  line-height: 1.06;
+  letter-spacing: -0.04em;
+}
+
+.waco-author-profile-content p {
+  max-width: 760px;
+  margin: 0 0 20px;
+  color: var(--waco-muted);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.waco-author-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.waco-author-stats span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 38px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  color: var(--waco-primary-dark);
+  background: rgba(35, 64, 49, 0.06);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.waco-author-stats strong {
+  color: var(--waco-primary);
+}
+
+/* Tag page */
+.waco-tag-summary-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 0.72fr);
+  gap: 28px;
+  align-items: center;
+  margin-bottom: 54px;
+  padding: clamp(26px, 4vw, 42px);
+}
+
+.waco-tag-summary-card h2 {
+  margin: 0 0 12px;
+  color: var(--waco-dark);
+  font-size: clamp(34px, 4vw, 54px);
+  line-height: 1.04;
+  letter-spacing: -0.045em;
+}
+
+.waco-tag-summary-card p {
+  max-width: 760px;
+  margin: 0;
+  color: var(--waco-muted);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+@media (max-width: 1024px) {
+  .waco-search-layout,
+  .waco-tag-summary-card {
+    grid-template-columns: 1fr;
+  }
+
+  .waco-archive-sidebar {
+    position: static;
+  }
+
+  .waco-archive-filter {
+    width: 100%;
+    justify-content: flex-start;
+    border-radius: 28px;
+  }
+}
+
+@media (max-width: 760px) {
+  .waco-archive-search-row,
+  .waco-error-search,
+  .waco-search-result-card,
+  .waco-author-profile-card {
+    grid-template-columns: 1fr;
+  }
+
+  .waco-search-result-media {
+    min-height: 220px;
+  }
+
+  .waco-archive-filter {
+    border-radius: 24px;
+  }
+
+  .waco-archive-filter button {
+    flex: 1 1 calc(50% - 10px);
+  }
+
+  .waco-error-card {
+    border-radius: 26px;
+  }
+
+  .waco-error-card .waco-btn-group {
+    justify-content: center;
+  }
+}
+
+
+/* =========================================================
+  CONTACT PAGE v2.0.0
+========================================================= */
+
+.waco-contact-intro-section {
+  padding-top: 64px;
+  padding-bottom: 58px;
+}
+
+.waco-contact-top-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.waco-contact-info-card {
+  padding: 26px;
+  border: 1px solid var(--waco-line);
+  border-radius: var(--waco-radius-lg);
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: var(--waco-shadow-soft);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.waco-contact-info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--waco-shadow);
+}
+
+.waco-contact-info-card h3 {
+  margin: 18px 0 8px;
+  color: var(--waco-dark);
+  font-size: 22px;
+  line-height: 1.18;
+  letter-spacing: -0.025em;
+}
+
+.waco-contact-info-card p {
+  margin: 0 0 8px;
+  color: var(--waco-primary-dark);
+  font-size: 16px;
+  line-height: 1.45;
+  font-weight: 900;
+}
+
+.waco-contact-info-card span {
+  display: block;
+  color: var(--waco-muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Contact form layout */
+.waco-contact-form-section {
+  padding-top: 58px;
+  padding-bottom: 62px;
+}
+
+.waco-contact-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 330px;
+  gap: 28px;
+  align-items: start;
+}
+
+.waco-contact-form-card,
+.waco-contact-side-card,
+.waco-contact-map-card {
+  border: 1px solid var(--waco-line);
+  border-radius: var(--waco-radius-xl);
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: var(--waco-shadow-soft);
+}
+
+.waco-contact-form-card {
+  padding: clamp(26px, 4vw, 46px);
+}
+
+.waco-contact-form-card h2 {
+  margin: 12px 0 12px;
+  color: var(--waco-dark);
+  font-size: clamp(34px, 4vw, 54px);
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+}
+
+.waco-contact-form-card > p {
+  max-width: 720px;
+  margin: 0 0 28px;
+  color: var(--waco-muted);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.waco-contact-form {
+  display: grid;
+  gap: 22px;
+}
+
+.waco-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.waco-form-field {
+  display: grid;
+  gap: 8px;
+}
+
+.waco-form-field-full {
+  grid-column: 1 / -1;
+}
+
+.waco-form-field label {
+  color: var(--waco-primary-dark);
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 900;
+}
+
+.waco-form-field input,
+.waco-form-field textarea {
+  width: 100%;
+  border: 1px solid rgba(35, 64, 49, 0.16);
+  border-radius: 18px;
+  color: var(--waco-primary-dark);
+  background: rgba(255, 255, 255, 0.84);
+  box-shadow: 0 10px 24px rgba(17, 24, 39, 0.04);
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 700;
+  outline: none;
+  transition: border-color 0.22s ease, background 0.22s ease, box-shadow 0.22s ease;
+}
+
+.waco-form-field input {
+  min-height: 52px;
+  padding: 0 16px;
+}
+
+.waco-form-field textarea {
+  min-height: 170px;
+  padding: 15px 16px;
+  resize: vertical;
+}
+
+.waco-form-field input::placeholder,
+.waco-form-field textarea::placeholder {
+  color: rgba(91, 104, 116, 0.7);
+  font-weight: 600;
+}
+
+.waco-form-field input:focus,
+.waco-form-field textarea:focus {
+  border-color: var(--waco-primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(35, 64, 49, 0.08);
+}
+
+.waco-form-footer {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.waco-form-footer p {
+  max-width: 560px;
+  margin: 0;
+  color: var(--waco-muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.waco-form-status {
+  display: none;
+  padding: 14px 16px;
+  border-radius: 16px;
+  color: var(--waco-primary-dark);
+  background: rgba(35, 64, 49, 0.08);
+  font-size: 14px;
+  line-height: 1.55;
+  font-weight: 800;
+}
+
+.waco-form-status.is-visible {
+  display: block;
+}
+
+/* Side cards */
+.waco-contact-side {
+  position: sticky;
+  top: 28px;
+  display: grid;
+  gap: 18px;
+}
+
+.waco-contact-side-card {
+  padding: 26px;
+}
+
+.waco-contact-side-card h3 {
+  margin: 0 0 12px;
+  color: var(--waco-dark);
+  font-size: 26px;
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+}
+
+.waco-contact-side-card p {
+  margin: 0 0 20px;
+  color: var(--waco-muted);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.waco-contact-hours {
+  display: grid;
+  gap: 12px;
+}
+
+.waco-contact-hours span {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: center;
+  padding: 12px;
+  border-radius: 16px;
+  background: rgba(35, 64, 49, 0.055);
+}
+
+.waco-contact-hours strong {
+  color: var(--waco-primary-dark);
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.waco-contact-hours em {
+  color: var(--waco-muted);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+/* Map card */
+.waco-contact-map-section {
+  padding-top: 62px;
+  padding-bottom: 62px;
+}
+
+.waco-contact-map-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+  overflow: hidden;
+}
+
+.waco-contact-map-image {
+  min-height: 360px;
+  background-color: #e5e7eb;
+}
+
+.waco-contact-map-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(28px, 4vw, 48px);
+}
+
+.waco-contact-map-content h2 {
+  margin: 12px 0 12px;
+  color: var(--waco-dark);
+  font-size: clamp(30px, 3.4vw, 46px);
+  line-height: 1.06;
+  letter-spacing: -0.04em;
+}
+
+.waco-contact-map-content p {
+  margin: 0;
+  color: var(--waco-muted);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+@media (max-width: 1024px) {
+  .waco-contact-top-grid,
+  .waco-contact-layout,
+  .waco-contact-map-card {
+    grid-template-columns: 1fr;
+  }
+
+  .waco-contact-side {
+    position: static;
+  }
+}
+
+@media (max-width: 760px) {
+  .waco-contact-info-card,
+  .waco-contact-form-card,
+  .waco-contact-side-card {
+    padding: 22px;
+  }
+
+  .waco-form-grid,
+  .waco-form-footer,
+  .waco-contact-hours span {
+    grid-template-columns: 1fr;
+  }
+
+  .waco-form-footer {
+    align-items: stretch;
+  }
+
+  .waco-form-footer .waco-btn {
+    width: 100%;
+  }
+
+  .waco-contact-map-image {
+    min-height: 260px;
+  }
+}
+
+
+/* =========================================================
+  ABOUT PAGE v2.1.0
+========================================================= */
+
+.waco-about-story-section,
+.waco-about-stats-section,
+.waco-about-advantage-section,
+.waco-about-why-section,
+.waco-about-testimonial-section {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+/* Story */
+.waco-about-story-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(360px, 1.08fr);
+  gap: 34px;
+  align-items: center;
+}
+
+.waco-about-story-content h2 {
+  margin: 12px 0 18px;
+  color: var(--waco-dark);
+  font-size: clamp(34px, 4.8vw, 62px);
+  line-height: 1.04;
+  letter-spacing: -0.05em;
+}
+
+.waco-about-story-content p {
+  margin: 0 0 18px;
+  color: var(--waco-muted);
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.waco-about-story-media {
+  min-height: 520px;
+  border: 1px solid var(--waco-line);
+  border-radius: var(--waco-radius-xl);
+  background-color: #e5e7eb;
+  box-shadow: var(--waco-shadow-soft);
+}
+
+/* Data strength */
+.waco-about-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.waco-about-stat-card {
+  padding: 30px 24px;
+  border: 1px solid var(--waco-line);
+  border-radius: var(--waco-radius-lg);
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: var(--waco-shadow-soft);
+  text-align: center;
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.waco-about-stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--waco-shadow);
+}
+
+.waco-about-stat-card strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--waco-primary-dark);
+  font-size: clamp(42px, 5vw, 70px);
+  line-height: 1;
+  letter-spacing: -0.06em;
+  font-weight: 950;
+}
+
+.waco-about-stat-card p {
+  margin: 0;
+  color: var(--waco-muted);
+  font-size: 14px;
+  line-height: 1.55;
+  font-weight: 800;
+}
+
+/* Product advantages */
+.waco-about-advantage-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.waco-about-advantage-card {
+  position: relative;
+  min-height: 260px;
+  padding: 28px;
+  border: 1px solid var(--waco-line);
+  border-radius: var(--waco-radius-lg);
+  background: rgba(255, 255, 255, 0.84);
+  box-shadow: var(--waco-shadow-soft);
+  overflow: hidden;
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.waco-about-advantage-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--waco-shadow);
+}
+
+.waco-about-advantage-card:nth-child(1) { transition-delay: 0.04s; }
+.waco-about-advantage-card:nth-child(2) { transition-delay: 0.12s; }
+.waco-about-advantage-card:nth-child(3) { transition-delay: 0.20s; }
+.waco-about-advantage-card:nth-child(4) { transition-delay: 0.28s; }
+
+.waco-about-floating-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 62px;
+  height: 62px;
+  margin-bottom: 24px;
+  border-radius: 22px;
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--waco-primary), #2f5a44);
+  font-size: 24px;
+  line-height: 1;
+  font-weight: 900;
+  box-shadow: 0 16px 34px rgba(35, 64, 49, 0.18);
+  animation: wacoIconFloat 3.6s ease-in-out infinite;
+}
+
+.waco-about-advantage-card:nth-child(2) .waco-about-floating-icon {
+  animation-delay: 0.5s;
+}
+
+.waco-about-advantage-card:nth-child(3) .waco-about-floating-icon {
+  animation-delay: 1s;
+}
+
+.waco-about-advantage-card:nth-child(4) .waco-about-floating-icon {
+  animation-delay: 1.5s;
+}
+
+@keyframes wacoIconFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+.waco-about-advantage-card h3 {
+  margin: 0 0 12px;
+  color: var(--waco-dark);
+  font-size: 22px;
+  line-height: 1.18;
+  letter-spacing: -0.025em;
+}
+
+.waco-about-advantage-card p {
+  margin: 0;
+  color: var(--waco-muted);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+/* Why choose us */
+.waco-about-why-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(360px, 1.1fr);
+  gap: 28px;
+  align-items: stretch;
+}
+
+.waco-about-why-list {
+  display: grid;
+  gap: 14px;
+}
+
+.waco-about-why-item {
+  display: grid;
+  grid-template-columns: 46px minmax(0, 1fr);
+  gap: 0 16px;
+  width: 100%;
+  padding: 22px;
+  border: 1px solid var(--waco-line);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: var(--waco-shadow-soft);
+  text-align: left;
+  cursor: pointer;
+  transition: transform 0.24s ease, box-shadow 0.24s ease, background 0.24s ease;
+}
+
+.waco-about-why-item:hover,
+.waco-about-why-item.is-active {
+  transform: translateY(-3px);
+  background: #ffffff;
+  box-shadow: var(--waco-shadow);
+}
+
+.waco-about-why-item span {
+  grid-row: span 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 999px;
+  color: var(--waco-primary);
+  background: rgba(35, 64, 49, 0.08);
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.waco-about-why-item.is-active span {
+  color: #ffffff;
+  background: var(--waco-primary);
+}
+
+.waco-about-why-item strong {
+  color: var(--waco-dark);
+  font-size: clamp(18px, 2vw, 26px);
+  line-height: 1.18;
+  letter-spacing: -0.025em;
+  font-weight: 900;
+}
+
+.waco-about-why-item p {
+  grid-column: 2;
+  max-height: 0;
+  overflow: hidden;
+  margin: 0;
+  color: var(--waco-muted);
+  font-size: 14px;
+  line-height: 1.68;
+  opacity: 0;
+  transition: max-height 0.28s ease, opacity 0.24s ease, margin 0.24s ease;
+}
+
+.waco-about-why-item.is-active p {
+  max-height: 180px;
+  margin-top: 12px;
+  opacity: 1;
+}
+
+.waco-about-why-image-wrap {
+  position: relative;
+  min-height: 560px;
+  overflow: hidden;
+  border: 1px solid var(--waco-line);
+  border-radius: var(--waco-radius-xl);
+  background: #e5e7eb;
+  box-shadow: var(--waco-shadow-soft);
+}
+
+.waco-about-why-image {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: scale(1.03);
+  transition: opacity 0.42s ease, transform 0.42s ease;
+}
+
+.waco-about-why-image.is-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Testimonials */
+.waco-about-testimonial-section {
+  overflow: hidden;
+}
+
+.waco-testimonial-swiper {
+  overflow: visible;
+}
+
+.waco-testimonial-swiper .swiper-slide {
+  height: auto;
+}
+
+.waco-testimonial-card {
+  display: flex;
+  min-height: 300px;
+  height: 100%;
+  flex-direction: column;
+  padding: 28px;
+  border: 1px solid var(--waco-line);
+  border-radius: var(--waco-radius-lg);
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: var(--waco-shadow-soft);
+}
+
+.waco-testimonial-stars {
+  margin-bottom: 16px;
+  color: var(--waco-accent);
+  font-size: 16px;
+  letter-spacing: 0.08em;
+}
+
+.waco-testimonial-card p {
+  margin: 0 0 24px;
+  color: var(--waco-text);
+  font-size: 15px;
+  line-height: 1.72;
+}
+
+.waco-testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.waco-testimonial-author > span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 18px;
+  color: #ffffff;
+  background: var(--waco-primary);
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.waco-testimonial-author strong {
+  display: block;
+  margin-bottom: 2px;
+  color: var(--waco-dark);
+  font-size: 15px;
+  line-height: 1.2;
+  font-weight: 900;
+}
+
+.waco-testimonial-author em {
+  display: block;
+  color: var(--waco-muted);
+  font-size: 13px;
+  line-height: 1.2;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.waco-testimonial-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.waco-testimonial-pagination {
+  position: static;
+  width: auto !important;
+}
+
+.waco-testimonial-pagination .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background: rgba(35, 64, 49, 0.28);
+  opacity: 1;
+}
+
+.waco-testimonial-pagination .swiper-pagination-bullet-active {
+  width: 26px;
+  border-radius: 999px;
+  background: var(--waco-primary);
+}
+
+.waco-testimonial-controls .waco-slider-arrows {
+  display: flex;
+  gap: 8px;
+}
+
+.waco-testimonial-controls button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid rgba(35, 64, 49, 0.16);
+  border-radius: 999px;
+  color: var(--waco-primary-dark);
+  background: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  font-weight: 900;
+  transition: transform 0.22s ease, background 0.22s ease, color 0.22s ease;
+}
+
+.waco-testimonial-controls button:hover {
+  transform: translateY(-2px);
+  color: #ffffff;
+  background: var(--waco-primary);
+}
+
+@media (max-width: 1024px) {
+  .waco-about-story-grid,
+  .waco-about-why-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .waco-about-stats-grid,
+  .waco-about-advantage-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .waco-about-story-media,
+  .waco-about-why-image-wrap {
+    min-height: 420px;
+  }
+}
+
+@media (max-width: 760px) {
+  .waco-about-story-section,
+  .waco-about-stats-section,
+  .waco-about-advantage-section,
+  .waco-about-why-section,
+  .waco-about-testimonial-section {
+    padding-top: 52px;
+    padding-bottom: 52px;
+  }
+
+  .waco-about-stats-grid,
+  .waco-about-advantage-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .waco-about-story-media,
+  .waco-about-why-image-wrap {
+    min-height: 300px;
+  }
+
+  .waco-about-why-item {
+    grid-template-columns: 40px minmax(0, 1fr);
+    padding: 20px;
+  }
+
+  .waco-about-why-item span {
+    width: 40px;
+    height: 40px;
+  }
+
+  .waco-testimonial-controls {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+
+/* =========================================================
+  PRODUCT COMPARE PAGE v2.2.0
+  - Before / After draggable slider
+========================================================= */
+
+.waco-compare-intro-section,
+.waco-compare-list-section {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.waco-compare-note-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.waco-compare-note-card {
+  padding: 24px;
+  border: 1px solid var(--waco-line);
+  border-radius: var(--waco-radius-lg);
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: var(--waco-shadow-soft);
+}
+
+.waco-compare-note-card strong {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 18px;
+  border-radius: 14px;
+  color: #ffffff;
+  background: var(--waco-primary);
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 900;
+}
+
+.waco-compare-note-card h3 {
+  margin: 0 0 10px;
+  color: var(--waco-dark);
+  font-size: 22px;
+  line-height: 1.18;
+  letter-spacing: -0.025em;
+}
+
+.waco-compare-note-card p {
+  margin: 0;
+  color: var(--waco-muted);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.waco-compare-list {
+  display: grid;
+  gap: 36px;
+}
+
+.waco-compare-card {
+  overflow: hidden;
+  border: 1px solid var(--waco-line);
+  border-radius: var(--waco-radius-xl);
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: var(--waco-shadow-soft);
+}
+
+.waco-before-after-slider {
+  --position: 50%;
+  position: relative;
+  height: 520px;
+  overflow: hidden;
+  background: #dfe4df;
+  user-select: none;
+}
+
+.waco-ba-image {
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.waco-ba-before {
+  z-index: 1;
+}
+
+.waco-ba-after {
+  z-index: 2;
+  clip-path: inset(0 0 0 var(--position));
+}
+
+.waco-ba-divider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: var(--position);
+  z-index: 4;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.96);
+  transform: translateX(-50%);
+  box-shadow: 0 0 0 1px rgba(14, 24, 19, 0.08);
+}
+
+.waco-ba-handle {
+  position: absolute;
+  top: 50%;
+  left: var(--position);
+  z-index: 5;
+  width: 52px;
+  height: 52px;
+  border: 2px solid rgba(255, 255, 255, 0.92);
+  border-radius: 999px;
+  color: var(--waco-primary-dark);
+  background: rgba(255, 255, 255, 0.92);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 18px 36px rgba(17, 24, 39, 0.18);
+  pointer-events: none;
+}
+
+.waco-ba-handle span {
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 900;
+}
+
+.waco-ba-label {
+  position: absolute;
+  top: 18px;
+  z-index: 6;
+  min-height: 34px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  color: #ffffff;
+  background: rgba(14, 24, 19, 0.58);
+  font-size: 13px;
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  backdrop-filter: blur(8px);
+}
+
+.waco-ba-label-before {
+  left: 18px;
+}
+
+.waco-ba-label-after {
+  right: 18px;
+}
+
+.waco-ba-range {
+  position: absolute;
+  inset: 0;
+  z-index: 7;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: ew-resize;
+}
+
+.waco-compare-card-body {
+  padding: 28px 30px 30px;
+}
+
+.waco-compare-card-body h3 {
+  margin: 12px 0 12px;
+  color: var(--waco-dark);
+  font-size: clamp(26px, 3vw, 40px);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+}
+
+.waco-compare-card-body p {
+  max-width: 960px;
+  margin: 0;
+  color: var(--waco-muted);
+  font-size: 15px;
+  line-height: 1.72;
+}
+
+@media (max-width: 1024px) {
+  .waco-compare-note-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .waco-before-after-slider {
+    height: 430px;
+  }
+}
+
+@media (max-width: 760px) {
+  .waco-compare-intro-section,
+  .waco-compare-list-section {
+    padding-top: 52px;
+    padding-bottom: 52px;
+  }
+
+  .waco-before-after-slider {
+    height: 300px;
+  }
+
+  .waco-ba-label {
+    top: 14px;
+    min-height: 30px;
+    padding: 7px 10px;
+    font-size: 12px;
+  }
+
+  .waco-ba-label-before {
+    left: 14px;
+  }
+
+  .waco-ba-label-after {
+    right: 14px;
+  }
+
+  .waco-ba-handle {
+    width: 46px;
+    height: 46px;
+  }
+
+  .waco-compare-card-body {
+    padding: 22px;
+  }
+
+  .waco-compare-card-body h3 {
+    font-size: clamp(24px, 6.5vw, 32px);
+  }
+}

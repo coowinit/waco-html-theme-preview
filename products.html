@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WACO Products Page</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="assets/css/waco-pages.css?v=2.2.0" />
+</head>
+<body>
+
+  <!--
+    WACO PRODUCTS PAGE v1.1.1
+    - No header / navigation / footer
+    - Inner page banner height: 360px on desktop
+    - Banner text centered horizontally and vertically
+    - Product categories use button menu only
+    - Product grid is the core section, 3 columns on desktop
+    - Product cards include price and add-to-cart placeholder
+  -->
+
+  <main class="waco-page waco-products-page">
+
+    <!-- 01. Inner Page Banner -->
+    <section
+      class="waco-inner-hero waco-products-inner-hero"
+      style="background: linear-gradient(90deg, rgba(14, 24, 19, 0.82) 0%, rgba(14, 24, 19, 0.58) 50%, rgba(14, 24, 19, 0.22) 100%), url('assets/images/products/products-hero.jpg') center / cover no-repeat;"
+    >
+      <div class="waco-container">
+        <div class="waco-inner-hero-content waco-reveal">
+          <nav class="waco-breadcrumb" aria-label="Breadcrumb">
+            <a href="/">Home</a>
+            <span>/</span>
+            <span>Products</span>
+          </nav>
+          <h1>Products</h1>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02. Product Category Menu + Product Grid -->
+    <section class="waco-section waco-product-list-section" id="waco-product-grid">
+      <div class="waco-container">
+        <div class="waco-section-heading waco-heading-split waco-reveal">
+          <div>
+            <span class="waco-eyebrow">Product Range</span>
+            <h2>Product listing layout title placeholder.</h2>
+          </div>
+          <p>
+            Product listing description placeholder. Category buttons are prepared for future WooCommerce filters.
+          </p>
+        </div>
+
+        <div class="waco-product-filter waco-product-category-menu waco-reveal" data-waco-product-filter>
+          <button class="is-active" type="button" data-filter="all">All Products</button>
+          <button type="button" data-filter="decking">Decking</button>
+          <button type="button" data-filter="cladding">Cladding</button>
+          <button type="button" data-filter="accessories">Accessories</button>
+          <button type="button" data-filter="samples">Samples</button>
+        </div>
+
+        <div class="waco-product-grid waco-shop-product-grid">
+          <article class="waco-product-card waco-shop-card waco-reveal" data-category="decking">
+            <a class="waco-product-card-media" href="/composite-decking/" style="background: url('assets/images/products/product-decking-classic.jpg') center / cover no-repeat;"></a>
+            <div class="waco-product-card-body">
+              <h3><a href="/composite-decking/">Classic Composite Decking</a></h3>
+              <p>Product description placeholder. Suitable for residential and commercial outdoor areas.</p>
+              <div class="waco-product-price">$19.90</div>
+              <div class="waco-product-actions">
+                <a class="waco-cart-btn" href="/cart/">Add to Cart</a>
+                <a class="waco-view-link" href="/composite-decking/">View Details</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="waco-product-card waco-shop-card waco-reveal" data-category="decking">
+            <a class="waco-product-card-media" href="/composite-decking/" style="background: url('assets/images/products/product-decking-coextrusion.jpg') center / cover no-repeat;"></a>
+            <div class="waco-product-card-body">
+              <h3><a href="/composite-decking/">Co-extrusion Decking</a></h3>
+              <p>Product description placeholder. Prepared for durability and surface protection.</p>
+              <div class="waco-product-price">$24.90</div>
+              <div class="waco-product-actions">
+                <a class="waco-cart-btn" href="/cart/">Add to Cart</a>
+                <a class="waco-view-link" href="/composite-decking/">View Details</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="waco-product-card waco-shop-card waco-reveal" data-category="decking">
+            <a class="waco-product-card-media" href="/composite-decking/" style="background: url('assets/images/products/product-decking-3d.jpg') center / cover no-repeat;"></a>
+            <div class="waco-product-card-body">
+              <h3><a href="/composite-decking/">3D Embossed Decking</a></h3>
+              <p>Product description placeholder. Designed for wood grain texture and natural visual effect.</p>
+              <div class="waco-product-price">$26.90</div>
+              <div class="waco-product-actions">
+                <a class="waco-cart-btn" href="/cart/">Add to Cart</a>
+                <a class="waco-view-link" href="/composite-decking/">View Details</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="waco-product-card waco-shop-card waco-reveal" data-category="cladding">
+            <a class="waco-product-card-media" href="/wall-cladding/" style="background: url('assets/images/products/product-wall-cladding-slat.jpg') center / cover no-repeat;"></a>
+            <div class="waco-product-card-body">
+              <h3><a href="/wall-cladding/">Slat Wall Cladding</a></h3>
+              <p>Product description placeholder. Suitable for exterior walls and decorative surfaces.</p>
+              <div class="waco-product-price">$18.90</div>
+              <div class="waco-product-actions">
+                <a class="waco-cart-btn" href="/cart/">Add to Cart</a>
+                <a class="waco-view-link" href="/wall-cladding/">View Details</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="waco-product-card waco-shop-card waco-reveal" data-category="cladding">
+            <a class="waco-product-card-media" href="/wall-cladding/" style="background: url('assets/images/products/product-wall-cladding-coextrusion.jpg') center / cover no-repeat;"></a>
+            <div class="waco-product-card-body">
+              <h3><a href="/wall-cladding/">Co-extrusion Wall Cladding</a></h3>
+              <p>Product description placeholder. A modern wall finish option for project applications.</p>
+              <div class="waco-product-price">$22.90</div>
+              <div class="waco-product-actions">
+                <a class="waco-cart-btn" href="/cart/">Add to Cart</a>
+                <a class="waco-view-link" href="/wall-cladding/">View Details</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="waco-product-card waco-shop-card waco-reveal" data-category="accessories">
+            <a class="waco-product-card-media" href="/installation/" style="background: url('assets/images/products/product-accessory-joist.jpg') center / cover no-repeat;"></a>
+            <div class="waco-product-card-body">
+              <h3><a href="/installation/">Composite Joist</a></h3>
+              <p>Product description placeholder. Installation support item for decking systems.</p>
+              <div class="waco-product-price">$9.90</div>
+              <div class="waco-product-actions">
+                <a class="waco-cart-btn" href="/cart/">Add to Cart</a>
+                <a class="waco-view-link" href="/installation/">View Details</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="waco-product-card waco-shop-card waco-reveal" data-category="accessories">
+            <a class="waco-product-card-media" href="/installation/" style="background: url('assets/images/products/product-accessory-clip.jpg') center / cover no-repeat;"></a>
+            <div class="waco-product-card-body">
+              <h3><a href="/installation/">Fixing Clips</a></h3>
+              <p>Product description placeholder. Hidden fixing components for clean installation.</p>
+              <div class="waco-product-price">$4.90</div>
+              <div class="waco-product-actions">
+                <a class="waco-cart-btn" href="/cart/">Add to Cart</a>
+                <a class="waco-view-link" href="/installation/">View Details</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="waco-product-card waco-shop-card waco-reveal" data-category="samples">
+            <a class="waco-product-card-media" href="/quote/" style="background: url('assets/images/products/product-colour-sample.jpg') center / cover no-repeat;"></a>
+            <div class="waco-product-card-body">
+              <h3><a href="/quote/">Colour Sample Kit</a></h3>
+              <p>Product description placeholder. Prepared for comparing colour and surface options.</p>
+              <div class="waco-product-price">$0.00</div>
+              <div class="waco-product-actions">
+                <a class="waco-cart-btn" href="/cart/">Add to Cart</a>
+                <a class="waco-view-link" href="/quote/">View Details</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="waco-product-card waco-shop-card waco-reveal" data-category="decking">
+            <a class="waco-product-card-media" href="/composite-decking/" style="background: url('assets/images/products/category-decking.jpg') center / cover no-repeat;"></a>
+            <div class="waco-product-card-body">
+              <h3><a href="/composite-decking/">Hollow Decking Board</a></h3>
+              <p>Product description placeholder. Prepared as an additional product card for pagination layout.</p>
+              <div class="waco-product-price">$17.90</div>
+              <div class="waco-product-actions">
+                <a class="waco-cart-btn" href="/cart/">Add to Cart</a>
+                <a class="waco-view-link" href="/composite-decking/">View Details</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <nav class="waco-pagination waco-reveal" aria-label="Product pagination">
+          <a class="is-active" href="#">1</a>
+          <a href="#">2</a>
+          <a href="#">3</a>
+          <span>...</span>
+          <a href="#">Next</a>
+        </nav>
+      </div>
+    </section>
+
+    <!-- 03. CTA -->
+    <section class="waco-section waco-cta-section">
+      <div class="waco-container">
+        <div class="waco-cta-box waco-reveal">
+          <div class="waco-cta-content">
+            <h2>CTA layout title placeholder.</h2>
+            <p>
+              CTA description placeholder. This area guides customers to request samples, compare colours or ask for product recommendations.
+            </p>
+            <div class="waco-btn-group">
+              <a class="waco-btn waco-btn-light" href="/quote/">Request Samples</a>
+              <a class="waco-btn waco-btn-ghost-light" href="/contact/">Contact Us</a>
+            </div>
+          </div>
+          <div class="waco-cta-side">
+            <div class="waco-cta-panel">
+              <ul class="waco-check-list">
+                <li>Support item placeholder</li>
+                <li>Support item placeholder</li>
+                <li>Support item placeholder</li>
+                <li>Support item placeholder</li>
+              </ul>
+            </div>
+            <div class="waco-cta-image" style="background: url('assets/images/products/product-colour-sample.jpg') center / cover no-repeat;"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="assets/js/waco-pages.js?v=2.2.0"></script>
+</body>
+</html>
