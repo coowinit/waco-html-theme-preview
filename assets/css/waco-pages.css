@@ -637,6 +637,10 @@ button, a { -webkit-tap-highlight-color: transparent; }
   line-height: 1.45;
 }
 
+aside .waco-check-list li {
+  color: rgba(0, 0, 0, 0.8);
+}
+
 .waco-check-list li::before {
   content: "✓";
   flex: 0 0 auto;
